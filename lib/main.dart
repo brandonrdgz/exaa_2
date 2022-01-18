@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
       title: 'EXAA II',
       initialRoute: 'login',
       routes: Routes.routes,
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
     );
   }
 }
