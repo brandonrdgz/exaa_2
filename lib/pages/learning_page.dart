@@ -52,6 +52,36 @@ class _LearningPageState extends State<LearningPage> {
                 )
               ],
             ),
+          ),
+          SizedBox(
+            height: height * .05,
+          ),
+          Container(
+            height: 230,
+            child: Stack(
+              children: <Widget>[
+                Positioned(
+                  top: 35,
+                  left: 20,
+                  child: Material(
+                    child: Container(
+                      height: 180,
+                      width: width * 0.9,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(0.0),
+                          boxShadow: [
+                            new BoxShadow(
+                                color: Colors.grey.withOpacity(0.3),
+                                offset: new Offset(-10, 10),
+                                blurRadius: 20,
+                                spreadRadius: 4.0)
+                          ]),
+                    ),
+                  ),
+                )
+              ],
+            ),
           )
         ],
       ),
