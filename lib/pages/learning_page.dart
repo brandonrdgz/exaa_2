@@ -111,7 +111,7 @@ class _LearningPageState extends State<LearningPage> {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            'Matemáticas',
+                            'Módulos',
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Color(0xFF363f93),
@@ -121,7 +121,7 @@ class _LearningPageState extends State<LearningPage> {
                             color: Colors.black,
                           ),
                           Text(
-                            'En este apartado se ingresará toda la descripción del módulo',
+                            'Por favor elija el módulo a estudiar',
                             style: TextStyle(
                                 fontSize: 10,
                                 color: Color(0xFF363f93),
@@ -132,7 +132,98 @@ class _LearningPageState extends State<LearningPage> {
                     ))
               ],
             ),
-          )
+          ),
+          Expanded(
+              child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            child: ListView(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.only(bottom: 10, top: 25),
+                  height: 200,
+                  padding:
+                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: color,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(80),
+                        ),
+                        boxShadow: [
+                          new BoxShadow(
+                              color: Color(0xFF363f93).withOpacity(0.3),
+                              offset: new Offset(-10, 0),
+                              blurRadius: 20,
+                              spreadRadius: 4)
+                        ]),
+                    padding:
+                        const EdgeInsets.only(left: 32, top: 50, bottom: 50),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'FÍSICA',
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        ),
+                        SizedBox(
+                          height: 2,
+                        ),
+                        Text(
+                          'Estudia física',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 10, top: 25),
+                  height: 200,
+                  padding:
+                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: color,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(80),
+                        ),
+                        boxShadow: [
+                          new BoxShadow(
+                              color: Color(0xFF363f93).withOpacity(0.3),
+                              offset: new Offset(-10, 0),
+                              blurRadius: 20,
+                              spreadRadius: 4)
+                        ]),
+                    padding:
+                        const EdgeInsets.only(left: 32, top: 50, bottom: 50),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'CÁLCULO',
+                          style: TextStyle(color: Colors.white, fontSize: 12),
+                        ),
+                        SizedBox(
+                          height: 2,
+                        ),
+                        Text(
+                          'Estudia cálculo',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ))
         ],
       ),
     );
