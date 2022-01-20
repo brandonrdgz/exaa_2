@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_declarations
 
+import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/widgets/topic_card.dart';
 import 'package:flutter/material.dart';
 
 class TopicLearningPage extends StatelessWidget {
@@ -11,6 +13,7 @@ class TopicLearningPage extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
+    List<TopicModel> topics = _arguments['topics'];
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -55,6 +58,22 @@ class TopicLearningPage extends StatelessWidget {
           SizedBox(
             height: height * .05,
           ),
+          Expanded(
+              child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            child: ListView.builder(
+              itemCount: topics.length,
+              itemBuilder: (context, i) {
+                return TopicCard(topics[i].moduleName, topics[i].topicName);
+              },
+            ),
+            /*child: ListView(
+              children: <Widget>[
+                TopicCard(_arguments['moduleName'], 'Álgebra')
+              ],
+            ),*/
+          ))
         ],
       ),
     );

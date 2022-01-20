@@ -1,3 +1,5 @@
+import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/utils/list_of_topics.dart';
 import 'package:flutter/material.dart';
 
 class ModuleCard extends StatelessWidget {
@@ -15,31 +17,37 @@ class ModuleCard extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     String _moduleToStudy = '';
     double _fontSize;
+    List<TopicModel> _topics = [];
     return GestureDetector(
       onTap: () {
         switch (moduleTitle) {
           case 'Pensamiento Matemático':
             {
+              _topics = ListOfTopics.topicsMath;
               _moduleToStudy = 'Math';
             }
             break;
           case 'Cálculo':
             {
+              _topics = ListOfTopics.topicsCalculus;
               _moduleToStudy = 'calculus';
             }
             break;
           case 'Física':
             {
+              _topics = ListOfTopics.topicsPhysics;
               _moduleToStudy = 'physics';
             }
             break;
           case 'Estructura de la lengua':
             {
+              _topics = ListOfTopics.topicsGramaticalStructure;
               _moduleToStudy = 'gramatic_structure';
             }
             break;
           case 'Comprensión lectora':
             {
+              _topics = ListOfTopics.topicsLecture;
               _moduleToStudy = 'lecture';
             }
             break;
@@ -51,7 +59,8 @@ class ModuleCard extends StatelessWidget {
             arguments: <String, dynamic>{
               'module': _moduleToStudy,
               'moduleName': moduleTitle,
-              'fontSize': _fontSize
+              'fontSize': _fontSize,
+              'topics': _topics
             });
       },
       child: Container(
