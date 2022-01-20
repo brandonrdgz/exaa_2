@@ -13,7 +13,7 @@ class ModuleCard extends StatelessWidget {
     Color color = Theme.of(context).primaryColor;
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
-    String _moduleToStudy;
+    String _moduleToStudy = '';
     return GestureDetector(
       onTap: () {
         switch (moduleTitle) {
@@ -43,7 +43,8 @@ class ModuleCard extends StatelessWidget {
             }
             break;
         }
-        Navigator.pushNamed(context, 'topicLearning');
+        Navigator.pushNamed(context, 'topicLearning',
+            arguments: <String, String>{'module': _moduleToStudy});
       },
       child: Container(
         height: 230,
