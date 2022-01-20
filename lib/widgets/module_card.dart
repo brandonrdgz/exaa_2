@@ -14,6 +14,7 @@ class ModuleCard extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     String _moduleToStudy = '';
+    double _fontSize;
     return GestureDetector(
       onTap: () {
         switch (moduleTitle) {
@@ -43,8 +44,15 @@ class ModuleCard extends StatelessWidget {
             }
             break;
         }
+        (_moduleToStudy == 'Math' || _moduleToStudy == 'gramatic_structure')
+            ? _fontSize = 20
+            : _fontSize = 30;
         Navigator.pushNamed(context, 'topicLearning',
-            arguments: <String, String>{'module': _moduleToStudy});
+            arguments: <String, dynamic>{
+              'module': _moduleToStudy,
+              'moduleName': moduleTitle,
+              'fontSize': _fontSize
+            });
       },
       child: Container(
         height: 230,
