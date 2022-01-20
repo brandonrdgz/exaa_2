@@ -79,7 +79,28 @@ class _LearningPageState extends State<LearningPage> {
                           ]),
                     ),
                   ),
-                )
+                ),
+                Positioned(
+                    top: 0,
+                    left: 30,
+                    child: Card(
+                      elevation: 10,
+                      shadowColor: Colors.grey.withOpacity(0.5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                      child: Container(
+                        height: 200,
+                        width: 150,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10.0),
+                          image: DecorationImage(
+                            fit: BoxFit.fill,
+                            image: AssetImage('assets/design/math.png'),
+                          ),
+                        ),
+                      ),
+                    ))
               ],
             ),
           )
