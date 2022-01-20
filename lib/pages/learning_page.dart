@@ -56,84 +56,321 @@ class _LearningPageState extends State<LearningPage> {
           SizedBox(
             height: height * .05,
           ),
-          Container(
-            height: 230,
-            child: Stack(
-              children: <Widget>[
-                Positioned(
-                  top: 35,
-                  left: 20,
-                  child: Material(
-                    child: Container(
-                      height: 180,
-                      width: width * 0.9,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(0.0),
-                          boxShadow: [
-                            new BoxShadow(
-                                color: Colors.grey.withOpacity(0.3),
-                                offset: new Offset(-10, 10),
-                                blurRadius: 20,
-                                spreadRadius: 4.0)
-                          ]),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 0,
-                  left: 30,
-                  child: Card(
-                    elevation: 10,
-                    shadowColor: Colors.grey.withOpacity(0.5),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    child: Container(
-                      height: 200,
-                      width: 150,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        image: DecorationImage(
-                          fit: BoxFit.fill,
-                          image: AssetImage('assets/design/math1.png'),
+          Expanded(
+            child: ListView(
+              children: [
+                Container(
+                  height: 230,
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned(
+                        top: 35,
+                        left: 20,
+                        child: Material(
+                          child: Container(
+                            height: 180,
+                            width: width * 0.9,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(0.0),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Colors.grey.withOpacity(0.3),
+                                      offset: new Offset(-10, 10),
+                                      blurRadius: 20,
+                                      spreadRadius: 4.0)
+                                ]),
+                          ),
                         ),
                       ),
-                    ),
+                      Positioned(
+                        top: 0,
+                        left: 30,
+                        child: Card(
+                          elevation: 10,
+                          shadowColor: Colors.grey.withOpacity(0.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Container(
+                            height: 200,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage('assets/design/math1.png'),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          top: 45,
+                          left: 190,
+                          child: Container(
+                            height: 150,
+                            width: 180,
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Módulos',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                ),
+                                Text(
+                                  'Por favor elija el módulo a estudiar',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ))
+                    ],
                   ),
                 ),
-                Positioned(
-                    top: 45,
-                    left: 190,
-                    child: Container(
-                      height: 150,
-                      width: 180,
-                      child: Column(
-                        children: <Widget>[
-                          Text(
-                            'Módulos',
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Color(0xFF363f93),
-                                fontWeight: FontWeight.bold),
+                Container(
+                  height: 230,
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned(
+                        top: 35,
+                        left: 20,
+                        child: Material(
+                          child: Container(
+                            height: 180,
+                            width: width * 0.9,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(0.0),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Colors.grey.withOpacity(0.3),
+                                      offset: new Offset(-10, 10),
+                                      blurRadius: 20,
+                                      spreadRadius: 4.0)
+                                ]),
                           ),
-                          Divider(
-                            color: Colors.black,
-                          ),
-                          Text(
-                            'Por favor elija el módulo a estudiar',
-                            style: TextStyle(
-                                fontSize: 10,
-                                color: Color(0xFF363f93),
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+                        ),
                       ),
-                    ))
+                      Positioned(
+                        top: 0,
+                        left: 30,
+                        child: Card(
+                          elevation: 10,
+                          shadowColor: Colors.grey.withOpacity(0.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Container(
+                            height: 200,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage('assets/design/math1.png'),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          top: 45,
+                          left: 190,
+                          child: Container(
+                            height: 150,
+                            width: 180,
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Módulos',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                ),
+                                Text(
+                                  'Por favor elija el módulo a estudiar',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 230,
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned(
+                        top: 35,
+                        left: 20,
+                        child: Material(
+                          child: Container(
+                            height: 180,
+                            width: width * 0.9,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(0.0),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Colors.grey.withOpacity(0.3),
+                                      offset: new Offset(-10, 10),
+                                      blurRadius: 20,
+                                      spreadRadius: 4.0)
+                                ]),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 0,
+                        left: 30,
+                        child: Card(
+                          elevation: 10,
+                          shadowColor: Colors.grey.withOpacity(0.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Container(
+                            height: 200,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage('assets/design/math1.png'),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          top: 45,
+                          left: 190,
+                          child: Container(
+                            height: 150,
+                            width: 180,
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Módulos',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                ),
+                                Text(
+                                  'Por favor elija el módulo a estudiar',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+                Container(
+                  height: 230,
+                  child: Stack(
+                    children: <Widget>[
+                      Positioned(
+                        top: 35,
+                        left: 20,
+                        child: Material(
+                          child: Container(
+                            height: 180,
+                            width: width * 0.9,
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(0.0),
+                                boxShadow: [
+                                  new BoxShadow(
+                                      color: Colors.grey.withOpacity(0.3),
+                                      offset: new Offset(-10, 10),
+                                      blurRadius: 20,
+                                      spreadRadius: 4.0)
+                                ]),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        top: 0,
+                        left: 30,
+                        child: Card(
+                          elevation: 10,
+                          shadowColor: Colors.grey.withOpacity(0.5),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Container(
+                            height: 200,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                fit: BoxFit.fill,
+                                image: AssetImage('assets/design/math1.png'),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                          top: 45,
+                          left: 190,
+                          child: Container(
+                            height: 150,
+                            width: 180,
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Módulos',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Divider(
+                                  color: Colors.black,
+                                ),
+                                Text(
+                                  'Por favor elija el módulo a estudiar',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      color: Color(0xFF363f93),
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
-          Expanded(
+          /*Expanded(
               child: MediaQuery.removePadding(
             context: context,
             removeTop: true,
@@ -223,7 +460,7 @@ class _LearningPageState extends State<LearningPage> {
                 )
               ],
             ),
-          ))
+          ))*/
         ],
       ),
     );
