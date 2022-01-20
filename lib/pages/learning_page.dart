@@ -81,24 +81,53 @@ class _LearningPageState extends State<LearningPage> {
                   ),
                 ),
                 Positioned(
-                    top: 0,
-                    left: 30,
-                    child: Card(
-                      elevation: 10,
-                      shadowColor: Colors.grey.withOpacity(0.5),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                      ),
-                      child: Container(
-                        height: 200,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10.0),
-                          image: DecorationImage(
-                            fit: BoxFit.fill,
-                            image: AssetImage('assets/design/math.png'),
-                          ),
+                  top: 0,
+                  left: 30,
+                  child: Card(
+                    elevation: 10,
+                    shadowColor: Colors.grey.withOpacity(0.5),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15.0),
+                    ),
+                    child: Container(
+                      height: 200,
+                      width: 150,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        image: DecorationImage(
+                          fit: BoxFit.fill,
+                          image: AssetImage('assets/design/math1.png'),
                         ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                    top: 45,
+                    left: 190,
+                    child: Container(
+                      height: 150,
+                      width: 180,
+                      child: Column(
+                        children: <Widget>[
+                          Text(
+                            'Matemáticas',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Color(0xFF363f93),
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Divider(
+                            color: Colors.black,
+                          ),
+                          Text(
+                            'En este apartado se ingresará toda la descripción del módulo',
+                            style: TextStyle(
+                                fontSize: 10,
+                                color: Color(0xFF363f93),
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                     ))
               ],
