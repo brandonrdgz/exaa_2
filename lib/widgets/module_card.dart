@@ -53,7 +53,7 @@ class ModuleCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/design/math1.png'),
+                    image: AssetImage(this.imagePath),
                   ),
                 ),
               ),
@@ -68,7 +68,7 @@ class ModuleCard extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      'Módulos',
+                      this.moduleTitle,
                       style: TextStyle(
                           fontSize: 20,
                           color: Color(0xFF363f93),
@@ -78,7 +78,7 @@ class ModuleCard extends StatelessWidget {
                       color: Colors.black,
                     ),
                     Text(
-                      'Por favor elija el módulo a estudiar',
+                      this.moduleDescription,
                       style: TextStyle(
                           fontSize: 10,
                           color: Color(0xFF363f93),
