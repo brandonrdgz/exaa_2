@@ -1,3 +1,4 @@
+import 'package:exaa_2/pages/initial_page.dart';
 import 'package:exaa_2/utils/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EXAA II',
-      initialRoute: 'register',
+      initialRoute: 'login',
       routes: Routes.routes,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
