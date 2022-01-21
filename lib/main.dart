@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'EXAA II',
-      initialRoute: 'login',
+      initialRoute: 'learning',
       routes: Routes.routes,
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
