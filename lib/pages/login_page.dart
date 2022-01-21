@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'initial_page.dart';
+
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
 
@@ -70,7 +72,11 @@ class _LoginPageState extends State<LoginPage> {
                           color: Theme.of(context).primaryColor,
                           padding: const EdgeInsets.symmetric(vertical: 17),
                           textColor: Colors.white,
-                          onPressed: () => _login(context),
+                          onPressed: () {
+                            _login(context);
+                            Navigator.pushReplacementNamed(
+                                context, InitialPage.id);
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -118,5 +124,7 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  void _showRegister(BuildContext context) {}
+  void _showRegister(BuildContext context) {
+    Navigator.pushNamed(context, 'register');
+  }
 }

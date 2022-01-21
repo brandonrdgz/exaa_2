@@ -30,6 +30,7 @@ class InitialPage extends StatelessWidget {
             text: 'Material didáctico',
             textSize: 40,
             onPressed: () {
+              Navigator.pushNamed(context, 'learning');
               //TODO: Show page 'Material didactico'
             },
           ),

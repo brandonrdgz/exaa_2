@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'initial_page.dart';
+
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key? key}) : super(key: key);
 
@@ -24,14 +26,19 @@ class _RegisterPageState extends State<RegisterPage> {
             padding: EdgeInsets.symmetric(vertical: 60),
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [Colors.purple.shade800, Colors.purple.shade300],
+                colors: [
+                  Colors.deepPurple.shade800,
+                  Colors.deepPurple.shade300,
+                ],
               ),
             ),
           ),
           Container(
             padding: EdgeInsets.only(top: 40),
             child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child:
                     new Icon(Icons.arrow_back, color: Colors.white, size: 50),
                 shape: new CircleBorder(),
@@ -83,7 +90,12 @@ class _RegisterPageState extends State<RegisterPage> {
                           color: Theme.of(context).primaryColor,
                           padding: const EdgeInsets.symmetric(vertical: 17),
                           textColor: Colors.white,
-                          onPressed: () => _register(context),
+                          onPressed: () {
+                            _register(context);
+                            Navigator.pop(context);
+                            Navigator.pushReplacementNamed(
+                                context, InitialPage.id);
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
