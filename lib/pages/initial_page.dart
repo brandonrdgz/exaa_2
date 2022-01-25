@@ -1,4 +1,7 @@
+import 'package:exaa_2/services/firebase/auth.dart';
+import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
+import 'package:exaa_2/utils/error.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -52,8 +55,43 @@ class InitialPage extends StatelessWidget {
               //TODO: Show page 'Acerca de'
             },
           ),
+          RoundedIconTextButton(
+            icon: FontAwesomeIcons.signOutAlt,
+            iconSize: 40,
+            text: 'Cerrar sesión',
+            textSize: 40,
+            onPressed: () {
+              _logout(context);
+            }
+          ),
         ],
       ),
+    );
+  }
+
+  void _logout(BuildContext context) {
+    CommonDialog.progressDialog(
+      context,
+      content: const Text('Cerrando sesión...'),
+      future: Auth.logout(),
+      onSuccess: (value) {
+        Navigator.pushReplacementNamed(context, 'login');
+      },
+      onError: (error) {
+        CommonDialog.dialog(
+          context,
+          title: const Text('Error'),
+          content: Text(Error.message(error)),
+          actions: [
+            TextButton(
+              child: const Text('Aceptar'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ] 
+        );
+      }
     );
   }
 }
