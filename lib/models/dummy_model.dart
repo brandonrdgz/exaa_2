@@ -1,7 +1,7 @@
 class DummyModel {
   DummyModel({required this.id, required this.name});
 
-  String id;
+  int id;
   String name;
 
   factory DummyModel.fromJson(Map<String, dynamic> json) =>

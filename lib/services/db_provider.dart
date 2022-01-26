@@ -34,9 +34,22 @@ class DBProvider with ChangeNotifier {
     final db = await database;
     notifyListeners();
 
-    final res = await db?.rawInsert("INSERT INTO  Scans (id, tipo valor) "
-        "VALUES ( ${dummy.id}, '${dummy.name}'')");
+    final res = await db?.rawInsert("INSERT INTO  Dummy (id, name) "
+        "VALUES ( '${dummy.id}', '${dummy.name}')");
 
     return res;
+  }
+
+  Future<List<DummyModel>> getDummies() async {
+    final db = await database;
+    var res;
+    res = await db?.query('Dummy');
+    print(res);
+    List<DummyModel> list = res.isNotEmpty
+        ? res.map<DummyModel>((c) => DummyModel.fromJson(c)).toList()
+        : <DummyModel>[];
+    print('Lista');
+    print(list[1].name);
+    return list;
   }
 }
