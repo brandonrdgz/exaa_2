@@ -1,10 +1,11 @@
 import 'package:exaa_2/models/dummy_model.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
-class DBProvider {
+class DBProvider with ChangeNotifier {
   static Database? _database;
   static final DBProvider db = DBProvider._();
   DBProvider._();
@@ -28,9 +29,10 @@ class DBProvider {
     });
   }
 
-  newDummy(DummyModel dummy) async {
+  insertDummy(DummyModel dummy) async {
     // se realiza únicamente una instancia de la base de datos, gracias al patrón singleton
     final db = await database;
+    notifyListeners();
 
     final res = await db?.rawInsert("INSERT INTO  Scans (id, tipo valor) "
         "VALUES ( ${dummy.id}, '${dummy.name}'')");
