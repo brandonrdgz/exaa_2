@@ -1,3 +1,7 @@
+import 'package:email_validator/email_validator.dart';
+import 'package:exaa_2/services/firebase/auth.dart';
+import 'package:exaa_2/utils/error.dart';
+import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,18 +16,19 @@ class RegisterPage extends StatefulWidget {
 
 class _RegisterPageState extends State<RegisterPage> {
   bool _loading = false;
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  String _username = '';
+  String _email = '';
+  String _password = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(
-      //title: Text("Registro EXAA II"),
-      //),
       body: Stack(
         children: <Widget>[
           Container(
             width: double.infinity,
-            padding: EdgeInsets.symmetric(vertical: 60),
+            padding: const EdgeInsets.symmetric(vertical: 60),
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
@@ -34,30 +39,22 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           Container(
-            padding: EdgeInsets.only(top: 40),
-            child: FlatButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child:
-                    new Icon(Icons.arrow_back, color: Colors.white, size: 50),
-                shape: new CircleBorder(),
-                color: Colors.black12),
-          ),
-          Container(
             width: double.infinity,
-            padding: EdgeInsets.only(top: 93),
+            padding: const EdgeInsets.only(top: 93),
             child: Text(
               "Nueva Cuenta",
               style: GoogleFonts.monoton(
-                textStyle: TextStyle(
-                    fontSize: 42, color: Colors.white, letterSpacing: .5),
+                textStyle: const TextStyle(
+                  fontSize: 42,
+                  color: Colors.white,
+                  letterSpacing: .5,
+                ),
               ),
               textAlign: TextAlign.center,
             ),
           ),
           Transform.translate(
-            offset: Offset(0, 45),
+            offset: const Offset(0, 45),
             child: Center(
               child: SingleChildScrollView(
                 child: Card(
@@ -67,52 +64,84 @@ class _RegisterPageState extends State<RegisterPage> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         horizontal: 35, vertical: 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        TextFormField(
-                          decoration:
-                              InputDecoration(labelText: "Nombre usuario"),
-                        ),
-                        SizedBox(height: 13),
-                        TextFormField(
-                          decoration:
-                              InputDecoration(labelText: "Ingresa correo"),
-                        ),
-                        SizedBox(height: 13),
-                        TextFormField(
-                          decoration:
-                              InputDecoration(labelText: "Escribe contraseña"),
-                          obscureText: true,
-                        ),
-                        SizedBox(height: 18),
-                        RaisedButton(
-                          color: Theme.of(context).primaryColor,
-                          padding: const EdgeInsets.symmetric(vertical: 17),
-                          textColor: Colors.white,
-                          onPressed: () {
-                            _register(context);
-                            Navigator.pop(context);
-                            Navigator.pushReplacementNamed(
-                                context, InitialPage.id);
-                          },
-                          child: Row(
+                    child: Form(
+                      key: _formKey,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          TextFormField(
+                            decoration: const InputDecoration(labelText: "Nombre usuario"),
+                            onChanged: (String username) {
+                              _username = username;
+                            },
+                            validator: (String? username) {
+                              if (username == null) {
+                                return 'El nombre de usuario no es válido';
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 13),
+                          TextFormField(
+                            decoration: const InputDecoration(labelText: "Ingresa correo"),
+                            onChanged: (String email) {
+                              _email = email;
+                            },
+                            validator: (String? email) {
+                              if (email == null || ! EmailValidator.validate(email)) {
+                                return 'El correo no es válido';
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 13),
+                          TextFormField(
+                            decoration: const InputDecoration(labelText: "Escribe contraseña"),
+                            obscureText: true,
+                            onChanged: (String password) {
+                              _password = password;
+                            },
+                            validator: (String? password) {
+                              if (password == null || password.length < 6) {
+                                return 'La contraseña debe de tener mínimo 6 caracteres';
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 18),
+                          RaisedButton(
+                            color: Theme.of(context).primaryColor,
+                            padding: const EdgeInsets.symmetric(vertical: 17),
+                            textColor: Colors.white,
+                            onPressed: () {
+                              _register(context);
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                const Text("Registrarse"),
+                                if (_loading)
+                                  Container(
+                                    height: 20,
+                                    width: 20,
+                                    margin: const EdgeInsets.only(left: 20),
+                                    child: const CircularProgressIndicator(
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Text("Registrarse"),
-                              if (_loading)
-                                Container(
-                                  height: 20,
-                                  width: 20,
-                                  margin: const EdgeInsets.only(left: 20),
-                                  child: CircularProgressIndicator(
-                                    color: Colors.white,
-                                  ),
-                                ),
+                              const Text("¿Ya tienes cuenta?"),
+                              FlatButton(
+                                textColor: Theme.of(context).primaryColor,
+                                child: const Text("Iniciar sesión"),
+                                onPressed: () => _showLogin(context),
+                              ),
                             ],
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -125,10 +154,58 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   void _register(BuildContext context) {
-    if (!_loading) {
+    if (_formKey.currentState != null && _formKey.currentState!.validate()) {
       setState(() {
         _loading = true;
       });
+
+      CommonDialog.progressDialog(
+        context,
+        content: const Text('Registrando...'),
+        future: Auth.register(_email, _password),
+        onSuccess: (value) {
+          setState(() {
+            _loading = false;
+          });
+
+          CommonDialog.dialog(
+            context,
+            content: const Text('Registro exitoso'),
+            actions: [
+              TextButton(
+                child: const Text('Aceptar'),
+                onPressed: () {
+                  Navigator.pop(context);
+                  Navigator.pushReplacementNamed(context, InitialPage.id);
+                },
+              ),
+            ] 
+          );
+        },
+        onError: (error) {
+          setState(() {
+            _loading = false;
+          });
+
+          CommonDialog.dialog(
+            context,
+            title: const Text('Error'),
+            content: Text(Error.message(error)),
+            actions: [
+              TextButton(
+                child: const Text('Aceptar'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ] 
+          );
+        }
+      );
     }
+  }
+
+  void _showLogin(BuildContext context) {
+    Navigator.pushReplacementNamed(context, 'login');
   }
 }
