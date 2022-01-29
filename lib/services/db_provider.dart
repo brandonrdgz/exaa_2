@@ -1,4 +1,6 @@
 import 'package:exaa_2/models/dummy_model.dart';
+import 'package:exaa_2/models/module_model.dart';
+import 'package:exaa_2/utils/sql_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
 import 'dart:io';
@@ -19,10 +21,12 @@ class DBProvider with ChangeNotifier {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAII.db');
+    final path = join(documentsDirectory.path, 'EXAAIIv12.db');
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
-      //await db.execute(createUserTable);
+      for (int j = 0; j < SqlData.createTables.length; j++) {
+        await db.execute(SqlData.createTables[j]);
+      }
     });
   }
 
@@ -50,5 +54,24 @@ class DBProvider with ChangeNotifier {
     return list;
   }
 
-  Future insertRecordsModule() async {}
+  Future insertRecordsModule() async {
+    final db = await database;
+
+    for (int i = 0; i < SqlData.insertRecordsModule.length; i++) {
+      await db?.rawInsert(SqlData.insertRecordsModule[i]);
+    }
+  }
+
+  Future<List<ModuleModel>> getModules() async {
+    final db = await database;
+    var res;
+    res = await db?.query('MODULE');
+    print(res);
+    List<ModuleModel> list = res.isNotEmpty
+        ? res.map<ModuleModel>((c) => ModuleModel.fromJson(c)).toList()
+        : <ModuleModel>[];
+    print('Lista');
+    print(list[0].name_module);
+    return list;
+  }
 }

@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:exaa_2/models/module_model.dart';
+import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/module_card.dart';
 import 'package:flutter/material.dart';
 
@@ -60,8 +62,31 @@ class _LearningPageState extends State<LearningPage> {
             height: height * .05,
           ),
           Expanded(
-            child: ListView(
-              children: <Widget>[
+              child: FutureBuilder(
+            future: DBProvider.db.getModules(),
+            builder: (BuildContext context,
+                AsyncSnapshot<List<ModuleModel>> snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                    itemCount: snapshot.data?.length,
+                    itemBuilder: (BuildContext context, int i) {
+                      return ModuleCard(
+                          snapshot.data![i].pathImage,
+                          snapshot.data![i].name_module,
+                          snapshot.data![i].description_module);
+                    });
+              } else {
+                return Container(
+                  height: 400,
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+            },
+          )
+
+              /*  children: <Widget>[
                 ModuleCard('assets/design/math1.png', 'Pensamiento Matemático',
                     'Descripción breve del módulo'),
                 ModuleCard('assets/design/calculus.jpg', 'Cálculo',
@@ -72,9 +97,9 @@ class _LearningPageState extends State<LearningPage> {
                     'Estructura de la lengua', 'Descripción breve del módulo'),
                 ModuleCard('assets/design/lecture.jpg', 'Comprensión lectora',
                     'Descripción breve del módulo')
-              ],
-            ),
-          ),
+              ],*/
+              ),
+
           /*Expanded(
               child: MediaQuery.removePadding(
             context: context,

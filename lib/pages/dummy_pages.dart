@@ -1,6 +1,7 @@
 //trash
 
 import 'package:exaa_2/models/dummy_model.dart';
+import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:flutter/material.dart';
 
@@ -27,8 +28,8 @@ class _DummyPageState extends State<DummyPage> {
             Text(_centerText.toString()),
             IconButton(
                 onPressed: () async {
-                  List<DummyModel> res = await DBProvider.db.getDummies();
-                  _centerText = res[1].name;
+                  List<ModuleModel> res = await DBProvider.db.getModules();
+                  _centerText = res[0].name_module;
                   setState(() {});
                   //print(res[]);
                 },
@@ -39,9 +40,9 @@ class _DummyPageState extends State<DummyPage> {
       floatingActionButton: FloatingActionButton(
         child: Text('X'),
         onPressed: () async {
-          final result = await DBProvider.db.insertDummy(dummy);
+          await DBProvider.db.insertRecordsModule();
           _centerText = 'Nuevo registro';
-          print(result);
+
           setState(() {});
         },
       ),

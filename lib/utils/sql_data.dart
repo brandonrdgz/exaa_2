@@ -53,9 +53,9 @@ class SqlData {
   ];
 
   static List<String> insertRecordsModule = [
-    """INSERT INTO MODULE (name_module, description_module, image_path)
+    """INSERT INTO MODULE (name_module, description_module, pathImage)
     VALUES ('Estructura de la lengua', 'Descripción', 'assets/design/gramatic_structure.jpg');""",
-    """INSERT INTO MODULE (name_module, description_module, image_path)
+    """INSERT INTO MODULE (name_module, description_module, pathImage)
     VALUES ('Pensamiento Matemático', 'Descripción', 'assets/design/math1.png');"""
   ];
 }
