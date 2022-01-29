@@ -1,4 +1,6 @@
+import 'package:exaa_2/pages/apply_exam_page.dart';
 import 'package:exaa_2/pages/dummy_pages.dart';
+import 'package:exaa_2/pages/exam_page.dart';
 import 'package:exaa_2/pages/initial_page.dart';
 import 'package:exaa_2/pages/learning_page.dart';
 import 'package:exaa_2/pages/login_page.dart';
@@ -14,6 +16,8 @@ class Routes {
     'topicLearning': (BuildContext context) => TopicLearningPage(),
     InitialPage.id: (BuildContext context) => InitialPage(),
     'register': (BuildContext context) => RegisterPage(),
-    'dummy': (BuildContext context) => DummyPage()
+    'dummy': (BuildContext context) => DummyPage(),
+    ApplyExamPage.id: (BuildContext context) => ApplyExamPage(),
+    ExamPage.id: (BuildContext context) => ExamPage(),
   };
 }
