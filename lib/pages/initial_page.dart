@@ -1,3 +1,4 @@
+import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
@@ -52,7 +53,7 @@ class InitialPage extends StatelessWidget {
             text: 'Acerca de',
             textSize: 40,
             onPressed: () {
-              //TODO: Show page 'Acerca de'
+              Navigator.pushNamed(context, AboutPage.id);
             },
           ),
           RoundedIconTextButton(
