@@ -22,10 +22,7 @@ class DBProvider with ChangeNotifier {
     final path = join(documentsDirectory.path, 'EXAAII.db');
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
-      await db.execute('CREATE TABLE Dummy ('
-          'id INTEGER PRIMARY KEY,'
-          'name TEXT'
-          ')');
+      //await db.execute(createUserTable);
     });
   }
 
@@ -52,4 +49,6 @@ class DBProvider with ChangeNotifier {
     print(list[1].name);
     return list;
   }
+
+  Future insertRecordsModule() async {}
 }

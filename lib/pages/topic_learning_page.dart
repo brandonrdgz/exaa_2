@@ -47,7 +47,7 @@ class TopicLearningPage extends StatelessWidget {
                   top: 110,
                   left: 20,
                   child: Text(
-                    _arguments['moduleName'],
+                    _arguments['name_module'],
                     style: TextStyle(
                         fontSize: _arguments['fontSize'], color: color),
                   ),
@@ -65,12 +65,12 @@ class TopicLearningPage extends StatelessWidget {
             child: ListView.builder(
               itemCount: topics.length,
               itemBuilder: (context, i) {
-                return TopicCard(topics[i].moduleName, topics[i].topicName);
+                return TopicCard(topics[i].name_module, topics[i].name_topic);
               },
             ),
             /*child: ListView(
               children: <Widget>[
-                TopicCard(_arguments['moduleName'], 'Álgebra')
+                TopicCard(_arguments['name_module'], 'Álgebra')
               ],
             ),*/
           ))
