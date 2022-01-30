@@ -1,5 +1,6 @@
 import 'package:exaa_2/models/dummy_model.dart';
 import 'package:exaa_2/models/module_model.dart';
+import 'package:exaa_2/models/topic_model.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
@@ -62,6 +63,15 @@ class DBProvider with ChangeNotifier {
     }
   }
 
+//FUNCION PARA LLEVAR A CABO LA INSERCIÓN DE LOS TOPICOS
+  Future insertRecordsTopic() async {
+    final db = await database;
+
+    for (int i = 0; i < SqlData.insertRecordsTopic.length; i++) {
+      await db?.rawInsert(SqlData.insertRecordsTopic[i]);
+    }
+  }
+
   Future<List<ModuleModel>> getModules() async {
     final db = await database;
     var res;
@@ -72,6 +82,20 @@ class DBProvider with ChangeNotifier {
         : <ModuleModel>[];
     print('Lista');
     print(list[0].name_module);
+    return list;
+  }
+
+  //FUNCIÓN PARA OBTENER LOS TÓPICOS EXISTENTES
+  Future<List<TopicModel>> getTopic() async {
+    final db = await database;
+    var res;
+    res = await db?.query('TOPIC');
+    print(res);
+    List<TopicModel> list = res.isNotEmpty
+        ? res.map<TopicModel>((c) => TopicModel.fromJson(c)).toList()
+        : <TopicModel>[];
+    print('Lista');
+    print(list[0].name_topic);
     return list;
   }
 }

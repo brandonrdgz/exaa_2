@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class TopicCard extends StatelessWidget {
   final String moduleName;
   final String topicName;
-  const TopicCard(this.moduleName, this.topicName, {Key? key})
+  final String descriptionTopic;
+  const TopicCard(this.moduleName, this.topicName, this.descriptionTopic,
+      {Key? key})
       : super(key: key);
 
   @override

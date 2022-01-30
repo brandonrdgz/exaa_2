@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_declarations
 
 import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/topic_card.dart';
 import 'package:flutter/material.dart';
 
@@ -59,6 +60,30 @@ class TopicLearningPage extends StatelessWidget {
             height: height * .05,
           ),
           Expanded(
+              child: FutureBuilder(
+            future: DBProvider.db.getTopic(),
+            builder: (BuildContext context,
+                AsyncSnapshot<List<TopicModel>> snapshot) {
+              if (snapshot.hasData) {
+                return ListView.builder(
+                    itemCount: snapshot.data?.length,
+                    itemBuilder: (BuildContext context, int i) {
+                      return TopicCard(
+                          snapshot.data![i].name_topic,
+                          snapshot.data![i].description_topic,
+                          snapshot.data![i].name_module);
+                    });
+              } else {
+                return Container(
+                  height: 400,
+                  child: Center(
+                    child: CircularProgressIndicator(),
+                  ),
+                );
+              }
+            },
+          )),
+          /*Expanded(
               child: MediaQuery.removePadding(
             context: context,
             removeTop: true,
@@ -73,7 +98,7 @@ class TopicLearningPage extends StatelessWidget {
                 TopicCard(_arguments['name_module'], 'Álgebra')
               ],
             ),*/
-          ))
+          ))*/
         ],
       ),
     );

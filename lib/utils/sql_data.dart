@@ -58,4 +58,12 @@ class SqlData {
     """INSERT INTO MODULE (name_module, description_module, pathImage)
     VALUES ('Pensamiento Matemático', 'Descripción', 'assets/design/math1.png');"""
   ];
+
+  //REGISTROS PARA PROBAR LOS TOPICOS
+  static List<String> insertRecordsTopic = [
+    """INSERT INTO MODULE (name_topic, description_topic, name_module)
+    VALUES ('Signos de puntuación', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO MODULE (name_module, description_module, pathImage)
+    VALUES ('Álgebra', 'Descripción', 'Pensamiento Matemático');"""
+  ];
 }
