@@ -61,9 +61,29 @@ class SqlData {
 
   //REGISTROS PARA PROBAR LOS TOPICOS
   static List<String> insertRecordsTopic = [
-    """INSERT INTO MODULE (name_topic, description_topic, name_module)
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
     VALUES ('Signos de puntuación', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO MODULE (name_module, description_module, pathImage)
-    VALUES ('Álgebra', 'Descripción', 'Pensamiento Matemático');"""
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Verbos', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Sustantivos', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Adjetivos', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Adverbios', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Preposiciones', 'Descripción', 'Estructura de la lengua');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Álgebra', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Binomio al cuadrado', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Binomios al cubo', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Ecuaciones', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Sistemas de ecuaciones', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
+    VALUES ('Representaciones gráficas', 'Descripción', 'Pensamiento Matemático');""",
   ];
 }

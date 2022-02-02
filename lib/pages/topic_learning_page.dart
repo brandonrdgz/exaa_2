@@ -14,7 +14,7 @@ class TopicLearningPage extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
-    List<TopicModel> topics = _arguments['topics'];
+    //List<TopicModel> topics = _arguments['topics'];
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -22,6 +22,7 @@ class TopicLearningPage extends StatelessWidget {
           Container(
             height: 230,
             decoration: BoxDecoration(
+              // ignore: prefer_const_constructors
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(50),
               ),
@@ -35,6 +36,7 @@ class TopicLearningPage extends StatelessWidget {
                   child: Container(
                     height: 100,
                     width: 300,
+                    // ignore: prefer_const_constructors
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(50),
@@ -50,7 +52,7 @@ class TopicLearningPage extends StatelessWidget {
                   child: Text(
                     _arguments['name_module'],
                     style: TextStyle(
-                        fontSize: _arguments['fontSize'], color: color),
+                        fontSize: _arguments['font_size'], color: color),
                   ),
                 )
               ],
@@ -61,7 +63,7 @@ class TopicLearningPage extends StatelessWidget {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getTopic(),
+            future: DBProvider.db.getTopicByModule(_arguments['name_module']),
             builder: (BuildContext context,
                 AsyncSnapshot<List<TopicModel>> snapshot) {
               if (snapshot.hasData) {
@@ -69,9 +71,10 @@ class TopicLearningPage extends StatelessWidget {
                     itemCount: snapshot.data?.length,
                     itemBuilder: (BuildContext context, int i) {
                       return TopicCard(
-                          snapshot.data![i].name_topic,
-                          snapshot.data![i].description_topic,
-                          snapshot.data![i].name_module);
+                        snapshot.data![i].name_module,
+                        snapshot.data![i].name_topic,
+                        snapshot.data![i].description_topic,
+                      );
                     });
               } else {
                 return Container(

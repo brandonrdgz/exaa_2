@@ -22,7 +22,7 @@ class DBProvider with ChangeNotifier {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAIIv12.db');
+    final path = join(documentsDirectory.path, 'EXAAIIv19.db');
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
       for (int j = 0; j < SqlData.createTables.length; j++) {
@@ -61,6 +61,7 @@ class DBProvider with ChangeNotifier {
     for (int i = 0; i < SqlData.insertRecordsModule.length; i++) {
       await db?.rawInsert(SqlData.insertRecordsModule[i]);
     }
+    print('insert successful modules');
   }
 
 //FUNCION PARA LLEVAR A CABO LA INSERCIÓN DE LOS TOPICOS
@@ -70,6 +71,7 @@ class DBProvider with ChangeNotifier {
     for (int i = 0; i < SqlData.insertRecordsTopic.length; i++) {
       await db?.rawInsert(SqlData.insertRecordsTopic[i]);
     }
+    print('insert successful topics');
   }
 
   Future<List<ModuleModel>> getModules() async {
@@ -90,12 +92,33 @@ class DBProvider with ChangeNotifier {
     final db = await database;
     var res;
     res = await db?.query('TOPIC');
-    print(res);
+    //print(res);
     List<TopicModel> list = res.isNotEmpty
         ? res.map<TopicModel>((c) => TopicModel.fromJson(c)).toList()
         : <TopicModel>[];
-    print('Lista');
-    print(list[0].name_topic);
+    //print('Lista');
+    //print(list[0].name_topic);
+    return list;
+  }
+
+  Future<List<TopicModel>> getTopicByModule(String name_module) async {
+    final db = await database;
+    var res;
+    /*res = await db
+        ?.rawQuery("select * from TOPIC where name_module = '$name_module';");*/
+    //res = await db?.query('TOPIC', where: "name_module = ?", whereArgs: [name_module]);
+    res = await db
+        ?.rawQuery('SELECT * FROM TOPIC WHERE name_module=?', [name_module]);
+    List<TopicModel> list = res.isNotEmpty
+        ? res.map<TopicModel>((c) => TopicModel.fromJson(c)).toList()
+        : <TopicModel>[];
+    print('despues del query');
+    list.forEach((element) {
+      print(element.name_topic);
+    });
+    /*var decoded = TopicModel.fromJson(res.first);
+    print(decoded.description_topic);
+    print(decoded.name_topic);*/
     return list;
   }
 }

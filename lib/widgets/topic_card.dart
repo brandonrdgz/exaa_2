@@ -37,19 +37,19 @@ class TopicCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Text(
-              moduleName,
-              style: TextStyle(color: Colors.white, fontSize: 12),
-            ),
-            SizedBox(
-              height: 2,
-            ),
-            Text(
               topicName,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
-            )
+            ),
+            SizedBox(
+              height: 2,
+            ),
+            Text(
+              descriptionTopic,
+              style: TextStyle(color: Colors.white, fontSize: 12),
+            ),
           ],
         ),
       ),
