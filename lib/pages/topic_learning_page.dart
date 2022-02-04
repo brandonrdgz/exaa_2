@@ -15,6 +15,7 @@ class TopicLearningPage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
     //List<TopicModel> topics = _arguments['topics'];
+    int _size = 0;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -70,11 +71,15 @@ class TopicLearningPage extends StatelessWidget {
                 return ListView.builder(
                     itemCount: snapshot.data?.length,
                     itemBuilder: (BuildContext context, int i) {
+                      (snapshot.data![i].name_topic ==
+                              'EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS')
+                          ? _size = 15
+                          : _size = 18;
                       return TopicCard(
-                        snapshot.data![i].name_module,
-                        snapshot.data![i].name_topic,
-                        snapshot.data![i].description_topic,
-                      );
+                          snapshot.data![i].name_module,
+                          snapshot.data![i].name_topic,
+                          snapshot.data![i].description_topic,
+                          _size);
                     });
               } else {
                 return Container(

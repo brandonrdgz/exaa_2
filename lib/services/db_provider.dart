@@ -23,7 +23,7 @@ class DBProvider with ChangeNotifier {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAIIv19.db');
+    final path = join(documentsDirectory.path, 'EXAAIIv22.db');
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
       for (int j = 0; j < SqlData.createTables.length; j++) {
@@ -73,6 +73,15 @@ class DBProvider with ChangeNotifier {
       await db?.rawInsert(SqlData.insertRecordsTopic[i]);
     }
     print('insert successful topics');
+  }
+
+  Future insertRecordsSubtopic() async {
+    final db = await database;
+
+    for (int i = 0; i < SqlData.insertRecordsSubtopic.length; i++) {
+      await db?.rawInsert(SqlData.insertRecordsSubtopic[i]);
+    }
+    print('insert successful subtopics');
   }
 
   Future<List<ModuleModel>> getModules() async {

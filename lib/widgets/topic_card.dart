@@ -6,7 +6,9 @@ class TopicCard extends StatelessWidget {
   final String moduleName;
   final String topicName;
   final String descriptionTopic;
-  const TopicCard(this.moduleName, this.topicName, this.descriptionTopic,
+  final int sizeTitle;
+  const TopicCard(
+      this.moduleName, this.topicName, this.descriptionTopic, this.sizeTitle,
       {Key? key})
       : super(key: key);
 
@@ -18,8 +20,11 @@ class TopicCard extends StatelessWidget {
     double _fontSize;
     return GestureDetector(
       onTap: () async {
-        (topicName == 'Signos de puntuación' ||
-                topicName == 'Verbos')
+        (topicName == 'PUNTUACIÓN' ||
+                topicName ==
+                    'EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS' ||
+                topicName ==
+                    'EL ESTABLECIMIENTO DE RELACIONES ENTRE PALABRAS Y FRASES SINÓNIMAS Y ANTÓNIMAS')
             ? _fontSize = 20
             : _fontSize = 30;
         List<SubtopicModel> res =
@@ -50,7 +55,7 @@ class TopicCard extends StatelessWidget {
                     blurRadius: 20,
                     spreadRadius: 4)
               ]),
-          padding: const EdgeInsets.only(left: 32, top: 50, bottom: 50),
+          padding: const EdgeInsets.only(left: 32, top: 50, bottom: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -58,7 +63,7 @@ class TopicCard extends StatelessWidget {
                 topicName,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: sizeTitle.toDouble(),
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(

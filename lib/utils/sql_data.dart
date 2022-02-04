@@ -53,55 +53,63 @@ class SqlData {
   ];
 
   static List<String> insertRecordsModule = [
-    """INSERT INTO MODULE (name_module, description_module, pathImage)
-    VALUES ('Estructura de la lengua', 'Descripción', 'assets/design/gramatic_structure.jpg');""",
-    """INSERT INTO MODULE (name_module, description_module, pathImage)
-    VALUES ('Pensamiento Matemático', 'Descripción', 'assets/design/math1.png');"""
+    """INSERT INTO MODULE  VALUES ('PENSAMIENTO MATEMÁTICO','CAPACIDAD PARA MANEJAR DIESTRAMENTE LAS OPERACIONES CON NÚMEROS','assets/design/math1.png');""",
+    """INSERT INTO MODULE  VALUES ('CÁLCULO','FORMA AVANZADA DEL ÁLGEBRA', 'assets/design/calculus.jpg');""",
+    """INSERT INTO MODULE  VALUES ('FÍSICA','CIENCIA NATURAL QUE ESTUDIA LOS COMPONENTES FUNDAMENTALES DEL UNIVERSO', 'assets/design/physics.png');""",
+    """INSERT INTO MODULE  VALUES ('ESTRUCTURA DE LA LENGUA','ESTUDIO DE LA LENGUA EN FORMA ORAL Y ESCRITA','assets/design/gramatic_structure.jpg');""",
+    """INSERT INTO MODULE  VALUES ('COMPRENSIÓN LECTORA','CAPACIDAD DE ENTENDER LO QUE SE LEE','assets/design/lecture.jpg');"""
   ];
 
   //REGISTROS PARA PROBAR LOS TOPICOS
   static List<String> insertRecordsTopic = [
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Signos de puntuación', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Verbos', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Sustantivos', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Adjetivos', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Adverbios', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Preposiciones', 'Descripción', 'Estructura de la lengua');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Álgebra', 'Descripción', 'Pensamiento Matemático');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Binomio al cuadrado', 'Descripción', 'Pensamiento Matemático');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Binomios al cubo', 'Descripción', 'Pensamiento Matemático');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Ecuaciones', 'Descripción', 'Pensamiento Matemático');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Sistemas de ecuaciones', 'Descripción', 'Pensamiento Matemático');""",
-    """INSERT INTO TOPIC (name_topic, description_topic, name_module)
-    VALUES ('Representaciones gráficas', 'Descripción', 'Pensamiento Matemático');""",
+    """INSERT INTO TOPIC VALUES ('OPERACIONES BÁSICAS','LAS OPERACIONES BÁSICAS SE VERIFICAN A TRAVÉS DE SU OPERACIÓN INVERSA','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('JERARQUÍA DE OPERACIONES','RESOLVER LAS OPERACIONES MEDIANTE SU ORDEN JERÁRQUICO','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('PROPIEDADES DE LOS NÚMEROS REALES','LOS NÚMEROS REALES SON TODOS AQUELLOS QUE SE PUEDEN REPRESENTAR DENTRO DE UNA RECTA NÚMERICA','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('REGLAS DE LOS SIGNOS','SON REGLAS QUE PROPORCIONAN EL SIGNO DEL RESULTADO DE LA MULTIPLICACIÓN O DIVISIÓN DE DOS NÚMEROS','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('CÁLCULO DE PORCENTAJES','EL PORCENTAJE ES UN SÍMBOLO MATEMÁTICO, QUE REPRESENTA UNA PROPORCIÓN O FRACCIÓN','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('REGLA DE TRES','ES UNA RELACIÓN QUE SE ESTABLECE ENTRE TRES VALORES CONOCIDOS Y UNA INCÓGNITA','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('POTENCIA Y RAÍZ','POTENCIA SIGNIFICA MULTIPLICAR VARIAS VECES POR SÍ MISMO. LA RAÍZ CUADRADA ES LO CONTRARIO DE ELEVAR AL CUADRADO','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('PROPIEDADES DE LOS NÚMEROS','HAY CUATRO PROPIEDADES BÁSICAS DE LOS NÚMEROS: CONMUTATIVA, ASOCIATIVA, DISTRIBUTIVA Y DE IDENTIDAD','PENSAMIENTO MATEMÁTICO');""",
+    """INSERT INTO TOPIC VALUES ('ESPACIO VECTORIAL','UN ESPACIO VECTORIAL ES UN CONCEPTO ABSTRACTO PARA PROBAR TEOREMAS','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('LITERALES Y EXPONENTES','UNA LITERAL ES UNA RERESENTACIÓN GENERAL DE CIERTA MAGNITUD','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('PRODUCTOS NOTABLES Y FACTORIZACIÓN','UN PRODUCTO NOTABLE ES UN PRODUCTO QUE CUMPLE CON REGLAS FIJAS, CADA PRODUCTO NOTABLE CORRESPONDE A UNA FÓRMULA DE FACTORIZACIÓN','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('ECUACIONES DE PRIMER Y SEGUNDO GRADO','LAS ECUACIONES SON IGUALDADES EN LAS QUE APARECEN NÚMEROS Y LETRAS RELACIONADOS MEDIANTE OPERACIONES MATEMÁTICAS','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('PROPORCIONES Y DESIGUALDADES','CUANDO SE TIENE UNA IGUALDAD ENTRE DOS RAZONES, ESTAMOS FRENTE A UNA PROPORCIÓN','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('DESIGUALDADES','UNA DESIGUALDAD ES UNA RELACIÓN DE ORDEN QUE SE DA ENTRE DOS VALORES CUANDO ESTOS SON DISTINTOS','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('FUNCIÓN Y LÍMITE','EL LÍMITE DE UNA FUNCIÓN ES UN CONCEPTO FUNDAMENTAL DEL ANÁLISIS APLICADO A LAS FUNCIONES','CÁLCULO');""",
+    """INSERT INTO TOPIC VALUES ('ENERGÍA','CAPACIDAD DE LOS CUERPOS PARA REALIZAR UN TRABAJO','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('MECÁNICA','ESTUDIO Y ANÁLISIS DEL MOVIMIENTO Y REPOSO DE LOS CUERPOS','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('ELECTROMAGNETISMO','ESTUDIO DE FENÓMENOS ELÉCTRICOS Y MAGNÉTICOS EN UNA SOLA TEORÍA','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('ACÚSTICA','ESTUDIO DE ONDAS MECÁNICAS QUE SE PROPAGAN A TRAVÉS DE LA MATERIA','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('ÓPTICA','ESTUDIO DE FENÓMENOS DE LUZ, COMO ONDA Y PARTÍCULA','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('TERMODINÁMICA','ESTUDIO DE LA INTERACCIÓN ENTRE EL CALOR Y OTRAS MANIFESTACIONES DE LA ENERGÍA','FÍSICA');""",
+    """INSERT INTO TOPIC VALUES ('ORTOGRAFÍA GENERAL','ES EL CONJUNTO DE REGLAS Y CONVENCIONES QUE RIGEN EL SISTEMA DE ESCRITURA PARA UNA LENGUA ESTÁNDAR','ESTRUCTURA DE LA LENGUA');""",
+    """INSERT INTO TOPIC VALUES ('PUNTUACIÓN','ES EL USO DE MARCAS Y SIGNOS ESTÁNDAR EN LA ESCRITURA PARA SEPARAR PALABRAS EN FRASES Y ACLARAR ASÍ SU SIGNIFICADO','ESTRUCTURA DE LA LENGUA');""",
+    """INSERT INTO TOPIC VALUES ('GRAMÁTICA Y VOCABULARIO','ESTUDIO DE LAS REGLAS Y PRINCIPIOS QUE GOBERNAN EL USO DE LAS LENGUAS, ASÍ COMO SU ORGANIZACIÓN Y OTROS CONSTITUYENTES SINTÁCTICOS','ESTRUCTURA DE LA LENGUA');""",
+    """INSERT INTO TOPIC VALUES ('CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE UNA ORACIÓN','SE REFIERE A LA ORGANIZACIÓN CORRECTA DE UNA ORACIÓN','ESTRUCTURA DE LA LENGUA');""",
+    """INSERT INTO TOPIC VALUES ('AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA','LA LITERATURA CLÁSICA SE CONSIDERA AQUELLA ESCRITA EN GRIEGO ANTIGUO O EN LATÍN','ESTRUCTURA DE LA LENGUA');""",
+    """INSERT INTO TOPIC VALUES ('LA COMPRENSIÓN LECTORA','ES LA CAPACIDAD DE ENTENDER LO QUE SE LEE','COMPRENSIÓN LECTORA');""",
+    """INSERT INTO TOPIC VALUES ('EL ESTABLECIMIENTO DE RELACIONES ENTRE PALABRAS Y FRASES SINÓNIMAS Y ANTÓNIMAS','SON RELACIONES QUE SE ENTABLAN DESDE EL CONTENIDO O EL SIGNIFICADO DE LA PALABRA','COMPRENSIÓN LECTORA');""",
+    """INSERT INTO TOPIC VALUES ('EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS','EL RAZONAMIENTO LÓGICO ES UN PROCESO DE LÓGICA QUE PARTIENDO DE UNO O MÁS JUICIOS, SE DERIVA LA VALIDEZ O FALSEDAD DE OTRO JUICIO DISTINTO','COMPRENSIÓN LECTORA');""",
+    """INSERT INTO TOPIC VALUES ('LA ELABORACIÓN DE INTERFERENCIAS LÓGICAS Y SILOGÍSTICAS','LA INTERFERENICA ES EL PROCESO POR EL CUAL SE DERIVAN CONCLUSIONES A PARTIR DE PREMISAS','COMPRENSIÓN LECTORA');""",
+    """INSERT INTO TOPIC VALUES ('EL ESTABLECIMIENTO DE RELACIONES','SON AQUELLAS QUE SE ESTABLECEN ENTRE LOS SIGNIFICADOS LÉXICAS DE LAS PALABRAS','COMPRENSIÓN LECTORA');"""
   ];
 
   //REGISTROS PARA PROBAR LOS SUBTOPICOS
   static List<String> insertRecordsSubtopic = [
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Coma', "<div> <h1>This is a title</h1> <p>This is a <strong>paragraph</strong>.</p> <p>I like <i>dogs</i></p> <p>Red text</p> <ul> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul> <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' /> </div>", 'Signos de puntuación');""",
+    VALUES ('Coma', "<div> <h1>This is a title</h1> <p>This is a <strong>paragraph</strong>.</p> <p>I like <i>dogs</i></p> <p>Red text</p> <ul> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul> <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' /> </div>", 'PUNTUACIÓN');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Punto', 'Contenido', 'Signos de puntuación');""",
+    VALUES ('Punto', 'Contenido', 'PUNTUACIÓN');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Punto y coma', 'Contenido', 'Signos de puntuación');""",
+    VALUES ('Punto y coma', 'Contenido', 'PUNTUACIÓN');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Pretérito', 'Contenido', 'Verbos');""",
+    VALUES ('Pretérito', 'Contenido', 'GRAMÁTICA Y VOCABULARIO');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Pasado', 'Contenido', 'Verbos');""",
+    VALUES ('Pasado', 'Contenido', 'GRAMÁTICA Y VOCABULARIO');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Irregulares', 'Contenido', 'Verbos');""",
+    VALUES ('Irregulares', 'Contenido', 'GRAMÁTICA Y VOCABULARIO');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Regulares', 'Contenido', 'Verbos');""",
+    VALUES ('Regulares', 'Contenido', 'GRAMÁTICA Y VOCABULARIO');""",
   ];
 }

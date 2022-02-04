@@ -53,12 +53,13 @@ class ModuleCard extends StatelessWidget {
             }
             break;
         }*/
-        (moduleTitle == 'Pensamiento Matemático' ||
-                moduleTitle == 'Estructura de la lengua')
+        (moduleTitle == 'PENSAMIENTO MATEMÁTICO' ||
+                moduleTitle == 'ESTRUCTURA DE LA LENGUA' ||
+                moduleTitle == 'COMPRENSIÓN LECTORA')
             ? _fontSize = 20
             : _fontSize = 30;
-        List<TopicModel> res =
-            await DBProvider.db.getTopicByModule(moduleTitle);
+        //List<TopicModel> res =
+        //  await DBProvider.db.getTopicByModule(moduleTitle);
         //print(res);
         Navigator.pushNamed(context, 'topicLearning',
             arguments: <String, dynamic>{
