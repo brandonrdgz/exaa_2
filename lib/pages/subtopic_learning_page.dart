@@ -69,8 +69,8 @@ class SubtopicLearningPage extends StatelessWidget {
                     itemCount: snapshot.data?.length,
                     itemBuilder: (BuildContext context, int i) {
                       return SubtopicCard(
-                        snapshot.data![i].name_topic,
                         snapshot.data![i].name_subtopic,
+                        snapshot.data![i].name_topic,
                       );
                     });
               } else {

@@ -98,7 +98,7 @@ class SqlData {
   //REGISTROS PARA PROBAR LOS SUBTOPICOS
   static List<String> insertRecordsSubtopic = [
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
-    VALUES ('Coma', "<div> <h1>This is a title</h1> <p>This is a <strong>paragraph</strong>.</p> <p>I like <i>dogs</i></p> <p>Red text</p> <ul> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul> <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' /> </div>", 'PUNTUACIÓN');""",
+    VALUES ('COMA', "<div> <h1>This is a title</h1> <p>This is a <strong>paragraph</strong>.</p> <p>I like <i>dogs</i></p> <p>Red text</p> <ul> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul> <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' /> </div>", 'PUNTUACIÓN');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
     VALUES ('Punto', 'Contenido', 'PUNTUACIÓN');""",
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)

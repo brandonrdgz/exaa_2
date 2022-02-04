@@ -38,6 +38,7 @@ class _DummyPageState extends State<DummyPage> {
               onPressed: () async {
                 await DBProvider.db.insertRecordsModule();
                 await DBProvider.db.insertRecordsTopic();
+                await DBProvider.db.insertRecordsSubtopic();
                 _centerText = 'Nuevo registro';
               },
             )

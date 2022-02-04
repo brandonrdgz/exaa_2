@@ -32,7 +32,7 @@ class TopicCard extends StatelessWidget {
         //print(res);
         Navigator.pushNamed(context, 'subtopicLearning',
             arguments: <String, dynamic>{
-              'name_module': topicName,
+              'name_topic': topicName,
               'font_size': _fontSize
             });
       },
