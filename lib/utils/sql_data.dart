@@ -86,4 +86,22 @@ class SqlData {
     """INSERT INTO TOPIC (name_topic, description_topic, name_module)
     VALUES ('Representaciones gráficas', 'Descripción', 'Pensamiento Matemático');""",
   ];
+
+  //REGISTROS PARA PROBAR LOS SUBTOPICOS
+  static List<String> insertRecordsSubtopic = [
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Coma', "<div> <h1>This is a title</h1> <p>This is a <strong>paragraph</strong>.</p> <p>I like <i>dogs</i></p> <p>Red text</p> <ul> <li>List item 1</li> <li>List item 2</li> <li>List item 3</li> </ul> <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' /> </div>", 'Signos de puntuación');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Punto', 'Contenido', 'Signos de puntuación');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Punto y coma', 'Contenido', 'Signos de puntuación');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Pretérito', 'Contenido', 'Verbos');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Pasado', 'Contenido', 'Verbos');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Irregulares', 'Contenido', 'Verbos');""",
+    """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
+    VALUES ('Regulares', 'Contenido', 'Verbos');""",
+  ];
 }

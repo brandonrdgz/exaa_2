@@ -1,6 +1,7 @@
 import 'package:exaa_2/models/dummy_model.dart';
 import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/models/subtopic_model.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
@@ -115,6 +116,28 @@ class DBProvider with ChangeNotifier {
     print('despues del query');
     list.forEach((element) {
       print(element.name_topic);
+    });
+    /*var decoded = TopicModel.fromJson(res.first);
+    print(decoded.description_topic);
+    print(decoded.name_topic);*/
+    return list;
+  }
+
+  //FUNCIÓN PARA OBTENER LOS SUBTÓPICOS DE UN TÓPICO
+  Future<List<SubtopicModel>> getSubtopicByTopic(String name_topic) async {
+    final db = await database;
+    var res;
+    /*res = await db
+        ?.rawQuery("select * from TOPIC where name_module = '$name_module';");*/
+    //res = await db?.query('TOPIC', where: "name_module = ?", whereArgs: [name_module]);
+    res = await db
+        ?.rawQuery('SELECT * FROM SUBTOPIC WHERE name_topic=?', [name_topic]);
+    List<SubtopicModel> list = res.isNotEmpty
+        ? res.map<SubtopicModel>((c) => SubtopicModel.fromJson(c)).toList()
+        : <SubtopicModel>[];
+    print('despues del query de subtopic');
+    list.forEach((element) {
+      print(element.name_subtopic);
     });
     /*var decoded = TopicModel.fromJson(res.first);
     print(decoded.description_topic);
