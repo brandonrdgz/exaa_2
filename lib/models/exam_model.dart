@@ -1,19 +1,11 @@
 class ExamModel {
-  ExamModel({
-    required this.idExam,
-    required this.typeExam
-  });
+  ExamModel({required this.id_exam, required this.type_exam});
 
-  num idExam;
-  String typeExam;
+  num id_exam;
+  String type_exam;
 
-  factory ExamModel.fromJson(Map<String, dynamic> json) => ExamModel(
-        idExam: json["idExam"],
-        typeExam: json["typeExam"]
-      );
+  factory ExamModel.fromJson(Map<String, dynamic> json) =>
+      ExamModel(id_exam: json["id_exam"], type_exam: json["type_exam"]);
 
-  Map<String, dynamic> toJson() => {
-        "idExam": idExam,
-        "typeExam": typeExam
-      };
+  Map<String, dynamic> toJson() => {"id_exam": id_exam, "type_exam": type_exam};
 }

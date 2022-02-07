@@ -1,4 +1,5 @@
 import 'package:exaa_2/pages/about_page.dart';
+import 'package:exaa_2/pages/apply_exam_page.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
@@ -25,7 +26,7 @@ class InitialPage extends StatelessWidget {
             text: 'Aplicar un examen',
             textSize: 40,
             onPressed: () {
-              //TODO: Show page 'Aplicar un examen'
+              Navigator.pushNamed(context, ApplyExamPage.id);
             },
           ),
           RoundedIconTextButton(

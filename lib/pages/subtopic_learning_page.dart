@@ -1,12 +1,10 @@
-// ignore_for_file: prefer_const_declarations
-
-import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/models/subtopic_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
-import 'package:exaa_2/widgets/topic_card.dart';
+import 'package:exaa_2/widgets/subtopic_card.dart';
 import 'package:flutter/material.dart';
 
-class TopicLearningPage extends StatelessWidget {
-  const TopicLearningPage({Key? key}) : super(key: key);
+class SubtopicLearningPage extends StatelessWidget {
+  const SubtopicLearningPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,6 @@ class TopicLearningPage extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
     //List<TopicModel> topics = _arguments['topics'];
-    int _size = 0;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -51,7 +48,7 @@ class TopicLearningPage extends StatelessWidget {
                   top: 110,
                   left: 20,
                   child: Text(
-                    _arguments['name_module'],
+                    _arguments['name_topic'],
                     style: TextStyle(
                         fontSize: _arguments['font_size'], color: color),
                   ),
@@ -64,22 +61,17 @@ class TopicLearningPage extends StatelessWidget {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getTopicByModule(_arguments['name_module']),
+            future: DBProvider.db.getSubtopicByTopic(_arguments['name_topic']),
             builder: (BuildContext context,
-                AsyncSnapshot<List<TopicModel>> snapshot) {
+                AsyncSnapshot<List<SubtopicModel>> snapshot) {
               if (snapshot.hasData) {
                 return ListView.builder(
                     itemCount: snapshot.data?.length,
                     itemBuilder: (BuildContext context, int i) {
-                      (snapshot.data![i].name_topic ==
-                              'EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS')
-                          ? _size = 15
-                          : _size = 18;
-                      return TopicCard(
-                          snapshot.data![i].name_module,
+                      return SubtopicCard(
+                          snapshot.data![i].name_subtopic,
                           snapshot.data![i].name_topic,
-                          snapshot.data![i].description_topic,
-                          _size);
+                          snapshot.data![i].content_subtopic);
                     });
               } else {
                 return Container(

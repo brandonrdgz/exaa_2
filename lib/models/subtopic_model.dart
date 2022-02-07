@@ -1,23 +1,23 @@
 class SubtopicModel {
   SubtopicModel({
-    required this.nameSubtopic,
-    required this.contentSubtopic,
-    required this.nameTopic,
+    required this.name_subtopic,
+    required this.content_subtopic,
+    required this.name_topic,
   });
 
-  String nameSubtopic;
-  String contentSubtopic;
-  String nameTopic;
+  String name_subtopic;
+  String content_subtopic;
+  String name_topic;
 
   factory SubtopicModel.fromJson(Map<String, dynamic> json) => SubtopicModel(
-        nameSubtopic: json["nameSubtopic"],
-        contentSubtopic: json["contentSubtopic"],
-        nameTopic: json["nameTopic"],
+        name_subtopic: json["name_subtopic"],
+        content_subtopic: json["content_subtopic"],
+        name_topic: json["name_topic"],
       );
 
   Map<String, dynamic> toJson() => {
-        "nameSubtopic": nameSubtopic,
-        "contentSubtopic": contentSubtopic,
-        "nameTopic": nameTopic
+        "name_subtopic": name_subtopic,
+        "content_subtopic": content_subtopic,
+        "name_topic": name_topic
       };
 }

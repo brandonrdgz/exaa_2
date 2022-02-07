@@ -19,7 +19,8 @@ CREATE TABLE HISTORY(
 
 CREATE TABLE MODULE(
     name_module TEXT PRIMARY KEY,
-    description_module TEXT
+    description_module TEXT,
+    pathImage TEXT
 );
 
 CREATE TABLE TOPIC(

@@ -1,6 +1,7 @@
 //trash
 
 import 'package:exaa_2/models/dummy_model.dart';
+import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class DummyPage extends StatefulWidget {
 
 class _DummyPageState extends State<DummyPage> {
   DummyModel dummy = DummyModel(id: 2, name: 'Alex');
-  String? _centerText = 'Something';
+  String? _centerText = 'Mostrar data';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,25 +26,24 @@ class _DummyPageState extends State<DummyPage> {
               height: 200,
             ),
             Text(_centerText.toString()),
-            IconButton(
+            RaisedButton(
+                child: Text('Obtener información'),
                 onPressed: () async {
-                  List<DummyModel> res = await DBProvider.db.getDummies();
-                  _centerText = res[1].name;
+                  List<ModuleModel> res = await DBProvider.db.getModules();
+                  _centerText = res[0].name_module;
                   setState(() {});
-                  //print(res[]);
-                },
-                icon: Icon(Icons.ac_unit))
+                }),
+            RaisedButton(
+              child: Text('Insertar datos a la bd'),
+              onPressed: () async {
+                await DBProvider.db.insertRecordsModule();
+                await DBProvider.db.insertRecordsTopic();
+                await DBProvider.db.insertRecordsSubtopic();
+                _centerText = 'Nuevo registro';
+              },
+            )
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Text('X'),
-        onPressed: () async {
-          final result = await DBProvider.db.insertDummy(dummy);
-          _centerText = 'Nuevo registro';
-          print(result);
-          setState(() {});
-        },
       ),
     );
   }
