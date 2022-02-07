@@ -1,3 +1,4 @@
+import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
 import 'package:exaa_2/pages/dummy_pages.dart';
 import 'package:exaa_2/pages/exam_page.dart';
@@ -21,6 +22,7 @@ class Routes {
     InitialPage.id: (BuildContext context) => InitialPage(),
     'register': (BuildContext context) => RegisterPage(),
     'dummy': (BuildContext context) => DummyPage(),
+    AboutPage.id: (BuildContext context) => AboutPage(),
     ApplyExamPage.id: (BuildContext context) => ApplyExamPage(),
     ExamPage.id: (BuildContext context) => ExamPage(),
   };
