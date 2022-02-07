@@ -3,85 +3,87 @@ import 'package:exaa_2/models/topic_model.dart';
 class ListOfTopics {
   static List<TopicModel> topicsMath = [
     TopicModel(
-        topicName: 'Álgebra',
-        topicDescription: ' ',
-        moduleName: 'Pensamiento Matemático'),
+        name_topic: 'Álgebra',
+        description_topic: ' ',
+        name_module: 'Pensamiento Matemático'),
     TopicModel(
-        topicName: 'Geometría',
-        topicDescription: ' ',
-        moduleName: 'Pensamiento Matemático'),
+        name_topic: 'Geometría',
+        description_topic: ' ',
+        name_module: 'Pensamiento Matemático'),
     TopicModel(
-        topicName: 'Ecuaciones lineales',
-        topicDescription: ' ',
-        moduleName: 'Pensamiento Matemático')
+        name_topic: 'Ecuaciones lineales',
+        description_topic: ' ',
+        name_module: 'Pensamiento Matemático')
   ];
 
   static List<TopicModel> topicsCalculus = [
     TopicModel(
-        topicName: 'Límite funcional',
-        topicDescription: ' ',
-        moduleName: 'Cálculo'),
+        name_topic: 'Límite funcional',
+        description_topic: ' ',
+        name_module: 'Cálculo'),
     TopicModel(
-        topicName: 'Límites', topicDescription: ' ', moduleName: 'Cálculo'),
+        name_topic: 'Límites', description_topic: ' ', name_module: 'Cálculo'),
     TopicModel(
-        topicName: 'Funciones trigonométricas',
-        topicDescription: ' ',
-        moduleName: 'Cálculo'),
+        name_topic: 'Funciones trigonométricas',
+        description_topic: ' ',
+        name_module: 'Cálculo'),
     TopicModel(
-        topicName: 'Derivación', topicDescription: ' ', moduleName: 'Cálculo'),
+        name_topic: 'Derivación',
+        description_topic: ' ',
+        name_module: 'Cálculo'),
   ];
   static List<TopicModel> topicsPhysics = [
     TopicModel(
-        topicName: 'Desplazamiento',
-        topicDescription: ' ',
-        moduleName: 'Física'),
+        name_topic: 'Desplazamiento',
+        description_topic: ' ',
+        name_module: 'Física'),
     TopicModel(
-        topicName: 'Rotación', topicDescription: ' ', moduleName: 'Física'),
+        name_topic: 'Rotación', description_topic: ' ', name_module: 'Física'),
     TopicModel(
-        topicName: 'Primera ley de Newton',
-        topicDescription: ' ',
-        moduleName: 'Física'),
+        name_topic: 'Primera ley de Newton',
+        description_topic: ' ',
+        name_module: 'Física'),
     TopicModel(
-        topicName: 'Momento ', topicDescription: ' ', moduleName: 'Física'),
+        name_topic: 'Momento ', description_topic: ' ', name_module: 'Física'),
   ];
   static List<TopicModel> topicsGramaticalStructure = [
     TopicModel(
-        topicName: 'Categorías gramaticales',
-        topicDescription: ' ',
-        moduleName: 'Estructura de la lengua'),
+        name_topic: 'Categorías gramaticales',
+        description_topic: ' ',
+        name_module: 'Estructura de la lengua'),
     TopicModel(
-        topicName: 'Reglas ortográficas',
-        topicDescription: ' ',
-        moduleName: 'Estructura de la lengua'),
+        name_topic: 'Reglas ortográficas',
+        description_topic: ' ',
+        name_module: 'Estructura de la lengua'),
     TopicModel(
-        topicName: 'Relaciones semánticas',
-        topicDescription: ' ',
-        moduleName: 'Estructura de la lengua'),
+        name_topic: 'Relaciones semánticas',
+        description_topic: ' ',
+        name_module: 'Estructura de la lengua'),
     TopicModel(
-        topicName: 'Lógica textual',
-        topicDescription: ' ',
-        moduleName: 'Estructura de la lengua'),
+        name_topic: 'Lógica textual',
+        description_topic: ' ',
+        name_module: 'Estructura de la lengua'),
   ];
   static List<TopicModel> topicsLecture = [
     TopicModel(
-        topicName: 'Observación',
-        topicDescription: ' ',
-        moduleName: 'Comprensión lectora'),
+        name_topic: 'Observación',
+        description_topic: ' ',
+        name_module: 'Comprensión lectora'),
     TopicModel(
-        topicName: 'Monitorización',
-        topicDescription: ' ',
-        moduleName: 'Comprensión lectora'),
+        name_topic: 'Monitorización',
+        description_topic: ' ',
+        name_module: 'Comprensión lectora'),
     TopicModel(
-        topicName: 'Inferencia',
-        topicDescription: ' ',
-        moduleName: 'Comprensión lectora'),
+        name_topic: 'Inferencia',
+        description_topic: ' ',
+        name_module: 'Comprensión lectora'),
     TopicModel(
-        topicName: 'Paráfrasis',
-        topicDescription: ' ',
-        moduleName: 'Comprensión lectora'),
+        name_topic: 'Paráfrasis',
+        description_topic: ' ',
+        name_module: 'Comprensión lectora'),
     TopicModel(
-        topicName: 'Análisis',
-        topicDescription: ' ',
-        moduleName: 'Comprensión lectora'),
+        name_topic: 'Análisis',
+        description_topic: ' ',
+        name_module: 'Comprensión lectora'),
   ];
 }

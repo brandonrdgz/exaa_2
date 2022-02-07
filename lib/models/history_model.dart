@@ -1,27 +1,25 @@
 class HistoryModel {
-  HistoryModel({
-    required this.email,
-    required this.idExam,
-    required this.dateRealization,
-    required this.result
-  });
+  HistoryModel(
+      {required this.email,
+      required this.id_exam,
+      required this.date_realization,
+      required this.result});
 
   String email;
-  num idExam;
-  String dateRealization;
+  num id_exam;
+  String date_realization;
   num result;
 
   factory HistoryModel.fromJson(Map<String, dynamic> json) => HistoryModel(
-        email: json["email"],
-        idExam: json["idExam"],
-        dateRealization: json["dateRealization"],
-        result: json["result"]
-      );
+      email: json["email"],
+      id_exam: json["id_exam"],
+      date_realization: json["date_realization"],
+      result: json["result"]);
 
   Map<String, dynamic> toJson() => {
         "email": email,
-        "idExam": idExam,
-        "dateRealization": dateRealization,
+        "id_exam": id_exam,
+        "date_realization": date_realization,
         "result": result
       };
 }

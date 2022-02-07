@@ -1,19 +1,21 @@
 class ModuleModel {
-  ModuleModel({
-    required this.nameModule,
-    required this.descriptionModule
-  });
+  ModuleModel(
+      {required this.name_module,
+      required this.description_module,
+      required this.pathImage});
 
-  String nameModule;
-  String descriptionModule;
+  String name_module;
+  String description_module;
+  String pathImage;
 
   factory ModuleModel.fromJson(Map<String, dynamic> json) => ModuleModel(
-        nameModule: json["nameModule"],
-        descriptionModule: json["descriptionModule"]
-      );
+      name_module: json["name_module"],
+      description_module: json["description_module"],
+      pathImage: json["pathImage"]);
 
   Map<String, dynamic> toJson() => {
-        "nameModule": nameModule,
-        "descriptionModule": descriptionModule
+        "name_module": name_module,
+        "description_module": description_module,
+        "pathImage": pathImage
       };
 }

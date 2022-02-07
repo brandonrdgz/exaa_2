@@ -1,4 +1,5 @@
 import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/utils/list_of_topics.dart';
 import 'package:flutter/material.dart';
 
@@ -15,12 +16,12 @@ class ModuleCard extends StatelessWidget {
     Color color = Theme.of(context).primaryColor;
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
-    String _moduleToStudy = '';
+    //String _moduleToStudy = '';
     double _fontSize;
-    List<TopicModel> _topics = [];
+    //List<TopicModel> _topics = [];
     return GestureDetector(
-      onTap: () {
-        switch (moduleTitle) {
+      onTap: () async {
+        /*switch (moduleTitle) {
           case 'Pensamiento Matemático':
             {
               _topics = ListOfTopics.topicsMath;
@@ -51,16 +52,19 @@ class ModuleCard extends StatelessWidget {
               _moduleToStudy = 'lecture';
             }
             break;
-        }
-        (_moduleToStudy == 'Math' || _moduleToStudy == 'gramatic_structure')
+        }*/
+        (moduleTitle == 'PENSAMIENTO MATEMÁTICO' ||
+                moduleTitle == 'ESTRUCTURA DE LA LENGUA' ||
+                moduleTitle == 'COMPRENSIÓN LECTORA')
             ? _fontSize = 20
             : _fontSize = 30;
+        //List<TopicModel> res =
+        //  await DBProvider.db.getTopicByModule(moduleTitle);
+        //print(res);
         Navigator.pushNamed(context, 'topicLearning',
             arguments: <String, dynamic>{
-              'module': _moduleToStudy,
-              'moduleName': moduleTitle,
-              'fontSize': _fontSize,
-              'topics': _topics
+              'name_module': moduleTitle,
+              'font_size': _fontSize
             });
       },
       child: Container(
