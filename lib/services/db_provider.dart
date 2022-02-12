@@ -23,7 +23,7 @@ class DBProvider with ChangeNotifier {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAIIv23.db');
+    final path = join(documentsDirectory.path, 'EXAAIIv34.db');
     return await openDatabase(path, version: 1, onOpen: (db) {},
         onCreate: (Database db, int version) async {
       for (int j = 0; j < SqlData.createTables.length; j++) {

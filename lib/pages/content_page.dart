@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 
@@ -19,7 +21,19 @@ class ContentPage extends StatelessWidget {
               data: _htmlContent,
               style: {
                 'h1': Style(color: Colors.red, textAlign: TextAlign.center),
-                'p': Style(color: Colors.black87, fontSize: FontSize.medium),
+                'h3': Style(textShadow: [
+                  Shadow(
+                    offset: Offset(20.0, 15.0),
+                    blurRadius: 10.0,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ]),
+                'p': Style(
+                  color: Colors.black87,
+                  fontSize: FontSize.medium,
+                  textAlign: TextAlign.justify,
+                  padding: EdgeInsets.only(right: 10, left: 10),
+                ),
                 'ul': Style(margin: EdgeInsets.symmetric(vertical: 20))
               },
             ),
