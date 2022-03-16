@@ -15,16 +15,26 @@ class DBProvider with ChangeNotifier {
   DBProvider._();
   Future<Database?> get database async {
     if (_database != null) {
+      print("Dentro del if");
+      await db.insertRecordsModule();
+      await db.insertRecordsTopic();
+      await db.insertRecordsSubtopic();
       return _database;
     }
-    _database = await initDB();
-    return _database;
+    if (_database == null) {
+      _database = await initDB();
+
+      print("Dentro del else");
+      return _database;
+    }
   }
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAIIv23.db');
-    return await openDatabase(path, version: 1, onOpen: (db) {},
+    final path = join(documentsDirectory.path, 'EXAAIIv4.db');
+    print(path.toString());
+
+    return await openDatabase(path, version: 2, onOpen: (db) {},
         onCreate: (Database db, int version) async {
       for (int j = 0; j < SqlData.createTables.length; j++) {
         await db.execute(SqlData.createTables[j]);
