@@ -1,3 +1,4 @@
+import 'package:exaa_2/pages/initial_page.dart';
 import 'package:flutter/material.dart';
 
 class Alerts {
@@ -5,13 +6,16 @@ class Alerts {
     // set up the button
     Widget okButton = FlatButton(
       child: Text("OK"),
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pushNamed(context, InitialPage.id);
+      },
     );
 
     // set up the AlertDialog
     AlertDialog alert = AlertDialog(
-      title: Text("My title"),
-      content: Text("This is my message."),
+      title: Text("Alerta"),
+      content: Text(
+          "¡La carga de datos ha sido exitosa!\nSe requiere volver a la pantalla inicial para reflejar los cambios."),
       actions: [
         okButton,
       ],
