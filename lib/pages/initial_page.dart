@@ -1,6 +1,8 @@
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
+import 'package:exaa_2/utils/sql_data.dart';
+import 'package:exaa_2/widgets/alerts.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
 import 'package:exaa_2/utils/error.dart';
@@ -9,7 +11,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InitialPage extends StatelessWidget {
   static const String id = 'InitialPage';
-
+  SqlData sql = new SqlData();
   InitialPage({Key? key}) : super(key: key);
 
   @override
@@ -58,30 +60,35 @@ class InitialPage extends StatelessWidget {
             },
           ),
           RoundedIconTextButton(
-            icon: FontAwesomeIcons.signOutAlt,
+            icon: FontAwesomeIcons.download,
             iconSize: 40,
-            text: 'Cerrar sesión',
-            textSize: 40,
-            onPressed: () {
-              _logout(context);
-            }
+            text: 'Cargar contenido de estudio',
+            textSize: 30,
+            onPressed: () async {
+              await sql.loadAllData();
+              Alerts.showAlertDialog(context);
+            },
           ),
+          RoundedIconTextButton(
+              icon: FontAwesomeIcons.signOutAlt,
+              iconSize: 40,
+              text: 'Cerrar sesión',
+              textSize: 40,
+              onPressed: () {
+                _logout(context);
+              }),
         ],
       ),
     );
   }
 
   void _logout(BuildContext context) {
-    CommonDialog.progressDialog(
-      context,
-      content: const Text('Cerrando sesión...'),
-      future: Auth.logout(),
-      onSuccess: (value) {
-        Navigator.pushReplacementNamed(context, 'login');
-      },
-      onError: (error) {
-        CommonDialog.dialog(
-          context,
+    CommonDialog.progressDialog(context,
+        content: const Text('Cerrando sesión...'),
+        future: Auth.logout(), onSuccess: (value) {
+      Navigator.pushReplacementNamed(context, 'login');
+    }, onError: (error) {
+      CommonDialog.dialog(context,
           title: const Text('Error'),
           content: Text(Error.message(error)),
           actions: [
@@ -91,9 +98,7 @@ class InitialPage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-          ] 
-        );
-      }
-    );
+          ]);
+    });
   }
 }

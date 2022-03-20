@@ -1,3 +1,5 @@
+import 'package:exaa_2/services/db_provider.dart';
+
 class SqlData {
   static List createTables = [
     """CREATE TABLE USERS(
@@ -112,4 +114,10 @@ class SqlData {
     """INSERT INTO SUBTOPIC (name_subtopic, content_subtopic, name_topic)
     VALUES ('Regulares', 'Contenido', 'GRAMÁTICA Y VOCABULARIO');""",
   ];
+
+  Future loadAllData() async {
+    await DBProvider.db.insertRecordsModule();
+    await DBProvider.db.insertRecordsTopic();
+    await DBProvider.db.insertRecordsSubtopic();
+  }
 }

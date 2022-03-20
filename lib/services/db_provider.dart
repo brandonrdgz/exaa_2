@@ -15,10 +15,6 @@ class DBProvider with ChangeNotifier {
   DBProvider._();
   Future<Database?> get database async {
     if (_database != null) {
-      print("Dentro del if");
-      await db.insertRecordsModule();
-      await db.insertRecordsTopic();
-      await db.insertRecordsSubtopic();
       return _database;
     }
     if (_database == null) {
@@ -31,7 +27,7 @@ class DBProvider with ChangeNotifier {
 
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
-    final path = join(documentsDirectory.path, 'EXAAIIv4.db');
+    final path = join(documentsDirectory.path, 'EXAAIIv8.db');
     print(path.toString());
 
     return await openDatabase(path, version: 2, onOpen: (db) {},
@@ -104,6 +100,7 @@ class DBProvider with ChangeNotifier {
         : <ModuleModel>[];
     print('Lista');
     print(list[0].name_module);
+
     return list;
   }
 
