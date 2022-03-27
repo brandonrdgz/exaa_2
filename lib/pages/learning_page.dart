@@ -63,7 +63,7 @@ class _LearningPageState extends State<LearningPage> {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getModules(),
+            future: DBProvider.db.getModules(context),
             builder: (BuildContext context,
                 AsyncSnapshot<List<ModuleModel>> snapshot) {
               if (snapshot.hasData) {

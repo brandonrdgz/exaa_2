@@ -29,7 +29,8 @@ class _DummyPageState extends State<DummyPage> {
             RaisedButton(
                 child: Text('Obtener información'),
                 onPressed: () async {
-                  List<ModuleModel> res = await DBProvider.db.getModules();
+                  List<ModuleModel> res =
+                      await DBProvider.db.getModules(context);
                   _centerText = res[0].name_module;
                   setState(() {});
                 }),

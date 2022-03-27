@@ -1,16 +1,27 @@
+import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
+import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
+import 'package:exaa_2/utils/sql_data.dart';
+import 'package:exaa_2/widgets/alerts.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
 import 'package:exaa_2/utils/error.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class InitialPage extends StatelessWidget {
+class InitialPage extends StatefulWidget {
   static const String id = 'InitialPage';
 
   InitialPage({Key? key}) : super(key: key);
+
+  @override
+  State<InitialPage> createState() => _InitialPageState();
+}
+
+class _InitialPageState extends State<InitialPage> {
+  SqlData sql = new SqlData();
 
   @override
   Widget build(BuildContext context) {
@@ -57,31 +68,47 @@ class InitialPage extends StatelessWidget {
               Navigator.pushNamed(context, AboutPage.id);
             },
           ),
+          /*FutureBuilder(
+            future: DBProvider.db.getModules(),
+            builder: (BuildContext context,
+                AsyncSnapshot<List<ModuleModel>> snapshot) {
+              if (!snapshot.hasData) {
+                return SizedBox();
+              } else {
+                return RoundedIconTextButton(
+                  icon: FontAwesomeIcons.download,
+                  iconSize: 40,
+                  text: 'Cargar contenido de estudio',
+                  textSize: 30,
+                  onPressed: () async {
+                    await sql.loadAllData();
+                    Alerts.showAlertDialog(context);
+                    setState(() {});
+                  },
+                );
+              }
+            },
+          ),*/
           RoundedIconTextButton(
-            icon: FontAwesomeIcons.signOutAlt,
-            iconSize: 40,
-            text: 'Cerrar sesión',
-            textSize: 40,
-            onPressed: () {
-              _logout(context);
-            }
-          ),
+              icon: FontAwesomeIcons.signOutAlt,
+              iconSize: 40,
+              text: 'Cerrar sesión',
+              textSize: 40,
+              onPressed: () {
+                _logout(context);
+              }),
         ],
       ),
     );
   }
 
   void _logout(BuildContext context) {
-    CommonDialog.progressDialog(
-      context,
-      content: const Text('Cerrando sesión...'),
-      future: Auth.logout(),
-      onSuccess: (value) {
-        Navigator.pushReplacementNamed(context, 'login');
-      },
-      onError: (error) {
-        CommonDialog.dialog(
-          context,
+    CommonDialog.progressDialog(context,
+        content: const Text('Cerrando sesión...'),
+        future: Auth.logout(), onSuccess: (value) {
+      Navigator.pushReplacementNamed(context, 'login');
+    }, onError: (error) {
+      CommonDialog.dialog(context,
           title: const Text('Error'),
           content: Text(Error.message(error)),
           actions: [
@@ -91,9 +118,7 @@ class InitialPage extends StatelessWidget {
                 Navigator.pop(context);
               },
             ),
-          ] 
-        );
-      }
-    );
+          ]);
+    });
   }
 }
