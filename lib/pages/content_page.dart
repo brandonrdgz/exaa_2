@@ -18,9 +18,32 @@ class ContentPage extends StatelessWidget {
             child: Html(
               data: _htmlContent,
               style: {
-                'h1': Style(color: Colors.red, textAlign: TextAlign.center),
-                'p': Style(color: Colors.black87, fontSize: FontSize.medium),
-                'ul': Style(margin: EdgeInsets.symmetric(vertical: 20))
+                'h1': Style(
+                    backgroundColor: Colors.deepPurple.shade200,
+                    border: Border.fromBorderSide(BorderSide(
+                        color: Colors.deepPurple.shade900,
+                        width: 5.0,
+                        style: BorderStyle.solid)),
+                    color: Colors.white,
+                    fontSize: FontSize.percent(195),
+                    textAlign: TextAlign.center,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w900,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationStyle: TextDecorationStyle.wavy),
+                'p': Style(
+                    color: Colors.black,
+                    fontSize: FontSize.percent(125),
+                    fontWeight: FontWeight.w600,
+                    textAlign: TextAlign.justify),
+                'ul': Style(
+                    color: Colors.black,
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    fontSize: FontSize.percent(125),
+                    fontWeight: FontWeight.w600,
+                    textAlign: TextAlign.justify),
+                'body': Style(
+                    backgroundColor: Colors.deepPurple.shade50)
               },
             ),
           ),
