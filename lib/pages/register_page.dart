@@ -1,4 +1,6 @@
 import 'package:email_validator/email_validator.dart';
+import 'package:exaa_2/models/users_model.dart';
+import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/utils/error.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
@@ -70,7 +72,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           TextFormField(
-                            decoration: const InputDecoration(labelText: "Nombre usuario"),
+                            decoration: const InputDecoration(
+                                labelText: "Nombre usuario"),
                             onChanged: (String username) {
                               _username = username;
                             },
@@ -82,19 +85,22 @@ class _RegisterPageState extends State<RegisterPage> {
                           ),
                           const SizedBox(height: 13),
                           TextFormField(
-                            decoration: const InputDecoration(labelText: "Ingresa correo"),
+                            decoration: const InputDecoration(
+                                labelText: "Ingresa correo"),
                             onChanged: (String email) {
                               _email = email;
                             },
                             validator: (String? email) {
-                              if (email == null || ! EmailValidator.validate(email)) {
+                              if (email == null ||
+                                  !EmailValidator.validate(email)) {
                                 return 'El correo no es válido';
                               }
                             },
                           ),
                           const SizedBox(height: 13),
                           TextFormField(
-                            decoration: const InputDecoration(labelText: "Escribe contraseña"),
+                            decoration: const InputDecoration(
+                                labelText: "Escribe contraseña"),
                             obscureText: true,
                             onChanged: (String password) {
                               _password = password;
@@ -159,36 +165,34 @@ class _RegisterPageState extends State<RegisterPage> {
         _loading = true;
       });
 
-      CommonDialog.progressDialog(
-        context,
-        content: const Text('Registrando...'),
-        future: Auth.register(_email, _password),
-        onSuccess: (value) {
-          setState(() {
-            _loading = false;
-          });
+      CommonDialog.progressDialog(context,
+          content: const Text('Registrando...'),
+          future: Auth.register(_email, _password), onSuccess: (value) {
+        setState(() {
+          _loading = false;
+        });
 
-          CommonDialog.dialog(
-            context,
+        CommonDialog.dialog(context,
             content: const Text('Registro exitoso'),
             actions: [
               TextButton(
                 child: const Text('Aceptar'),
-                onPressed: () {
+                onPressed: () async {
                   Navigator.pop(context);
                   Navigator.pushReplacementNamed(context, InitialPage.id);
+                  UsersModel users =
+                      UsersModel(email: _email, username: _username);
+                  await DBProvider.db.insertUser(users);
+                  //await DBProvider.db.getUsers();
                 },
               ),
-            ] 
-          );
-        },
-        onError: (error) {
-          setState(() {
-            _loading = false;
-          });
+            ]);
+      }, onError: (error) {
+        setState(() {
+          _loading = false;
+        });
 
-          CommonDialog.dialog(
-            context,
+        CommonDialog.dialog(context,
             title: const Text('Error'),
             content: Text(Error.message(error)),
             actions: [
@@ -198,10 +202,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   Navigator.pop(context);
                 },
               ),
-            ] 
-          );
-        }
-      );
+            ]);
+      });
     }
   }
 

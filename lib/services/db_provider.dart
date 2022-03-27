@@ -2,6 +2,7 @@ import 'package:exaa_2/models/dummy_model.dart';
 import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/models/topic_model.dart';
 import 'package:exaa_2/models/subtopic_model.dart';
+import 'package:exaa_2/models/users_model.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:sqflite/sqflite.dart';
@@ -151,6 +152,31 @@ class DBProvider with ChangeNotifier {
     /*var decoded = TopicModel.fromJson(res.first);
     print(decoded.description_topic);
     print(decoded.name_topic);*/
+    return list;
+  }
+
+  insertUser(UsersModel user) async {
+    // se realiza únicamente una instancia de la base de datos, gracias al patrón singleton
+    final db = await database;
+    notifyListeners();
+
+    final res = await db?.rawInsert("INSERT INTO  USERS (username, email) "
+        "VALUES ( '${user.username}', '${user.email}')");
+    print('insert successful user');
+    return res;
+  }
+
+  Future<List<UsersModel>> getUsers() async {
+    final db = await database;
+    var res;
+    res = await db?.query('USERS');
+    print(res);
+    List<UsersModel> list = res.isNotEmpty
+        ? res.map<UsersModel>((c) => UsersModel.fromJson(c)).toList()
+        : <UsersModel>[];
+    print('Lista');
+    print(list[0].username);
+    print(list[0].email);
     return list;
   }
 }
