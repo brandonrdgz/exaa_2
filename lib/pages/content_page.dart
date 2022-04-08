@@ -18,9 +18,50 @@ class ContentPage extends StatelessWidget {
             child: Html(
               data: _htmlContent,
               style: {
-                'h1': Style(color: Colors.red, textAlign: TextAlign.center),
-                'p': Style(color: Colors.black87, fontSize: FontSize.medium),
-                'ul': Style(margin: EdgeInsets.symmetric(vertical: 20))
+                'h3': Style(
+                    width: 300,
+                    backgroundColor: Colors.deepPurple.shade200,
+                    margin: EdgeInsets.only(left: 45.0, right: 20.0),
+                    border: Border.fromBorderSide(BorderSide(
+                        color: Colors.deepPurple.shade900,
+                        width: 5.0,
+                        style: BorderStyle.solid)),
+                    color: Colors.white,
+                    fontSize: FontSize.percent(185),
+                    textAlign: TextAlign.center,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationStyle: TextDecorationStyle.wavy),
+                'h4': Style(
+                    width: 300,
+                    backgroundColor: Colors.deepPurple.shade200,
+                    margin: EdgeInsets.only(left: 45.0, right: 20.0),
+                    border: Border.fromBorderSide(BorderSide(
+                        color: Colors.deepPurple.shade900,
+                        width: 5.0,
+                        style: BorderStyle.solid)),
+                    color: Colors.white,
+                    fontSize: FontSize.percent(185),
+                    textAlign: TextAlign.center,
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                    textDecoration: TextDecoration.underline,
+                    textDecorationStyle: TextDecorationStyle.wavy),
+                'p': Style(
+                    color: Colors.black,
+                    padding: EdgeInsets.only(left: 9, right: 9),
+                    fontSize: FontSize.percent(100),
+                    fontWeight: FontWeight.w400,
+                    textAlign: TextAlign.justify),
+                'ul': Style(
+                    color: Colors.black,
+                    padding: EdgeInsets.only(right: 6, left: 6),
+                    margin: EdgeInsets.symmetric(vertical: 20),
+                    fontSize: FontSize.percent(100),
+                    fontWeight: FontWeight.w400,
+                    textAlign: TextAlign.justify),
+                'body': Style(backgroundColor: Colors.deepPurple.shade50)
               },
             ),
           ),
@@ -28,42 +69,4 @@ class ContentPage extends StatelessWidget {
       ]),
     );
   }
-
-  /*
-  final _htmlContent = """
-  <div>
-    <h1>This is a title</h1>
-    <p>This is a <strong>paragraph</strong>.</p>
-    <p>I like <i>dogs</i></p>
-    <p>Red text</p>
-    <ul>
-        <li>List item 1</li>
-        <li>List item 2</li>
-        <li>List item 3</li>
-    </ul>
-    <img src='https://www.kindacode.com/wp-content/uploads/2020/11/my-dog.jpg' />
-  </div>
-  """;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Kindacode.com'),
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Html(
-            data: _htmlContent,
-            // Styling with CSS (not real CSS)
-            style: {
-              'h1': Style(color: Colors.red),
-              'p': Style(color: Colors.black87, fontSize: FontSize.medium),
-              'ul': Style(margin: EdgeInsets.symmetric(vertical: 20))
-            },
-          ),
-        ),
-      ),
-    );
-  }
-  */
 }
