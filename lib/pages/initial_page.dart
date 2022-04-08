@@ -60,6 +60,15 @@ class _InitialPageState extends State<InitialPage> {
             },
           ),
           RoundedIconTextButton(
+            icon: FontAwesomeIcons.question,
+            iconSize: 40,
+            text: 'Foro',
+            textSize: 40,
+            onPressed: () {
+              //TODO: Show page 'Estadisticas'
+            },
+          ),
+          RoundedIconTextButton(
             icon: FontAwesomeIcons.infoCircle,
             iconSize: 40,
             text: 'Acerca de',
