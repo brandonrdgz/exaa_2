@@ -22,7 +22,6 @@ class DBProvider with ChangeNotifier {
     if (_database == null) {
       _database = await initDB();
 
-      print("Dentro del else");
       return _database;
     }
   }
@@ -30,7 +29,6 @@ class DBProvider with ChangeNotifier {
   initDB() async {
     Directory documentsDirectory = await getApplicationDocumentsDirectory();
     final path = join(documentsDirectory.path, 'EXAAIIv507.db');
-    print(path.toString());
 
     return await openDatabase(path, version: 2, onOpen: (db) {},
         onCreate: (Database db, int version) async {
