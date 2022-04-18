@@ -256,11 +256,7 @@ class SqlData {
         </p>
       </div>
   </div>",'ORTOGRAFÍA GENERAL');""",
-  ];
-
-//PUNTUACIÓN
-/*
-INSERT INTO SUBTOPIC VALUES ('La coma','<div>
+    """INSERT INTO SUBTOPIC VALUES ('La coma',"<div>
 		<h3>La coma</h3>
 		<ul>
 			<li>
@@ -285,8 +281,8 @@ INSERT INTO SUBTOPIC VALUES ('La coma','<div>
 				
 			</li>
 		</ul>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('El punto y coma','<div>
+	</div>",'PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('El punto y coma','<div>
 		<h3>El punto y coma</h3>
 		<ul>
 			<li>
@@ -299,8 +295,8 @@ INSERT INTO SUBTOPIC VALUES ('El punto y coma','<div>
 				Siempre que a una oración sigue, precedida de c onjunción, otra oración que, en orden a la idea que expresa, no tiene perfecto enlace con la anterior, hay que poner al fin de la primera punto y coma: Pero nada bastó para desalojar al enemigo, hasta que se abrevió el asalto por el camino que abrió la artillería; y se observó que uno solo, de tantos como fueron deshechos en este adoratorio, se rindió a la merced de los españoles (Solís, Historia de Nueva España, III, 7) . Si después de la palabra artillería solo se pusiese coma, la oración y se observó, etc., vendría regida de la preposición hasta y cambiaría el sentido.
 			</li>
 		</ul>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Los dos puntos','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Los dos puntos','<div>
 		<h3>Los dos puntos</h3>
 		<ul>
 			<li>
@@ -319,8 +315,8 @@ INSERT INTO SUBTOPIC VALUES ('Los dos puntos','<div>
 				También se emplean los dos puntos después del M uy señor mío y otras expresiones semejantes con que se suele dar principio a las cartas: Muy señor mío: Sírvase usted tomar a su cargo, etc.; Amigo mío: En contestación a la estimada de usted, etc. Después de los dos puntos se escribe indistintamente con letra mayúscula o minúscula el vocablo que sigue.
 			</li>
 		</ul>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('El punto','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('El punto','<div>
 		<h3>El punto</h3>
 		<p>
 			Se pone punto cuando el período forma sentido completo, en términos de poderse pasar a otro nuevo sin quedar pendiente la comprensión de aquel. Es la mayor pausa sintáctica que la ortografía señala.
@@ -334,8 +330,8 @@ INSERT INTO SUBTOPIC VALUES ('El punto','<div>
 		<p>
 			Resta advertir que en toda clase de escritos suelen hacerse después del punto final ciertas separaciones o divisiones llamadas párrafos, cada una de las cuales ha de empezar en renglón distinto de aquel en que acabe el anterior, y más adentro que las otras líneas de la plana. Deben principalmente usarse tales divisiones cuando se va a pasar a diverso asunto, o bien a considerar el mismo desde otro aspecto.
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Los puntos suspensivos','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Los puntos suspensivos','<div>
 		<h3>Los puntos suspensivos</h3>
 		<ul>
 			<li>
@@ -348,8 +344,8 @@ INSERT INTO SUBTOPIC VALUES ('Los puntos suspensivos','<div>
 				También se usan dichos puntos cuando se copia a algún texto o autoridad los cuales no hace al caso insertar íntegros, indicando así lo que se omite.
 			</li>
 		</ul>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('La interrogación y la admiración','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('La interrogación y la admiración','<div>
 		<h3>La interrogación y la admiración</h3>
 		<p>
 			Los signos de interrogación y de admiración se ponen al principio y al fin de la oración que deba llevarlos: ¿Dónde estás?; ¿A qué vienes?; ¿Te veré mañana?; ¡Qué asombro!; ¡Ay de mí!
@@ -369,8 +365,8 @@ INSERT INTO SUBTOPIC VALUES ('La interrogación y la admiración','<div>
 		<p>
 			Hay cláusulas que son al par interrogativas y admirativas, y en ellas podrá ponerse nota de admiración al principio y de interrogación al fin, o viceversa: ¡Que esté negado al hombre saber cuándo será la hora de su muerte? ¿Qué persecución es esta, Dios mío!
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('El paréntesis','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('El paréntesis','<div>
 		<h3>El paréntesis</h3>
 			<ul>
 				<li>
@@ -385,8 +381,8 @@ INSERT INTO SUBTOPIC VALUES ('El paréntesis','<div>
 				<li>
 					Se emplea también el paréntesis curvo para ence rrar en él noticias o datos aclaratorios, explicaciones de abreviaturas, etc.; y el rectangular, para indicar en la copia de códices o inscripciones lo que falta en el original y se suple conjeturalmente. Ejemplos: El hijo del rayo de guerra, Carlos V (D. Juan De Austria); Perdió Boabdil a Granada en la hégira 897 (1492); Imp(eratori) Caes(ari) [Nervae] Traiano [Aug(usto)] p(ontifici) m(aximo). etc.
 			</ul>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('La diéresis o crema','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('La diéresis o crema','<div>
 		<h3>La diéresis o crema</h3>
 		<p>
 			El uso de la diéresis solo es preceptivo para indicar que ha de pronunciarse la u en las combinaciones gue, gui: pingüe, pingüino, argüir.
@@ -394,17 +390,17 @@ INSERT INTO SUBTOPIC VALUES ('La diéresis o crema','<div>
 		<p>
 			Queda a salvo el uso discrecional cuando, por licencia poética o con otro propósito, interese una pronunciación determinada.
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Las comillas','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Las comillas','<div>
 		<h3>Las comillas</h3>
 		<p>
 			Para distinguir las palabras sobre las cuales quiere el que escribe llamar particularmente la atención del lector, se subrayan en lo manuscrito; y en lo impreso se ponen de letra cursiva, y a veces con versales u otras que resalten por su figura o su tamaño. Se practica lo mismo con las voces o citas en idioma extranjero, con el texto literal de citas en castellano, con los títulos de libros y con las dicciones y cláusulas que en las obras de enseñanza y otras se ponen, por ejemplo. Mas cuando las cláusulas de este género tienen alguna extensión o llenan varias líneas, se les suelen poner comillas inversas al principio de cada uno de los renglones que ocupan: Dice un escritor célebre: «El hombre tiene aptitud, por su naturaleza, para habitar en todos los países del mundo: en los arenales del desierto, en los montes más encumbrados, en los climas polares puede vivir y propagarse. No así los animales, que, sujetos a más estrechos límites, perecen fuera de ellos o arrastran vida penosa.»
 		</p>
 		<p>
-			Las comillas simples se usan al principio y al final de una palabra o frase incluidas como cita o puestas de relieve dentro de un texto entrecomillado más extenso. También se emplean para indicar que una palabra está usada en su valor conceptual o como definición de otra, ejemplo: espiar 'acechar'.
+			Las comillas simples se usan al principio y al final de una palabra o frase incluidas como cita o puestas de relieve dentro de un texto entrecomillado más extenso. También se emplean para indicar que una palabra está usada en su valor conceptual o como definición de otra, ejemplo: espiar acechar.
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('El guion','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('El guion','<div>
 		<h3>El guion</h3>
 		<p>
 			Cada vocablo de por sí, ya simple, como guardia, poner, ya compuesto, como salvaguardia, reponer, se ha de escribir aislado, o con entera separación del que le preceda o siga. Sin embargo, en la escritura hay necesidad muchas veces de dividir una palabra, y entonces se ha de observar lo siguiente:
@@ -435,14 +431,14 @@ INSERT INTO SUBTOPIC VALUES ('El guion','<div>
 				</li>
 			</ul>
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Las dos rayas','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Las dos rayas','<div>
 		<h3>Las dos rayas</h3>
 		<p>
 			Este signo se usaba para dividir algunas palabras compuestas; actualmente se emplea solo en las copias, para denotar que en el original se pasa a párrafo distinto.
 		</p>
-	</div>','PUNTUACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Otros signos auxiliares','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Otros signos auxiliares','<div>
 		<h3>Otros signos auxiliares</h3>
 		<ul>
 			<li>
@@ -461,17 +457,14 @@ INSERT INTO SUBTOPIC VALUES ('Otros signos auxiliares','<div>
 				Llave o corchete ( {} ) . Su oficio es abrazar diversas partidas en una cuenta, varios miembros en un cuadro sinóptico, etc., que deben considerarse agrupados y unidos para determinado fin. f) Manecilla - Puesta al margen o en el texto de un escrito, da a entender que lo señalado por ella es particularmente útil o interesante.
 			</li>
 		</ul>
-	</div>','PUNTUACIÓN');
-
-//GRAMÁTICA Y VOCABULARIO
-
-INSERT INTO SUBTOPIC VALUES ('Sintaxis','<div>
+	</div>','PUNTUACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Sintaxis','<div>
 		<h3>Sintaxis</h3>
 		<p>
 			La sintaxis es una subdisciplina de la lingüística. Es la parte de la gramática que se encarga de estudiar las reglas que gobiernan la forma en que las palabras se organizan en sintagmas y, a su vez, estos sintagmas en oraciones
 		</p>
-</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Morfología','<div>
+</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Morfología','<div>
 		<h3>Morfología</h3>
 		<p>
 			Es la rama de la lingüística que estudia la estructura interna de las palabras para delimitar, definir y clasificar las unidades de la misma, las clases de palabras a las que da lugar (morfología flexiva) y la formación de nuevas palabras (morfología léxica). El morfema (llamado formante por otros autores) es la unidad mínima significativa de la primera articulación o división del signo lingüístico: la palabra. Así pues, una palabra está constituida generalmente por dos clases de morfemas: los lexemas y los morfemas gramaticales. Los lexemas son los morfemas, comúnmente conocidos como raíces, que contienen el significado de la palabra. Constituyen casi siempre la parte invariable, autónoma y de significado más concreto de la misma. Forman la parte más numerosa del léxico y su número en toda lengua es siempre muy superior al de morfemas.
@@ -514,8 +507,8 @@ INSERT INTO SUBTOPIC VALUES ('Morfología','<div>
 				Los alomorfos son las diferentes representaciones fónicas de un determinado morfema. Por ejemplo, -s y -es son alomorfos del morfema de número plural del español. También son alomorfos: -ble y -bil como en imposible e imposibilidad o nece- y neci como en necio y necedad.
 			</p>
 		</div>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Semántica','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Semántica','<div>
 		<h3>Semántica</h3>
 		<p>
 			La semántica es un subcampo de la gramática y, por extensión, de la lingüística. Proviene del griego "semantikos", que quería decir "significado relevante", derivada de "sema", lo que significaba "signo". Se dedica al estudio del significado de los signos lingüísticos y de sus combinaciones, desde un punto de vista sincrónico o diacrónico.
@@ -555,8 +548,8 @@ INSERT INTO SUBTOPIC VALUES ('Semántica','<div>
 				No todos los sustantivos suelen tener plural. Los nombres propios y los de objetos únicos sólo pueden tenerlo en casos especiales, así como los nombres abstractos como la tolerancia y la sabiduría. Existen algunas palabras, más conocidas como colectivos que se refieren a lo singular y lo plural a la vez. Ej: tijeras, pantalones. Son formas en plural que hacen referencia a una unidad.
 			</p>
 		</div>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Adjetivo','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Adjetivo','<div>
 		<h3>Adjetivo</h3>
 		<p>
 			El adjetivo es aquella parte de la oración que se junta al sustantivo para calificarlo o no presenta una forma externa que le distinga de la categoría más afín, que es el sustantivo. Entre una y otra clase de palabras o semantemas existe un constante movimiento: substantivos que se hacen adjetivos, y a la inversa. El adjetivo se caracteriza por su dependencia del sustantivo y de ahí su función fundamental de atributo, junto a la de predicado nominal.
@@ -582,8 +575,8 @@ INSERT INTO SUBTOPIC VALUES ('Adjetivo','<div>
 				El adjetivo explicativo o epíteto es el que expresa una cualidad no necesaria del nombre, pero que añade mayor belleza e interés literario al texto. Suele ir antepuesto al nombre. El hábil jugador marcó un gol. 
 			</p>
 		</div>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Pronombre','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Pronombre','<div>
 		<h3>Pronombre</h3>
 		<p>
 			El pronombre es la parte de la oración que sustituye al nombre, sin embargo, no es una parte de la oración en el mismo sentido que lo son los sustantivos, el adjetivo, el verbo o el adverbio. Los pronombres se nos presentan en clases más perfiladas e independientes de las que hemos visto al estudiar los sustantivos y los adjetivos. Distinguiremos los personales, posesivos, demostrativos, relativos, interrogativos e indefinidos.
@@ -606,14 +599,14 @@ INSERT INTO SUBTOPIC VALUES ('Pronombre','<div>
 				</li>
 			</ul>
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Oración','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Oración','<div>
 		<h3>Oración</h3>
 		<p>
 			Se llama Oración toda proposición o conjunto de proposiciones que forma sentido completo: de que está alfombrada la ribera es proposición perfecta, pero no es oración
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Numerales','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Numerales','<div>
 		<h3>Numerales</h3>
 		<p>
 			Los numerales son un tipo de partículas que hay que relacionar con los indefinidos de cantidad y, por otra con los adjetivos calificativos, de cuales se diferencian porque en lugar de expresar cualidad indican cantidad. En realidad, forman un grupo dentro de ellos.
@@ -635,8 +628,8 @@ INSERT INTO SUBTOPIC VALUES ('Numerales','<div>
 				</li>
 			</ul>
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Articulo','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Articulo','<div>
 		<h3>Artículo</h3>
 		<p>
 			El artículo se antepone al sustantivo para anunciar su género, su número y su función gramatical. Con frecuencia el artículo determina la extensión del sustantivo. Pongamos un ejemplo, las expresiones comprar libros y comprar los libros. En el primer caso queda completamente indeterminado el sustantivo libros; no sabemos a cuántos libros nos referimos; en cambio, cuando decimos comprar los libros, entendemos que se trata de libros conocidos por la persona a quien dirigimos la palabra. Las formas del artículo son: el, la, lo, para el masculino, femenino y neutro del singular, respectivamente: los, las, para el plural masculino y femenino. Este artículo se llama determinado. Delante de nombres femeninos que empiezan por a, á o ha, usamos la forma el; por ejemplo: el hada, el agua, el áncora.
@@ -647,8 +640,8 @@ INSERT INTO SUBTOPIC VALUES ('Articulo','<div>
 		<p>
 			Determinados Indeterminados: Masculino, Femenino, Neutro, Masculino, Femenino , el, la, lo, uno, una, los, las, unos, unas.
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Verbo','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Verbo','<div>
 		<h3>Verbo</h3>
 		<p>
 			El verbo es una parte de la oración que expresa acción, presión o estado. El concepto de verbo aparece unido a una importante función dentro de la oración, el predicado. Por ello, la presencia del verbo es indispensable para formar una oración. El verbo suele combinarse con determinados morfemas que indican el tiempo, modo, aspecto, voz, número y persona. La persona es común a los pronombres personales, el número es común al nombre. El tiempo, el modo y el aspecto son en español sólo verbales y también la voz, aunque no existe para ésta un medio de expresión tan claro.
@@ -733,8 +726,8 @@ INSERT INTO SUBTOPIC VALUES ('Verbo','<div>
 				Existen numerosos adjetivos que pueden ejercer la función de adverbios, como claro, recio, alto, limpio. Es fácil determinar en cada caso si les corresponde una u otra función, dependiendo de si modifican a un sustantivo o a un verbo. Por ejemplo, claro será adjetivo en lenguaje claro, agua clara, pero será adverbio en hablar claro, escribir claro.
 			</p>
 		</div>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('El tiempo','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('El tiempo','<div>
 		<h3>El tiempo</h3>
 		<p>
 			Los tiempos gramaticales son las formas que el verbo toma para dar a conocer el momento en que sucede lo que el verbo significa; ej.: ayer bebí; ahora duermo; mañana trabajaré. Los tiempos verbales se dividen en dos: simples o compuestos.
@@ -755,8 +748,8 @@ INSERT INTO SUBTOPIC VALUES ('El tiempo','<div>
 			</br>
 			<img src="https://drive.google.com/uc?id=12P-VnrmHihnflGuHMqL4vP2hkCJvrhHe" alt="Tiempos gramaticales">
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Adverbios','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Adverbios','<div>
 		<h3>Adverbios</h3>
 		<p>
 			Muchos adverbios se forman añadiendo a la forma femenina de los adjetivos la terminación - mente: fácilmente, claramente, etc. Los adverbios donde, cuando, cuanto y como equivalen a pronombres relativos; por ejemplo: el barrio donde vivimos es el barrio en que vivimos. Por esto se llaman adverbios relativos. Lo mismo que los pronombres de su clase, los adverbios relativos llevan acento cuando figuran en oraciones interrogativas o exclamativas: ¿cómo está usted?, ¿cuándo has llegado?
@@ -770,8 +763,8 @@ INSERT INTO SUBTOPIC VALUES ('Adverbios','<div>
 		<p>
 			Las tradicionales preposiciones castellanas son: a, ante, cabe, con, contra, de, desde, en, entre, hacia, hasta, para, por, según, sin, sobre y tras.
 		</p>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-INSERT INTO SUBTOPIC VALUES ('Conjunciones','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Conjunciones','<div>
 		<h3>Conjunciones</h3>
 		<p>
 			Conjunciones.- Las conjunciones son los elementos invariables de la lengua capaces de enlazar oraciones creando distintas relaciones entre ellas. También a veces se puede observar en la expresión que las conjunciones unen palabras aisladas, pero en realidad éstas se pueden considerar como la simplificación expresiva de auténticas oraciones enteras que subyacen en tales palabras. Las conjunciones pueden ser coordinantes o subordinantes, según establezcan una u otra relación entre las oraciones unidas por ellas.
@@ -831,11 +824,8 @@ INSERT INTO SUBTOPIC VALUES ('Conjunciones','<div>
 				</ul>
 			</p>
 		</div>
-	</div>','GRAMÁTICA Y VOCABULARIO');
-
-//CONCORDANCIA Y DISCORDANCIA
-
-INSERT INTO SUBTOPIC VALUES ('Sujeto y predicado','<div>
+	</div>','GRAMÁTICA Y VOCABULARIO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Sujeto y predicado','<div>
 		<h3>Sujeto y predicado</h3>
 		<p>
 			La oración: "La nave espacial se posó sobre la colina", es una proposición. Su primer miembro, "La nave espacial", indica aquello de lo que se va a decir algo. Mientras que el segundo miembro ,"se posó sobre la colina", es lo que se dice de la nave espacial. Fíjate en las siguientes proposiciones:
@@ -866,8 +856,8 @@ INSERT INTO SUBTOPIC VALUES ('Sujeto y predicado','<div>
 				Al igual que el Sujeto, el Predicado tiene un elemento central y constante, llamado núcleo del predicado. En forma opcional, éste puede estar acompañado de determinantes. Veamos algunos ejemplos: El núcleo del predicado indica lo que hace, dice, siente o piensa el sujeto. Cumple siempre la función verbal, mediante la palabra verbo. Los verbos expresan acción, sentimientos, estados y existencia respecto de distintas personas y tiempos. Algunos verbos son: Cantar, sufrir, jugar, hacer, etcétera. 
 			</p>
 		</div>
-	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Oraciones interrogativas','<div>
+	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Oraciones interrogativas','<div>
 		<h3>Oraciones interrogativas</h3>
 		<p>
 			Para preguntar, podemos ubicar la acción al inicio de la oración, o utilizar una palabra que indica interrogación. Leamos estos ejemplos: ¿Irás al cumpleaños de Enrique?, ¿Encontraste el mensaje que te dejó tu papá? Estas oraciones interrogativas comienzan por la acción. Ahora, analicemos estas otras: ¿Cuál es tu personaje histórico favorito?, ¿Dónde está la clave?
@@ -875,14 +865,14 @@ INSERT INTO SUBTOPIC VALUES ('Oraciones interrogativas','<div>
 		<p>
 			Las oraciones interrogativas utilizaron las palabras cuál y dónde. Algo que no puede faltar en este tipo de oraciones son los signos de interrogación delante y al final de ellas: ¿ ... ? Estos signos permiten identificar una pregunta. Algunas palabras que sirven para hacer preguntas son: ¿Qué...? ¿Quién...? ¿Cómo...? ¿Cuándo...? ¿Dónde...? ¿Por qué...? Las oraciones interrogativas se contestan con oraciones aseverativas, que pueden ser afirmativas o negativas.
 		</p>
-	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Oraciones exclamativas','<div>
+	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Oraciones exclamativas','<div>
 		<h3>Oraciones exclamativas</h3>
 		<p>
 			Las oraciones exclamativas expresan sorpresa o admiración. Llevan siempre signo de exclamación al inicio y al término de ellas. ¡ ... ! ¿Por qué se llaman oraciones exclamativas? Por el tono de vos que utilizamos al decirlas. Tomamos aire y luego hablamos con otro ánimo. Te presentamos algunos ejemplos: ¡Qué linda está la Luna!, ¡Nos vamos de vacaciones!
 		</p>
-	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Oraciones imperativas','<div>
+	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Oraciones imperativas','<div>
 		<h3>Oraciones imperativas</h3>
 		<p>
 			Las oraciones imperativas tienen la particularidad de indicar una orden, un mandato o una prohibición, no llevan escrito el sujeto. Analicemos las siguientes oraciones imperativas: Se prohíbe fumar en este recinto, No pisar el pasto. Ambas oraciones indican que se prohíbe realizar una determinada acción. Veamos otras oraciones imperativas: Salgamos rápido, Quítate el delantal. Estas oraciones nos están indicando una orden y mandato.
@@ -901,8 +891,8 @@ INSERT INTO SUBTOPIC VALUES ('Oraciones imperativas','<div>
 				</li>
 			</ul>
 		</p>
-	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');
-INSERT INTO SUBTOPIC VALUES ('Complementos en la oración','<div>
+	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('Complementos en la oración','<div>
 		<h3>Complementos en la oración</h3>
 		<p>
 			El sujeto tiene los siguientes complementos:
@@ -932,17 +922,14 @@ INSERT INTO SUBTOPIC VALUES ('Complementos en la oración','<div>
 				</li>
 			</ul>
 		</p>
-	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');
-
-//AUTORES Y OBRAS IMPORTANTES
-
-INSERT INTO SUBTOPIC VALUES ('El arte griego','<div>
+	</div>','CONCORDANCIA Y DISCORDANCIA DE LAS PARTES DE LA ORACIÓN');""",
+    """INSERT INTO SUBTOPIC VALUES ('El arte griego','<div>
 		<h3>El arte griego</h3>
 		<p>
 			El arte griego se caracterizó por la búsqueda de la belleza y la perfección de los artistas, en especial los escultores se esforzaron por expresar la belleza ideal del cuerpo humano, que estaban en el equilibrio y la armonía.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('La literatura griega  poesía épica','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('La literatura griega  poesía épica','<div>
 		<h3>La literatura griega poesía épica</h3>
 		<p>
 			Los primitivos habitantes de Grecia, los pueblos de las civilizaciones egea y micénica poseyeron una literatura oral compuesta en su mayor parte por canciones que hablaban de las guerras, las cosechas y los ritos funerarios. Los helenos se apropiaron de estas canciones en el segundo milenio a.C. y, aunque no se conserva ningún fragmento, los cantos de los aedos dedicados a los héroes prefiguran la poesía épica. La épica griega alcanzó su máximo esplendor con la Ilíada y la Odisea de Homero, aunque se cree que pueden ser obra de una sucesión de poetas que vivieron a lo largo del siglo IX a.C. Escritos en dialecto jónico con mezclas eólico, la perfección de sus versos hexámetros dáctilos indica que los poemas son la culminación, más que el principio, de una tradición literaria. Los poemas épicos homéricos se difundieron en las recitaciones de cantores profesionales que, en sucesivas generaciones, alteraron el original, actualizando el lenguaje. Esta tradición oral se mantuvo durante más de cuatro siglos.
@@ -959,8 +946,8 @@ INSERT INTO SUBTOPIC VALUES ('La literatura griega  poesía épica','<div>
 		<p>
 			El dístico elegíaco se popularizó en toda Grecia durante el siglo VII a.C. y se utilizó en composiciones de todas clases, desde canciones fúnebres a canciones de amor. El primer autor conocido de elegías fue Calino de Éfeso. Otros famosos poetas elegíacos primitivos fueron Tirteo de Esparta, Mimnermo de Colofón, Arquíloco de Paros, Solón el primer poeta ateniense y Teognis de Megara.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('Poesia lirica','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Poesia lirica','<div>
 		<h3>Poesía lírica</h3>
 		<p>
 			La lírica procede de canciones acompañadas de la lira, y en la antigua Grecia había dos tipos principales, la personal y la coral. La lírica personal se desarrolló en la isla de Lesbos. El poeta y músico Terpandro, que había nacido en Lesbos pero que vivió casi toda su vida en Esparta, está considerado como el primer poeta lírico griego porque fue el que antes compuso música y poesía. La mayor parte de sus poemas eran nomos o himnos litúrgicos en honor de Apolo, y cantados por un solo intérprete acompañado de la lira.
@@ -974,8 +961,8 @@ INSERT INTO SUBTOPIC VALUES ('Poesia lirica','<div>
 		<p>
 			La lírica coral alcanzó su apogeo hacia mediados del siglo V a.C. en las obras de Píndaro, que escribió muchos poemas de este género en todas las formas, incluyendo himnos, ditirambos y epinicios. Se conserva cerca de la cuarta parte de su obra, principalmente epinicios con la estructura trinaria creada por Estesícoro. Las tragedias de la época incluyen muchas odas corales importantes.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('El teatro','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('El teatro','<div>
 		<h3>El teatro</h3>
 		<p>
 			A inicios de la primavera, las ciudades griegas celebraron fiestas populares en honor a Dionisio, dios del vino. Estas eran parecidas a los carnavales: la gente bailaba cantaba y se emborrachaba en las calles. Unos coros desfilaban por la ciudad, dirigidos por una persona que se llamaba corifeo. Paulatinamente los coros comenzaron a entablar diálogos con el corifeo, lo cual dio origen al establecimiento de parlamentos fijos para cada uno de ellos. De esta manera nació la forma expresiva fundamental del teatro: el dialogo.
@@ -986,14 +973,14 @@ INSERT INTO SUBTOPIC VALUES ('El teatro','<div>
 		<p>
 			El siguiente paso en la evolución del teatro fue la localización especifica de la representación: se abandona la calle como escenario de los diálogos y se creó un lugar especial: el teatro, un espacio destinado exclusivamente para la representación de los diálogos. Había dos tipos principales de obras, la tragedia y la comedia. Aunque ambas estaban escritas en verso existían entre ellas diferencias notables.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('La tragedia','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('La tragedia','<div>
 		<h3>La tragedia</h3>
 		<p>
 			La tragedia, tal y como hoy se la conoce, se cree que fue creada en el siglo VI a.C. por el poeta ateniense Esquilo, que introdujo el papel de un segundo actor, aparte del coro. Sus tragedias, cerca de 90, versan sobre temas tan excelsos como la divinidad y las relaciones de los seres humanos con los dioses. Únicamente siete de sus obras han llegado hasta hoy, entre ellas Prometeo encadenado, que narra el castigo de Zeus al titán Prometeo, y la Orestiada, trilogía que retrata el asesinato del héroe griego Agamenón por su mujer, el de ésta por su hijo Orestes y el posterior destino de Orestes.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('La comedia','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('La comedia','<div>
 		<h3>La comedia</h3>
 		<p>
 			Uno de los más grandes poetas cómicos fue Aristófanes, cuya primera comedia, Daitaleis, hoy perdida, data del 427 a.C. Empleando la sátira dramática, ridiculizó a Eurípides en Las ranas y a Sócrates en Las nubes. Estas obras representan la antigua comedia de la literatura griega.
@@ -1004,8 +991,8 @@ INSERT INTO SUBTOPIC VALUES ('La comedia','<div>
 		<p>
 			En la comedia nueva, la sátira se sustituye por la comedia social, con tramas y personajes cotidianos y familiares, y temas de amor romántico. El principal autor de esta comedia nueva fue Menandro, cuya influencia alcanzó a los dramaturgos latinos de los siglos III y II a.C., sobre todo a Plauto y Terencio. Se conservan una obra completa de Menandro, El tacaño, y fragmentos de otras.
 		</p>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('Autores','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Autores','<div>
 		<h3>Autores</h3>
 		<div>
 			<h4>Homero</h4>
@@ -1034,8 +1021,8 @@ INSERT INTO SUBTOPIC VALUES ('Autores','<div>
 				Uno de los aspectos más interesantes del estilo de Sófocles es la presentación de la psiquis de los personajes. El conflicto trágico en Sófocles no es el carácter absoluto, es decir, no se plantea en función del cumplimiento de un destino inexorable, sin o que surge el interior del alma humana como una contraposición entre el sujeto y el mundo. En este sentido, los conflictos de las tragedias de Sófocles tiene una dimensión muy interesante. Esta forma básica del conflicto será retomada siglos después en otros géneros típicamente modernos tales como la novela y el drama
 			</p>
 		</div>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');
-INSERT INTO SUBTOPIC VALUES ('Literatura romana la influencia griega','<div>
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Literatura romana la influencia griega','<div>
 		<h3>La literatura romana</h3>
 		<p>
 			A la llegada de los conquistadores romanos, Grecia ya había alcanzado el punto más alto de sus logros culturales e iniciaban la decadencia. Los romanos, entusiasmados por una cultura muy superior a la suya, empezaron por copias los modelos griegos de la arquitectura y escultura. Es así como construyeron templos con columnas y frontis, y también esculpieron retratos realistas al estilo griego. Incluso la mitología griega se trasladó al mundo romano con ligeras modificaciones: cambiaron los nombres de los dioses, pero no las virtudes y poderes que los caracterizaba. Esta adaptación del mundo griego sirvió como fundamento para el florecimiento de las formas artísticas de expresión al interior del imperio.
@@ -1146,7 +1133,813 @@ INSERT INTO SUBTOPIC VALUES ('Literatura romana la influencia griega','<div>
 				</ul>
 			</p>
 		</div>
-	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');*/
+	</div>','AUTORES Y OBRAS IMPORTANTES DE LA LITERATURA CLÁSICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Definición de Energía','<div>
+	<h3>Definición de Energía</h3>
+	<p>
+		La energía es, a nuestro entender, el principio y el fin del universo que conocemos. De la energía proviene la masa (que Lavoisier llamaba "materia") y el destino de toda masa es convertirse nuevamente en energía. La energía como tal, más la masa (energía concentrada de modo de estar ocupando un lugar en el espacio, es decir, en el resto de la energía), conforman la "materia" (el "Todo", en oposición a la "Nada"). Todo ocurre en el Universo bajo un principio: reducir la energía de un sistema. Por ello los cuerpos caen, el agua caliente se enfría, etc. Hay una especialidad de la Física (llamada "Termodinámica") que brinda interesantes explicaciones sobre esto. La energía se nos presenta en formas muy variadas: mecánica, térmica, eléctrica, luminosa, atómica, etc. Aquí solamente vamos a referirnos a la energía mecánica.
+	</p>
+</div>','ENERGÍA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Tipos de energía mecánica','<div>
+	<h3>Tipos de energía mecánica</h3>
+	<p>
+		Existen 2 formas de energía mecánica:
+		<ul>
+			<li>
+				La energía potencial: que depende de la posición que ocupa un cuerpo (por ejemplo, la altura a la que se encuentra). En general su fórmula es: Ep = m . g . h (donde m = masa, g = aceleración de la gravedad, y h = altura).
+			</li>
+			<li>
+				La energía cinética: debida al movimiento que realiza en ese momento (en realidad, de la velocidad de este). En general su fórmula es : Ec = m . v2 (donde m = masa, y v = velocidad).
+			</li>
+		</ul>
+		La Energía Mecánica Total es la suma de ambas y es generalmente constante: EMT = Ep + Ec
+	</p>
+</div>','ENERGÍA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Ramas de la física mecánica','<div>
+	<h3>Ramas de la física mecánica</h3>
+	<p>
+		En función del objeto de su estudio, podemos dividir la Física Mecánica en tres partes o ramas:
+		<ul>
+			<li>
+				Estática: es la parte de la Mecánica que estudia las fuerzas que actúan en un sistema sin tener en cuenta los efectos que su acción provoca.
+			</li>
+			<li>
+				Dinámica: es la parte de la mecánica que estudia los efectos provocados por las fuerzas, fundamentalmente los cambios en la dirección y/o magnitud de las velocidades. Estos cambios se denominan "aceleraciones". Aquí introdujo Newton sus principios fundamentales: el de inercia, el de masa y el de acción y reacción.
+			</li>
+			<li>
+				Cinemática: es la parte de la mecánica que estudia los movimientos, generalmente sin tener en cuenta ni las fuerzas que los provocan ni las masas sobre las que actúan.
+			</li>
+		</ul>
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Vectores','<div>
+	<h3>Vectores</h3>
+	<p>
+		Por qué las fuerzas se representan por vectores: Una fuerza queda definida cuando se expresan:
+		<ul>
+			<li>
+				Su dirección: la recta sobre la que actúa.
+			</li>
+			<li>
+				Su sentido: la semirrecta de esa recta sobre la que actúa (sentido + ó sentido -).
+			</li>
+			<li>
+				Su punto de aplicación: el punto en el cual se puede considerar aplicada.
+			</li>
+			<li>
+				Su intensidad: su módulo (cantidad) en una unidad determinada: Kg fuerza, Newton, etc.
+			</li>
+		</ul>
+	</p>
+	<p>
+		En Geometría, definimos: como "recta", una sucesión infinita de puntos alineados sin principio ni fin, como "semirrecta", una sucesión infinita de puntos que tiene un origen o comienzo, pero no tiene fin, como "segmento", una sucesión finita de puntos que tiene un origen y tiene un fin, y como "vector", un segmento orientado (hacia un extremo del segmento o hacia el opuesto).</br>Por tanto, un vector queda definido cuando se expresan:
+		<ul>
+			<li>
+				Su dirección: la recta sobre la que actúa,
+			</li>
+			<li>
+				Su sentido: su orientación hacia un extremo o hacia el opuesto.
+			</li>
+			<li>
+				Su punto de aplicación: el punto en el cual tiene su origen.
+			</li>
+			<li>
+				Su medida (en una unidad determinada: m, cm, etc.)
+			</li>
+		</ul>
+	</p>
+	<p>
+		Si comparamos qué elementos necesita una fuerza para quedar definida, y qué elementos necesita un vector para quedar definido, vemos que son prácticamente los mismos, o, al menos, podemos hacerlos equiparables. Por esta razón, las fuerzas (elementos naturales que solamente son detectables y medibles por sus efectos estudiados por la Física) se suelen representar gráficamente mediante vectores (elementos artificiales creados y estudiados por la Geometría).
+	</p>
+	<p>
+		En definitiva, las fuerzas no son vectores ni los vectores son fuerzas. La fuerza es una magnitud vectorial porque requiere los mismos elementos que un vector y, además, éste permite representarla gráficamente sobre un papel en la recta, en el plano o en el espacio. Las magnitudes que quedan definidas con solamente expresar su magnitud se denominan "escalares", por ejemplo la masa, el volumen, etc.
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Composición de fuerzas','<div>
+	<h3>Composición de fuerzas</h3>
+	<p>
+		Varias fuerzas casi siempre pueden "componerse", es decir, reemplazarse por una única fuerza llamada "resultante" cuyos efectos sean los mismos que producían aquéllas. Existen varias posibilidades típicas que mencionaremos pero que no desarrollaremos en este  trabajo.
+		<ul>
+			<li>
+				Fuerzas sobre una misma recta de acción (con igual dirección o "colineales"): con el mismo sentido: la fuerza resultante tiene la misma dirección y sentido que las fuerzas componentes, su punto de aplicación es cualquiera de los de su recta de acción y su medida es la suma de las medidas de las componentes. Con sentido opuesto: la fuerza resultante tiene la misma dirección que las fuerzas componentes, su sentido es el de la componente mayor, su punto de aplicación es cualquiera de los de su recta de acción y su medida es la diferencia de las medidas de las componentes.
+			</li>
+			<li>
+				Fuerzas concurrentes (con el mismo punto de aplicación): En el caso de sólo dos fuerzas componentes, la resultante se obtiene gráficamente por aplicación de la llamada "regla del paralelogramo" o, en caso de tratarse de más de dos fuerzas concurrentes, por la construcción de un polígono con ellas. La medida de la resultante no es la suma de las medidas de las componentes sino su "composición", en la que influyen la dirección y el sentido de cada una de las componentes. Del mismo modo, la unión del punto de aplicación con el extremo final de la última fuerza nos indicará la dirección y el sentido de esa resultante. En realidad, y como ya hemos dicho, no estamos gráficamente resolviendo un sistema de fuerzas sino un sistema geométrico con los vectores que las representan. También en útil representar las fuerzas en un sistema de coordenadas cartesianas ortogonales, proyectar las fuerzas sobre ambos ejes para obtener sus valores sobre cada uno de ellos, y luego, aplicando el teorema de Pitágoras, encontrar el valor de la resultante, y, usando la trigonometría, su dirección y sentido.
+			</li>
+			<li>
+				Fuerzas paralelas: con el mismo sentido: la resultante tiene una medida igual a la suma de las medidas de las componentes, su dirección es paralela a las de las componentes (ubicada entre ellas y más cerca de la mayor), y su sentido es el mismo que el de aquéllas. El punto de aplicación se determina mediante la llamada "relación de Stevin" que dice que "cada fuerza es directamente proporcional al segmento determinado por los puntos de aplicación de las otras fuerzas". Puede aplicarse también el método gráfico llamado "del funicular".Ver con más detalle estos métodos en cualquier texto o trabajo especializado. Con sentido opuesto: la resultante tiene una medida igual a la resta de las medidas de las componentes, su dirección es paralela a las de las componentes (ubicada no entre ellas sino por fuera, del lado de la mayor), su sentido es el de la componente mayor. El punto de aplicación también se determina mediante la "relación de Stevin".
+			</li>
+			<li>
+				Fuerzas no colineales ni concurrentes ni paralelas: existe siempre algún procedimiento aplicable al sistema dado que generalmente procurará trasladar las fuerzas componentes hasta asimilarlas parcial o totalmente a cualquiera de los casos vistos.
+			</li>
+		</ul>
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Efectos de la aplicación de fuerzas','<div>
+	<h3>Efectos de la aplicación de fuerzas</h3>
+	<p>
+		Las fuerzas son causas que solamente se ven a través de sus efectos. En Mecánica, una fuerza tiene como efecto la modificación del estado de movimiento del cuerpo sobre el que se la aplica. Y hemos llamado "aceleración" a esa modificación del movimiento (esto es, la variación de la velocidad y/o de la dirección de movimiento de un cuerpo). Es necesario aplicar una fuerza solamente cuando se busca modificar la magnitud o dirección de una velocidad. Si un cuerpo está quieto o moviéndose a velocidad constante sobre una trayectoria rectilínea, la resultante de las fuerzas que se ejercen sobre él es cero (resultante nula).
+	</p>
+	<p>
+		Este principio es el que Newton elaboró y llamó "principio de inercia". Quizá sea el resultado de que el Universo intenta mantener su energía constante salvo que pueda disminuirla mediante algún fenómeno espontáneo (por ejemplo, la caída de un cuerpo, la formación de un compuesto químico más estable, etc.). "Todo cuerpo continúa en su estado de reposo o de movimiento uniforme sobre una línea recta, a no ser que se le obligue a variar ese estado mediante fuerzas que actúen sobre él." (1686 - Principios matemáticos de filosofía natural).
+	</p>
+	<p>
+		Cuando aplicamos una fuerza sobre un cuerpo, le creamos una aceleración directamente proporcional a la intensidad de la fuerza que aplicamos e inversamente proporcional a la masa de ese cuerpo. Este principio también fue desarrollado en parte por Newton y lo conocemos como "principio de masa": a = F / m
+	</p>
+	<p>
+		"La ley de variación del movimiento es proporcional a la fuerza motora a que se le somete y se realiza en el sentido de la recta en que la fuerza actúa." (1686 - Principios matemáticos de filosofía natural). Siempre que un cuerpo ejerce una fuerza sobre otro (acción), recibe de él otra fuerza de igual intensidad, pero de sentido contrario (reacción).
+	</p>
+	<p>
+		Esta conclusión, fruto de la fina observación de Newton y de su espíritu científico de razonamiento, le permitió establecer este "principio de acción y reacción". "A toda acción se opone siempre una reacción igual; o sea, las acciones mutuas de dos cuerpos uno sobre el otro se dirigen siempre hacia las partes contrarias." (1686 - Principios matemáticos de filosofía natural). Estos principios son el fundamento de la parte de la Física Mecánica que conocemos como "Estática".
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Fuerzas de fricción','<div>
+	<h3>Fuerzas de fricción</h3>
+	<p>
+		Como en la vida práctica ninguna superficie es perfectamente lisa, las fuerzas que se aplican sobre un cuerpo para iniciar o mantener su movimiento no tienen una eficiencia del 100%. Esto se debe a la aparición de las fuerzas llamadas "de fricción" que se oponen a esos movimientos. Pueden ser producidas por rozamiento (en sólidos que se deslizan sobre sólidos), por rodadura (en sólidos que ruedan sobre sólidos), o por viscosidad (sólidos, líquidos o gases que atraviesan otros líquidos o gases). El sentido de las fuerzas de fricción es siempre opuesto al sentido del movimiento.
+	</p>
+	<p>
+		Existen dos situaciones que afectan el valor de las fuerzas de rozamiento: Un caso se da cuando intentamos iniciar un movimiento y otro cuando, luego de iniciado, intentamos mantenerlo.
+		<ul>
+			<li>
+				Rozamiento estático: como tuve el privilegio de que me fuera explicado por el eminente físico de la UNLP Dr. Rafael Grinfeld allá por 1963 y jamás se me olvidaron (ni su explicación ni él), cuando un cuerpo rugoso es apoyado sobre otro cuerpo rugoso, las irregularidades de uno "calzan" en las irregularidades del otro. Es más: si ambos cuerpos son metálicos, el peso del superior provoca que las eminencias de ambos lleguen a soldarse (microsoldaduras). Al intentar iniciar un deslizamiento, se hace necesario "descalzar" un cuerpo del otro produciendo la ruptura de sus puntos más salientes y, si existieran, también la ruptura de esas microsoldaduras. Esto hace que el rozamiento estático tenga un valor inicial mayor que el que se produce cuando ya el cuerpo está en movimiento. El cociente entre la fuerza de rozamiento estático y la fuerza normal o perpendicular (compresión de un cuerpo sobre el otro) se denomina "coeficiente de rozamiento estático".
+			</li>
+			<li>
+				Rozamiento dinámico: una vez iniciado el movimiento, disminuye un poco la fuerza de rozamiento, pues ya no existe esa adherencia inicial. El cociente entre la fuerza de rozamiento dinámico y la fuerza normal se hace menor, y se denomina "coeficiente de rozamiento dinámico".
+			</li>
+		</ul>
+	</p>
+	<p>
+		Los lubricantes cumplen la función de disminuir ambas fuerzas de rozamiento, generalmente intercalando capas líquidas o pastosas que convierten el fenómeno de rozamiento en un fenómeno de viscosidad, con fuerzas de fricción significativamente menores y, por tanto, mayor eficiencia en el movimiento obtenido.
+	</p>
+	<p>
+		¿"En equilibrio" o "en reposo"?</br>Tomémonos un par de minutos para diferenciar con mayor claridad estos conceptos equilibrio: implica aceleración = cero, lo que puede darse en un cuerpo en reposo o en otro que se mueva con velocidad uniforme sobre una trayectoria rectilínea. reposo: implica velocidad = 0, lo que solamente puede darse en un cuerpo quieto (al menos, sin desplazarse con respecto de otro que consideremos fijo). Un cuerpo puede estar en equilibrio sin estar en reposo: por ejemplo, si se está moviendo con velocidad constante sobre una trayectoria rectilínea. Un cuerpo puede estar en reposo sin estar en equilibrio: por ejemplo, un cuerpo lanzado hacia arriba que llega al punto máximo de su trayectoria y se detiene, pero que está siendo afectado por la fuerza de gravedad que lo hará iniciar su caída libre.
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Centro de gravedad y centro de masa','<div>
+	<h3>Centro de gravedad y Centro de masa</h3>
+	<p>
+		Todo cuerpo tiene un volumen, es decir, ocupa un lugar en el espacio. Sin embargo, en la Física Mecánica básica jamás lo mencionamos. Los cuerpos, para nosotros, son siempre puntos que no tienen ni largo ni ancho ni alto, pero que tienen masa y tienen peso. Esto significa que los resultados teóricos que obtenemos no serán realmente los verdaderos en la práctica. Pero, para comenzar a estudiar los temas, es suficiente.
+		<ul>
+			<li>
+				Centro de gravedad: es el punto en el que puede considerarse concentrado todo el peso de un cuerpo.
+			</li>
+			<li>
+				Centro de masa: es el punto en el que puede considerarse concentrada toda la masa de un cuerpo.
+			</li>
+		</ul>
+		Generalmente, la posición de ambos coincide y, en cuerpos homogéneos (de un material con peso específico y densidad uniformes en toda su extensión), también coincide con el centro geométrico del cuerpo.
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Movimiento','<div>
+	<h3>Movimiento</h3>
+	<p>
+		Todos los puntos del Universo que conocemos están en movimiento, es decir, cambian su posición. Cuando estás echado en tu sillón favorito y te recriminan por estar "quieto", puedes responder que estás girando alrededor del eje terrestre a razón de un giro completo diario, con la Tierra alrededor del Sol, con el Sistema Solar dentro de la Vía Láctea, con la Vía Láctea a través de las otras galaxias, ... Entonces, ¿qué está quieto y qué está en movimiento en forma absoluta? Nada. Todo movimiento es relativo. Un punto está en movimiento cuando cambia de posición con respecto a otro que arbitrariamente consideramos fijo. Y las distintas posiciones que ocupa a medida que pasa el tiempo configurarán su trayectoria.
+	</p>
+	<p>
+		En este capítulo de la Física que se ha dado en llamar "Cinemática" veremos los movimientos sin tener en cuenta las fuerzas que los originan, y aquí solamente veremos algunos de ellos: los movimientos uniformes y los movimientos uniformemente variados, tanto rectilíneos como circulares.
+		<ul>
+			<li>
+				Movimientos rectilíneos: Obviamente, un movimiento es rectilíneo cuando la curvatura de su "recta de acción" es cero. Son pocos los movimientos verdaderamente rectilíneos, pero cuando la curvatura de la recta de acción no es significativa, podemos considerarlos así para facilitar el estudio.
+				<ul>
+					<li>
+						El movimiento es rectilíneo uniforme cuando su velocidad no varía con el transcurso del tiempo. Esto significa que: su velocidad es constante, la resultante de las fuerzas ejercidas sobre él es cero y, por tanto, no hay aceleración.
+					</li>
+					<li>
+						El movimiento es rectilíneo uniformemente acelerado cuando su velocidad aumenta regularmente con el transcurso del tiempo. Esto significa que: su aceleración es positiva y constante, es constante la intensidad de la resultante de las fuerzas ejercidas sobre el móvil y esta fuerza resultante tiene el mismo sentido que el movimiento del cuerpo.
+					</li>
+					<li>
+						El movimiento es rectilíneo uniformemente retardado cuando su velocidad disminuye regularmente con el transcurso del tiempo. Esto significa que: su aceleración es negativa y constante, es constante la intensidad de la resultante de las fuerzas ejercidas sobre el móvil y esta fuerza resultante tiene sentido opuesto al del movimiento del cuerpo (caso del frenado).
+					</li>
+					<li>
+						El movimiento es una caída libre cuando: es vertical, la altura inicial es mayor que la final (que es cero), la velocidad inicial es cero (se deja caer, no se empuja hacia abajo), la velocidad final es positiva, la aceleración es la de la gravedad considerada como positiva (a favor de la fuerza de atracción gravitatoria),  la fuerza actuante es la de la gravedad, es constante (aproximadamente igual a 9,8 m/s2 para movimientos cercanos a la superficie de la Tierra) y tiene el mismo sentido que el movimiento del cuerpo.
+					</li>
+					<li>
+						El movimiento es un tiro vertical cuando: obviamente, es vertical, la altura inicial es cero y, por tanto, menor que la final, la velocidad inicial es positiva (se lanza el cuerpo hacia arriba), la velocidad final es cero, la aceleración es la de la gravedad considerada como negativa (en contra de la fuerza de atracción gravitatoria), la fuerza actuante es la de la gravedad, es constante y tiene sentido opuesto al del movimiento del cuerpo.
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</p>
+</div>','MECÁNICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Definición de Electromagnetismo','<div>
+	<h3>Definición de Electromagnetismo</h3>
+	<p>
+		El electromagnetismo, estudia los fenómenos eléctricos y magnéticos que se unen en una sola teoría aportada por Faraday, que se resumen en cuatro ecuaciones vectoriales que relacionan campos eléctricos y magnéticos conocidas como las ecuaciones de Maxwell. Gracias a la invención de la pila de limón, se pudieron efectuar los estudios de los efectos magnéticos que se originan por el paso de corriente eléctrica a través de un conductor.
+	</p>
+	<p>
+		El Electromagnetismo, de esta manera es la parte de la Física que estudia los campos eléctricos y los campos magnéticos, sus interacciones con la materia y, en general, la electricidad y el magnetismo y las partículas subatómicas que generan flujo de carga eléctrica. El electromagnetismo, por ende, se comprende que estudia conjuntamente los fenómenos físicos en los cuales intervienen cargas eléctricas en reposo y en movimiento, así como los relativos a los campos magnéticos y a sus efectos sobre diversas sustancias sólidas, líquidas y gaseosas.
+	</p>
+</div>','ELECTROMAGNETISMO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Campos eléctricos y magnéticos','<div>
+	<h3>Campos eléctricos y magnéticos</h3>
+	<p>
+		Es conveniente entender el electromagnetismo en 2 términos separados: El campo eléctrico y el campo magnético. Un campo eléctrico es producido por la presencia de cargas eléctricas, las cuales crean una fuerza, relacionadas por la ecuación (Siendo Q la carga eléctrica medida en coulombs y E el campo eléctrico medido en Newtons/Coulombs). Esta fuerza eléctrica es la responsable de la electricidad estática y dirige el flujo de carga eléctrica en un área determinada (corriente eléctrica). Por otro lado, el campo magnético puede ser producido por el movimiento de cargas eléctricas, o corriente eléctrica, las cuales crean la fuerza magnética asociada con los imanes como la magnetita.
+	</p>
+	<p>
+		El termino electromagnetismo proviene del hecho de que no podemos estudiar los campos eléctricos y magnéticos por separado. Un campo magnético variable produce un campo eléctrico (como ocurre en el fenómeno de inducción electromagnética, la cual es la base para el funcionamiento de generadores eléctricos, motores de inducción eléctrica y transformadores). Similarmente, un campo eléctrico variable genera un campo magnético.
+	</p>
+	<p>
+		Debido a esta dependencia mutua de los campos eléctricos y magnéticos, se considera lógico considerarlos como uno solo, el campo electromagnético. Esta unificación, la cual fue completada por James Clerk Maxwell, es uno de los triunfos para los físicos del siglo 19. Estos estudios trajeron consecuencias sumamente altas, siendo una de ellas la aclaración de la naturaleza de la luz.
+	</p>
+	<p>
+		Como se ha ido descubriendo, lo que percibimos como “luz visible” es realmente una propagación oscilatoria en el campo electromagnético, es decir, una onda electromagnética. Diferentes frecuencias de oscilación dan a lugar a las diferentes formas de radiación electromagnética, desde las ondas de radio de frecuencias bajas, la luz visible en frecuencias intermedias, hasta los rayos gamma con las frecuencias bastante altas. Las implicaciones teóricas del electromagnetismo llevaron a Albert Einstein a la publicación de la Teoría de relatividad especial, en 1905
+	</p>
+</div>','ELECTROMAGNETISMO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Desarrollo histórico de la teoría electromagnética','<div>
+	<h3>Desarrollo histórico de la teoría electromagnética</h3>
+	<p>
+		Históricamente, el magnetismo y la electricidad habían sido tratados como fenómenos distintos y eran estudiados por ciencias diferentes. Sin embargo, los descubrimientos de Oersted y luego de Ampere, al observar que la aguja de una brújula tomaba una posición perpendicular al pasar corriente a través de un conductor próximo a ella. Así mismo los estudios de Faraday en el mismo campo, sugerían que la electricidad y el magnetismo eran manifestaciones de un mismo fenómeno.
+	</p>
+	<p>
+		La idea anterior fue propuesta y materializada por el físico escocés James Clerk Maxwell (1831- 1879), quien luego de estudiar los fenómenos eléctricos y magnéticos concluyó que son producto de una misma interacción, denominada interacción electromagnética, lo que le llevó a formular, alrededor del año 1850, las ecuaciones antes citadas, que llevan su nombre, en las que se describe el comportamiento del campo electromagnético. Estas ecuaciones dicen esencialmente que:
+		<ul>
+			<li>
+				Existen portadores de cargas eléctricas, y las líneas del campo eléctrico parten desde las cargas positivas y terminan en las cargas negativas.
+			</li>
+			<li>
+				No existen portadores de carga magnética; por lo tanto, el número de líneas del campo magnético que salen desde un volumen dado debe ser igual al número de líneas que entran a dicho volumen.
+			</li>
+			<li>
+				Un imán en movimiento, o, dicho de otra forma, un campo magnético variable, genera una corriente eléctrica llamada corriente inducida.
+			</li>
+			<li>
+				Cargas eléctricas en movimiento generan campos magnéticos.
+			</li>
+		</ul>
+	</p>
+</div>','ELECTROMAGNETISMO');""",
+    """INSERT INTO SUBTOPIC VALUES ('Definición de Acústica','<div>
+	<h3>Definición de Acústica</h3>
+	<p>
+		El sonido es la vibración de un medio elástico, bien sea gaseoso, liquido o sólido. Cuando nos referimos al sonido audible por el oído humano, estamos hablando de la sensación detectada por nuestro oído, que producen las rápidas variaciones de presión en el aire por encima y por debajo de un valor estático. Este valor estático nos lo da la presión atmosférica (alrededor de 100.000 pascals) el cual tiene unas variaciones pequeñas y de forma muy lenta, tal y como se puede comprobar en un barómetro.
+	</p>
+	<p>
+		¿Cómo son de pequeñas y de rápidas las variaciones de presión que causan el sonido? Cuando las rápidas variaciones de presión se centran entre 20 y 20.000 veces por segundo (igual a una frecuencia de 20 Hz a 20 kHz) el sonido es potencialmente audible, aunque las variaciones de presión puedan ser a veces tan pequeñas como la millonésima parte de un pascal.
+	</p>
+	<p>
+		Los sonidos muy fuertes son causados por grandes variaciones de presión, por ejemplo, una variación de 1 pascal se oiría como un sonido muy fuerte, siempre y cuando la mayoría de la energía de dicho sonido estuviera contenida en las frecuencias medias (1kHz - 4 kHz) que es donde el iodo humano es más sensitivo. El sonido lo puede producir diferentes fuentes, desde una persona hablando hasta un altavoz, que es una membrana móvil que comprime el aire generado ondas sonoras.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Frecuencia y Decibelio','<div>
+	<h3>Frecuencia y Decibelio</h3>
+	<p>
+		La frecuencia de una onda sonora se define como el número de pulsaciones (ciclos) que tiene por unidad de tiempo (segundo). La unidad correspondiente a un ciclo por segundo es el hertzio (Hz). Las frecuencias más bajas se corresponden con lo que habitualmente llamamos sonidos "graves”, son sonidos de vibraciones lentas. Las frecuencias más altas se corresponden con lo que llamamos "agudos" y son vibraciones muy rápidas. El espectro de frecuencias audible varía según cada persona, edad etc. Sin embrago normalmente se acepta como los intervalos entre 20 Hz y 20 kHz.
+	</p>
+	<p>
+		El decibelio es una unidad logarítmica de medida utilizada en diferentes disciplinas de la ciencia. En todos los casos se usa para comparar una cantidad con otra llamada de referencia. Normalmente el valor tomado como referencia es siempre el menor valor de la cantidad. En algunos casos puede ser un valor promediado aproximado.
+	</p>
+	<p>
+		En Acústica la mayoría de las veces el decibelio se utiliza para comparar la presión sonora, en el aire, con una presión de referencia. Este nivel de referencia tomado en Acústica es una aproximación al nivel de presión mínimo que hace que nuestro iodo sea capaz de percibirlo. El nivel de referencia varía lógicamente según el tipo de medida que estemos realizando. No es el mismo nivel de referencia para la presión acústica, que para la intensidad acústica o para la potencia acústica. A continuación, se dan los valores de referencia.
+		<ul>
+			<li>
+				Nivel de Referencia para la Presión Sonora (en el aire) = 0.00002 = 2E-5 Pa (rms)
+			</li>
+			<li>
+				Nivel de Referencia para la Intensidad Sonora (en el aire) = 0.000000000001 = 1E-12 w/m^2
+			</li>
+			<li>
+				Nivel de Referencia para la Potencia Sonora (en el aire) = 0.00000000001 = 1E-12 w
+			</li>
+		</ul>
+	</p>
+	<p>
+		Como su nombre indica el decibelio es la décima parte del Bel. El Bel es el logaritmo en base 10 de la relación de dos potencias o intensidades. No obstante, esta unidad resulta demasiado grande por lo que se ha normalizado el uso de la décima parte del Bel, siendo el decibel o decibelio.  La razón por la que se utiliza el decibelio es que, si no, tendríamos que estar manejando números o muy pequeños o excesivamente grandes, llenos de ceros, con lo que la posibilidad de error sería muy grande al hacer cálculos. Además, también hay que tener en cuenta que el comportamiento del iodo humano está más cerca de una función logarítmica que de una lineal, ya que no percibe la misma variación de nivel en las diferentes escalas de nivel, ni en las diferentes bandas de frecuencias.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Nivel Sonoro','<div>
+	<h3>Nivel Sonoro</h3>	
+	<p>
+		Para medir el nivel sonoro disponemos de los Sonómetros. Estos aparatos nos permiten conocer el Nivel de Presión sonora o SPL (Sound Presure Level). Normalmente suelen ser sistemas digitales y presentan en una pantalla de cristal líquido los valores medidos. Estos siempre se dan como decibelios dB y en referencia al valor antes señalado de (2E-5 Pa). Con el sonómetro es posible además del hallar el valor rms de la presión, también ver los picos máximos y niveles mínimos de la medida. Como se verá en el capítulo de ponderaciones, los sonómetros normalmente no dan la medida en dB lineales si no que dan ya con la ponderación y son dBA/dBC etc.
+	</p>
+	<p>
+		Una función muy utilizada a la hora de medir niveles de presión acústica y que ofrecen los sonómetros es la medición en modo Leq. Normalmente se utiliza el Leq 1´ (leq a un minuto). El sonómetro mide las diferentes presiones que se generan durante un tiempo determinado (Leq X) siendo X = 1 minuto en nuestro caso, el valor que nos da al finalizar el minuto de medida es un valor en dB que equivaldría al de una señal de valor continuo durante todo el minuto y que utilizaría la misma energía que se ha medido durante el minuto. Hay que observar que en una medida de un minuto los valores varían y si se quiere determinar un valor medio de ruido hay que hacerlo con la función Leq, de otra forma se obtendrán valores erróneos puesto que podemos tener valores de pico durante un instante y no ser representativos del nivel de ruido normal que se esta intentando determinar.
+	</p>
+	<p>
+		En el punto anterior hemos visto que el dB es un valor lineal, quiere decir que los valores medidos son los valores tomados como validos sin que sufran ninguna alteración. Si los valores de presión acústica los medimos de esta forma, linealmente, aun siendo cierta dicha medida, tendrá poco valor en cuanto a la percepción del odio humano.
+	</p>
+	<p>
+		El oído no se comporta igual para el mismo nivel de presión en diferentes frecuencias. Por ejemplo, tomemos un sonido lineal en toda la banda de 20 Hz a 20 kHz tenemos en todas las bandas un nivel de 30 dB, si nuestro iodo fuese lineal oiríamos los mismo o mejor con la misma intensidad auditiva las frecuencias más bajas, que las medias y que las agudas. Sin embargo, esto no es cierto el iodo humano tiene una menor sensibilidad en las frecuencias más graves, y en las más agudas frente a las medias.
+	</p>
+	<p>
+		Lo que más oímos, por tanto, son las frecuencias medias, y las que menos las más graves seguidas de las más agudas. Como vemos es necesario encontrar una forma de ajustar los niveles de dB que hemos medido con la percepción que el oído tiene de los mismos según cada frecuencia. Esta corrección se realiza ponderando los dB medidos mediante una tabla de ponderación ya especificada y que se llama tabla "A". Los decibelios ya ponderados en "A" se representan como dBA y los no ponderados, llamados lineales, como dB. 
+	</p>
+	<p>
+		¿Cómo se suman los niveles de sonido? Hemos visto que el decibelio es una función logarítmica y, por tanto, cuando hablamos de dB de presión sonora no es posible sumarlos sin más. Por ejemplo 30 dB + 30 dB no es igual a 60 dB si no a 33 dB como vamos a ver a continuación. Para poder sumar dos decibelios podemos emplear la siguiente ecuación: Suma dB1 + dB2 = 10 log (10^(dB1/10) + 10^(dB2/10))
+	</p>
+	<p>
+		La suma de dos dB nunca puede ser más de 3 dB más que el mayor de los dos. Si la diferencia que hay entre los dos valores a sumar es mayor de 10 dB la suma no tiene valor practico y se toma el valor del mayor de los dos. Por ejemplo, si sumamos 20 dB + 10 dB el resultado será igual a 20 dB (aproximado). Solamente son significativos para la suma los valores que tienen una diferencia menor a 10 dB.
+	</p>
+	<p>
+		¿A partir de que niveles el sonido es perjudicial? Por encima de los 100 dBA es muy recomendable siempre que sea posible utilizar protectores para los oídos. Si la exposición es prolongada, por ejemplo, en puestos de trabajos, se considera necesario el utilizar protectores en ambientes con niveles de 85 dBA, siempre y cuando la exposición sea prolongada. Los daños producidos en el oído por exposiciones a ruidos muy fuertes son acumulativos e irreversibles, por lo que se deben de extremar las precauciones. De la exposición prolongada a ruidos se observan trastornos nerviosos, cardiacos y mentales.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Presión, Intensidad y Potencia Acústica','<div>
+	<h3>Presión, Intensidad y Potencia Acústica</h3>
+	<p>
+		La presión sonora como hemos visto antes es la presión que se genera en un punto determinado por una fuente sonora. El nivel de presión sonora SPL se mide en dB(A) SPL y determina el nivel de presión que realiza la onda sonora con relación a un nivel de referencia que es 2E-5 Pascal en el aire. Es el parámetro más fácil de medir, se puede medir con un sonómetro. Su valor depende del punto donde midamos, del local etc. Realmente no da mucha información sobre las características acústicas de la fuente, a no ser que se haga un análisis frecuencial de los nivel de presión, dado que el SPL siempre esta influenciado por la distancia a la fuente, el local etc.
+	</p>
+	<p>
+		Se puede definir como la cantidad de energía sonora transmitida en una dirección determinada por unidad de área. Con buen oído se puede citar dentro de un rango de entre 0.000000000001 w por metro cuadrado, hasta 1 w. Para realizar la medida de intensidades se utiliza actualmente analizadores de doble canal con posibilidad de espectro cruzado y una sonda que consiste en dos micrófonos separados a corta distancia. Permite determinar la cantidad de energía sonora que radia una fuente dentro de un ambiente ruidoso. No es posible medirlo con un sonómetro. El nivel de intensidad sonora se mide en w/m2.
+	</p>
+	<p>
+		La potencia acústica es la cantidad de energía radiada por una fuente determinada. El nivel de potencia Acústica es la cantidad de energía total radiada en un segundo y se mide en w. La referencia es 1pw = 1E-12 w. Para determinar la potencia acústica que radia una fuente se utiliza un sistema de medición alrededor de la fuente sonora a fin de poder determinar la energía total irradiada.
+	</p>
+	<p>
+		La potencia acústica es un valor intrínseco de la fuente y no depende del local donde se halle. Es como una bombilla, puede tener 100 w y siempre tendrá 100 w la pongamos en nuestra habitación o la pongamos dentro de una nave enorme su potencia siempre será la misma. Con la potencia acústica ocurre lo mismo el valor no varía por estar en un local reverberante o en uno seco. Al contrario de la Presión Acústica que sí que varía según varíe las características del local donde se halle la fuente, la distancia etc.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Velocidad de propagación','<div>
+	<h3>Velocidad de Propagación</h3>
+	<p>
+		La velocidad de propagación del sonido en el aire es de unos 334 m/s. y a 0º es de 331,6 m/s. La velocidad de propagación es proporcional a la raíz cuadrada de la temperatura absoluta y es alrededor de 12 m/s mayor a 20º. La velocidad es siempre independiente de la presión atmosférica. En el agua la velocidad de propagación es de 1500 m/s. Es posible obtener medidas de temperatura de los océanos midiendo la diferencia de velocidad sobre grandes distancias.
+	</p>
+	<p>
+		El Tiempo de Reverberación RT, es el tiempo que tarda una señal, desde que esta deja de sonar, en atenuarse un nivel de 60 dB. Para realizar la medida se genera un ruido y se mide a partir de que este deja de sonar, entonces se determina el tiempo que tarda en atenuarse 60 dB. El Tiempo de Reverberación se mide de forma frecuencial, esto es, un local no tiene el mismo RT en 200 Hz que en 4 kHz. Ello es debido a que el RT viene determinado por el Volumen de la sala, y por los coeficientes de absorción de sus superficies, o si se prefiere por las superficies con un coeficiente de absorción determinado.
+	</p>
+	<p>
+		Como los coeficientes de absorción de los diferentes materiales que componen cualquier local no son iguales para todas las frecuencias, las reflexiones generadas en el interior del local serán diferentes para cada frecuencia y por lo tanto el RT del local es diferente según las frecuencias. Para calcular la RT de un local sin realizar mediciones se puede utilizar la fórmula de Sabine: RT60 = 0,163 * (V/A) donde  V = Volumen de la sala en m3 y A = Superficie de Absorción en m2.
+	</p>
+	<p>
+		Como norma cuanto mayor sea el local mayor es el RT. Si los materiales que lo componen internamente son poco absorbentes el RT también aumentara. El valor de RT es muy importante si se quiere conseguir buenos niveles de inteligibilidad dentro de los locales.
+	</p>
+	<p>
+		El coeficiente de absorción de un material es la relación entre la energía absorbida por el material y la energía reflejada por el mismo. Dada esta formulación su valor siempre está comprendido entre 0 y 1. El máximo coeficiente de absorción está determinado por un valor de 1 donde toda la energía que incide en el material es absorbida por el mismo, y el mínimo es 0 donde toda la energía es reflejada. El coeficiente de absorción varia con la frecuencia y, por tanto, los fabricantes de materiales acústicos dan los coeficientes de absorción por lo menos en resolución de una octava.
+	</p>
+	<p>
+		Sabiendo los materiales de una sala y sabiendo sus coeficientes de absorción podemos saber cómo sonora esa sala en cada frecuencia y podremos también saber, mediante la fórmula de Sabine, Eyring etc., el tiempo de reverberación también por frecuencias.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Eco, Reverberación y Resonancia','<div>
+	<h3>Eco, Reverberación y Resonancia</h3>
+	<p>
+		Cuando se genera un sonido en el interior de un local las superficies que componen el mismo ocasionan una serie de diferentes efectos dependiendo de las características de dichas superficies. Esto ocurre porque las ondas sonoras inciden en las diferentes superficies y estas las reflejan de diferente forma según su coeficiente de reflexión acústica.
+	</p>
+	<p>
+		Como es lógico, primero siempre se percibe el sonido directo, esto es, el sonido que nos llega a nuestro oído sin que aún se halla reflejado en ninguna superficie. Una vez recibido el sonido directo, llegará a nuestros oídos, con un retraso de tiempo con respecto al sonido directo, el sonido reflejado por las superficies del local. Tanto el retraso como el nivel sonoro del sonido reflejado dependen de las características físicas del local y sus superficies.
+	</p>
+	<p>
+		Si el retraso entre el sonido directo y el reflejado es mayor de 1/10 de segundo, nuestro sistema de audición será capaz de separar las dos señales y percibirlas como tales, primero una y después la otra, esto es lo que se entiende por eco. Por ejemplo: supongamos que estamos dentro de un local de grandes dimensiones y una persona que está separada de nosotros a cierta distancia nos dice "HOLA"; primero llegara a nuestros oídos el "HOLA" del sonido directo, y en el caso de un Eco este nos llegara como mínimo 1/10 segundo después, por lo tanto oiremos "HOLA. (1/10 segundo mínimo)...HOLA", y lo interpretaremos efectivamente como dos mensajes diferentes separados por un intervalo de tiempo determinado. Sin embargo, nuestro interlocutor únicamente ha articulado un "HOLA".
+	</p>
+	<p>
+		Cuando en la misma situación que en el caso anterior, el sonido reflejado nos llega con un tiempo inferior a 1/10 de segundo, nuestro sistema de audición no es capaz de separar ambas señales y las toma como una misma, pero con una duración superior de esta. Normalmente esto se entiende como reverberación. La reverberación de un local se mide según su tiempo de reverberación (rt) en segundos y varía según la frecuencia de análisis que se utilice. Esto es debido a que los diferentes materiales que componen las superficies del local no se comportan por igual en todo el espectro sonoro, y, por tanto, los coeficientes de absorción de cada superficie de un mismo material varía según la frecuencia. Conociendo el tiempo de reverberación de un local podemos saber cómo se comportará el mismo en diferentes aplicaciones. Cuando el tiempo de reverberación alcanza valores muy altos con respecto al sonido directo, puede ocurrir un enmascaramiento de este y se puede perder la capacidad de entender la información contenida en el mensaje que se percibe.
+	</p>
+	<p>
+		La resonancia se ocasiona cuando un cuerpo entra en vibración por simpatía con una onda sonora que incide sobre el y coincide su frecuencia con la frecuencia de oscilación del cuerpo o esta es múltiplo entero de la frecuencia de la onda que le incide.
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Efecto Doppler','<div>
+	<h3>Efecto Doppler</h3>
+	<p>
+		El efecto Doppler se origina cuando hay un movimiento relativo entre la fuente sonora y el oyente cuando cualquiera de los dos se mueven con respecto al medio en el que las ondas se propagan. El resultado es la aparente variación de la altura del sonido. Existe una variación en la frecuencia que percibimos con la frecuencia que la fuente origina.
+	</p>
+	<p>
+		Para entenderlo mejor supongamos que estamos paradas en el andén de una estación, a lo lejos un tren viene a gran velocidad con la sirena accionada, mientras el tren este lejos de nosotros oiremos el silbido de la sirena como una frecuencia determinada, cuando el tren pase delante nuestro y siga su camino, el sonido de la sirena cambia con respecto al estábamos oyendo y con respecto al que vamos a oír una vez que el tren nos rebasa y sigue su camino. La frecuencia que aparente se puede determinar según las siguientes fórmulas:</br>Fuente móvil = fx = (c/(c-u))fs</br>Receptor en movimiento: fx = ((c-v)/c)fs</br>Ambos en movimiento: fx = ((c-v)/(c-u))fs</br>Donde:
+		<ul>
+			<li>
+				fx = Frecuencia aparente c = Velocidad del sonido
+			</li>
+			<li>
+				v = Velocidad del observador u = Velocidad de la fuente
+			</li>
+			<li>
+				fs = Frecuencia de la fuente
+			</li>
+		</ul>
+	</p>
+</div>','ACÚSTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Definción de Óptica','<div>
+	<h3>Definición de Óptica</h3>
+	<p>
+		La óptica es la rama de la física que estudia el comportamiento de la luz y, más generalmente, de las ondas electromagnéticas. Según el modelo utilizado para la luz, se distingue entre las siguientes ramas, por orden creciente de precisión (cada rama utiliza un modelo simplificado del empleado por la siguiente): La óptica geométrica: Trata a la luz como un conjunto de rayos que cumplen el principio de Fermat. Se utiliza en el estudio de la transmisión de la luz por medios homogéneos (lentes, espejos), la reflexión y la refracción.
+	</p>
+	<p>
+		La óptica ondulatoria: Considera a la luz como una onda plana, teniendo en cuenta su frecuencia y longitud de onda. Se utiliza para el estudio de difracción e interferencia. La óptica electromagnética: Considera a la luz como una onda electromagnética, explicando así la reflectancia y transmitancia, y los fenómenos de polarización y anisotropía. La óptica cuántica u óptica física: Estudio cuántico de la interacción entre las ondas electromagnéticas y la materia, en el que la dualidad onda-corpúsculo desempeña un papel crucial.
+	</p>
+</div>','ÓPTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Fenómenos Ópticos','<div>
+	<h3>Fenómenos Ópticos</h3>
+	<p>
+		<ul>
+			<li>
+				Difracción: En física, la difracción es un fenómeno característico de las ondas que consiste en la dispersión y curvado aparente de las ondas cuando encuentran un obstáculo. La difracción ocurre en todo tipo de ondas, desde ondas sonoras, ondas en la superficie de un fluido y ondas electromagnéticas como la luz y las ondas de radio. También sucede cuando un grupo de ondas de tamaño finito se propaga; por ejemplo, por culpa de la difracción, un haz angosto de ondas de luz de un láser deben finalmente divergir en un rayo más amplio a una distancia suficiente del emisor.
+			</li>
+			<li>
+				Refracción: La refracción (del latín fractum, "quebrado") es el cambio de dirección que experimenta una onda electromagnética debido al cambio de velocidad cuando pasa de un medio con un índice de refracción dado a un medio con otro índice de refracción distinto. Un ejemplo de este fenómeno se ve cuando se sumerge un lápiz en un vaso con agua: el lápiz parece quebrado. También ocurre cuando la luz pasa por una capa de aire sobre una superficie caliente, produciendo un espejismo.
+			</li>
+			<li>
+				Reflexión: En Óptica se refiere al fenómeno por el cual un rayo de luz que incide sobre una superficie es reflejado. El ángulo con la normal a esa superficie que forman los rayos incidente y reflejado son iguales. Se produce también un fenómeno de absorción diferencial en la superficie, por el cual la energía y espectro del rayo reflejado no coinciden con la del incidente. Para una explicación más detallada véase radiación electromagnética.
+			</li>
+			<li>
+				Arco Iris: La Teoría Elemental del arco iris fue, sin embargo, anterior a Newton. Desarrollada primero por Antonius de Demini en 1611, fue retomada y refinada luego por René Descartes. Posteriormente, la Teoría Completa del arco iris fue propuesta en forma inicial por Thomas Young y, más tarde, elaborada en detalle por Potter y Airy.
+			</li>
+			<li>
+				Aberración longitudinal: En óptica la aberración longitudinal es la distancia a lo largo del eje óptico desde el foco de los rayos paraxiales hasta el punto en que los rayos provenientes de los bordes exteriores de las lentes o superficies reflectantes intersectan dicho eje. En la aberración de cromatismo, la distancia, medida sobre el eje óptico, entre los focos de dos colores patrón.
+			</li>
+		</ul>
+	</p>
+</div>','ÓPTICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Definción de Termodinámica','<div>
+	<h3>Definición de Termodinámica</h3>
+	<p>
+		Los sistemas físicos que encontramos en la Naturaleza consisten en un agregado de un número muy grande de átomos. La materia está en uno de los tres estados: sólido, líquido o gas: En los sólidos, las posiciones relativas (distancia y orientación) de los átomos o moléculas son fijas. En los líquidos las distancias entre las moléculas son fijas, pero su orientación relativa cambia continuamente. En los gases, las distancias entre moléculas son en general, mucho más grandes que las dimensiones de las mismas. Las fuerzas entre las moléculas son muy débiles y se manifiestan principalmente en el momento en el que chocan. Por esta razón, los gases son más fáciles de describir que los sólidos y que los líquidos.
+	</p>
+	<p>
+		El gas contenido en un recipiente está formado por un número muy grande de moléculas, 6.02·1023 moléculas en un mol de sustancia. Cuando se intenta describir un sistema con un número tan grande de partículas resulta inútil (e imposible) describir el movimiento individual de cada componente. Por lo que mediremos magnitudes que se refieren al conjunto: volumen ocupado por una masa de gas, presión que ejerce el gas sobre las paredes del recipiente y su temperatura. Estas cantidades físicas se denominan macroscópicas, en el sentido de que no se refieren al movimiento individual de cada partícula, sino del sistema en su conjunto. 
+	</p>
+</div>','TERMODINÁMICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Conceptos básicos','<div>
+	<h3>Conceptos básicos</h3>
+	<p>
+		Denominamos estado de equilibrio de un sistema cuando las variables macroscópicas presión p, volumen V, y temperatura T, no cambian. El estado de equilibrio es dinámico en el sentido de que los constituyentes del sistema se mueven continuamente.</br><img src="https://drive.google.com/uc?id=1mElZe0W5nfZO-n3Fhm-nzVetAWxfAL0o" alt="Conceptos básicos"></br>El estado del sistema se representa por un punto en un diagrama p-V. Podemos llevar al sistema desde un estado inicial a otro final a través de una sucesión de estados de equilibrio.
+	</p>
+	<p>
+		Se denomina ecuación de estado a la relación que existe entre las variables p, V, y T. La ecuación de estado más sencilla es la de un gas ideal pV=nRT, donde n representa el número de moles, y R la constante de los gases R=0.082 atm·l/(K mol).
+	</p>
+	<p>
+		Se denomina energía interna del sistema a la suma de las energías de todas sus partículas. En un gas ideal las moléculas solamente tienen energía cinética, los choques entre las moléculas se suponen perfectamente elásticos, la energía interna solamente depende de la temperatura.
+	</p>
+</div>','TERMODINÁMICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Trabajo mecánico hecho por o sobre el sistema','<div>
+	<h3>Trabajo mecánico hecho por o sobre el sistema</h3>
+	<p>
+		Consideremos, por ejemplo, un gas dentro de un cilindro. Las moléculas del gas chocan con las paredes cambiando la dirección de su velocidad, o de su momento lineal. El efecto del gran número de colisiones que tienen lugar en la unidad de tiempo se puede representar por una fuerza F que actúa sobre toda la superficie de la pared.</br><img src="https://drive.google.com/uc?id=1H9gy4VH8PdwSasAXBk4Xish8rg7r6CJJ" alt="Trabajo mecánica"></br>Si una de las paredes es un pistón móvil de área A, y éste se desplaza dx, el intercambio de energía del sistema con el mundo exterior puede expresarse como el trabajo realizado por la fuerza F a lo largo del desplazamiento dx.
+	</p>
+	<p>
+		dW=-Fdx=-pAdx=-pdV</br>Siendo dV el cambio del volumen del gas. El signo menos indica que si el sistema realiza trabajo (incrementa su volumen) su energía interna disminuye, pero si se realiza trabajo sobre el sistema (disminuye su volumen) su energía interna aumenta. El trabajo total realizado cuando el sistema pasa del estado A cuyo volumen es VA al estado B cuyo volumen es VB.</br><img src="https://drive.google.com/uc?id=18vQOLie-08s-TqiIzkcSxYcX9Aajh5sB" alt="Volumen"></br>
+	</p>
+</div>','TERMODINÁMICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Calor','<div>
+	<h3>Calor</h3>
+	<p>
+		El calor no es una nueva forma de energía, es el nombre dado a una transferencia de energía de tipo especial en el que intervienen gran número de partículas. Se denomina calor a la energía intercambiada entre un sistema y el medio que le rodea debido a los choques entre las moléculas del sistema y el exterior al mismo y siempre que no pueda expresarse macroscópicamente como producto de fuerza por desplazamiento. Se debe distinguir también entre los conceptos de calor y energía interna de una sustancia. El flujo de calor es una transferencia de energía que se lleva a cabo como consecuencia de las diferencias de temperatura.
+	</p>
+	<p>
+		La energía interna es la energía que tiene una sustancia debido a su temperatura, que es esencialmente a escala microscópica la energía cinética de sus moléculas. El calor se considera positivo cuando fluye hacia el sistema, cuando incrementa su energía interna. El calor se considera negativo cuando fluye desde el sistema, por lo que disminuye su energía interna.
+	</p>
+	<p>
+		Cuando una sustancia incrementa su temperatura de TA a TB, el calor absorbido se obtiene multiplicando la masa (o el número de moles n) por el calor específico c y por la diferencia de temperatura TB-TA. Q=nc(TB-TA)
+	</p>
+	<p>
+		Cuando no hay intercambio de energía (en forma de calor) entre dos sistemas, decimos que están en equilibrio térmico. Las moléculas individuales pueden intercambiar energía, pero en promedio, la misma cantidad de energía fluye en ambas direcciones, no habiendo intercambio neto. Para que dos sistemas estén en equilibrio térmico deben de estar a la misma temperatura.
+	</p>
+	<p>
+		Transformaciones: La energía interna U del sistema depende únicamente del estado del sistema, en un gas ideal depende solamente de su temperatura. Mientras que la transferencia de calor o el trabajo mecánico dependen del tipo de transformación o camino seguido para ir del estado inicial al final.
+	</p>
+</div>','TERMODINÁMICA');""",
+    """INSERT INTO SUBTOPIC VALUES ('Suma','<div>
+	<h3>Suma</h3>
+	<p>
+		Se utiliza para juntar, agregar, unir, etc, 2 o más cantidades contables de la misma magnitud (categoría) La suma o adición es una operación aritmética definida sobre conjuntos de números (naturales, enteros, racionales, reales y complejos) y también sobre estructuras asociadas a ellos, como espacios vectoriales con vectores cuyas componentes sean estos números o funciones que tengan su imagen en ellos.</br>En el álgebra moderna se utiliza el nombre suma y su símbolo "+" para representar la operación formal de un anillo que dota al anillo de estructura de grupo abeliano, o la operación de un módulo que dota al módulo de estructura de grupo abeliano. También se utiliza a veces en teoría de grupos para representar la operación que dota a un conjunto de estructura de grupo. En estos casos se trata de una denominación puramente simbólica, sin que necesariamente coincida esta operación con la suma habitual en números, funciones, vectores.
+	</p>
+	<div>
+		<h4>Propiedades de la suma</h4>
+		<p>
+			<ul>
+				<li>
+					Propiedad conmutativa: si se altera el orden de los sumandos no cambia el resultado, de esta forma, a+b=b+a.
+				</li>
+				<li>
+					Propiedad asociativa: a+(b+c) = (a+b)+c
+				</li>
+				<li>
+					Elemento neutro: 0. Para cualquier número a, a + 0 = 0 + a = a.
+				</li>
+				<li>
+					Elemento opuesto. Para cualquier número entero, racional, real o complejo a, existe un número −a tal que a + (−a) = (−a) + a = 0. Este número −a se denomina elemento opuesto, y es único para cada a. No existe en algunos conjuntos, como el de los números naturales.
+				</li>
+			</ul>
+			Estas propiedades pueden no cumplirse en casos de sumas infinitas. 
+		</p>
+	</div>
+	<div>
+		<h4>Notación</h4>
+		<p>
+			Si todos los términos se escriben individualmente, se utiliza el símbolo "+" (leído más). Con esto, la suma de los números 1, 2 y 4 es 1 + 2 + 4 = 7. También se puede emplear el símbolo "+" cuando, a pesar de no escribirse individualmente los términos, se indican los números omitidos mediante puntos suspensivos y es sencillo reconocer los números omitidos. Por ejemplo: 1 + 2 + 3 + ... + 98 + 99 + 100 es la suma de los cien primeros números naturales. 2 + 4 + 8 + ... + 512 + 1024 es la suma de las diez primeras potencias de 2.
+		</p>
+		<p>
+			En sumas largas e incluso sumas infinitas se emplea un nuevo símbolo, que se llama sumatorio y se representa con la letra griega Sigma mayúscula (Σ). Por ejemplo: <img src="https://drive.google.com/uc?id=1Xf06E1T_E8sjxmI4xPLESFFtbzJfLwfW" alt="suma"> es la suma de los cien primeros números naturales. <img src="https://drive.google.com/uc?id=1R7SUH5ZdUD81zgrPme5yfoUww0f9lmml" alt="suma"> es la suma de las diez primeras potencias de 2.
+		</p>
+	</div>
+	<div>
+		<h4>Suma de fracciones</h4>
+		<p>
+			<ul>
+				<li>
+					Fracciones que tienen el mismo denominador; Fracciones que tienen el distinto denominador Primer caso: la suma de dos ó más fracciones que tienen el mismo denominador es muy sencilla, sólo hay que sumar los numeradores y se deja el denominador común.
+				</li>
+				<li>
+					La suma de dos o más fracciones con distinto denominador es un poco menos sencilla.
+				</li>
+			</ul>
+		</p>
+	</div>
+</div>','OPERACIONES BÁSICAS');""",
+    """INSERT INTO SUBTOPIC VALUES ('Resta','<div>
+	<h3>Resta</h3>
+	<p>
+		Se utiliza para restar, descontar, disminuir, etc., 2 o más cantidades contables de la misma magnitud (categoría) La resta o substracción es una de las cuatro operaciones básicas de la aritmética, y se trata básicamente de la operación inversa a la suma. Por ejemplo, si a+b=c, entonces c-b=a. En la resta, el primer número se denomina minuendo y el segundo es el sustraendo. El resultado de la resta se denomina diferencia.
+	</p>
+	<p>
+		En el conjunto de los números naturales, N, sólo se pueden restar dos números si el minuendo es mayor que el sustraendo. De lo contrario, la diferencia sería un número negativo, que por definición estaría excluido del conjunto. Esto es así para otros conjuntos con ciertas restricciones, como los números reales positivos. En matemáticas avanzadas no se habla de "restar" sino de "sumar el opuesto". En otras palabras, no se tiene a - b sino a + (-b), donde -b es el elemento opuesto de b respecto de la suma.
+	</p>
+	<div>
+		<h4>Resta de fracciones</h4>
+		<p>
+			<ul>
+				<li>
+					Resta de fracciones que tienen el mismo denominador: Para restar dos o más fracciones que tienen el mismo denominador, sólo hay que restar los numeradores y se deja el denominador común.
+				</li>
+				<li>
+					Resta de fracciones con distinto denominador: Se haya el mínimo común múltiplo de los dos denominadores, Se calculan los numeradores con la fórmula, se procede como en la resta de fracciones de igual denominador (dado que las fracciones tienen el mismo denominador).
+				</li>
+			</ul>
+		</p>
+	</div>
+</div>','OPERACIONES BÁSICAS');""",
+    """INSERT INTO SUBTOPIC VALUES ('Multiplicación','<div>
+	<h3>Multiplicación</h3>
+	<p>
+		Se utiliza para resolver problemas donde se suman “n” veces las mismas cantidades. El producto o la multiplicación es una operación aritmética que se puede explicar como una manera de sumar números idénticos.
+	</p>
+	<p>
+		El resultado de la multiplicación de números se llama producto. Los números que se multiplican se llaman factores o coeficientes, e individualmente como multiplicando (número a sumar) y multiplicador (veces que se suma el multiplicando). La multiplicación se suele indicar con el aspa × o el punto centrado ·. En ausencia de estos caracteres se suele emplear el asterisco *, sobre todo en computación.
+	</p>
+	<div>
+		<h4>Definición</h4>
+		<p>
+			La multiplicación de dos números enteros n y m se define como: m×n = m + m + m +...+ m tal que hay n sumandos.
+			</br>
+			<img src="https://drive.google.com/uc?id=1u5bZJwtt5v75fH2WWgrOq_4Q0qNYjtKE" alt="multiplicacion">
+		</p>
+	</div>
+	<div>
+		<h4>Propiedades de la multiplicación</h4>
+		<p>
+			<ul>
+				<li>
+					Propiedad conmutativa: el orden en que se multiplican dos números es irrelevante, lo que se conoce como propiedad conmutativa, y se cumple en general para dos números cualesquiera x e y: x·y = y·x
+				</li>
+				<li>
+					Propiedad asociativa: que consiste en que, para tres números cualesquiera x, y y z, se cumple: (x·y)z = x(y·z)
+				</li>
+				<li>
+					Propiedad distributiva con la suma, porque: x(y + z) = xy + xz. Asimismo: (x + t)(y + z) = x(y + z) + t(y + z) = xy + xz + ty + tz
+				</li>
+				<li>
+					Elemento identidad: la multiplicación tiene un elemento identidad que es el 1, cualquier número multiplicado por 1 es igual a sí mismo: 1·x = x
+				</li>
+			</ul>
+			¿Qué ocurre con el cero? La definición inicial no ayuda mucho porque 1 es mayor que 0. De hecho, es más fácil definir el producto por cero utilizando la segunda definición: m·0 = m + m + m +...+ m donde hay cero sumandos. La suma de cero veces m es cero, así que m·0 = 0 sin importar lo que valga m, siempre que sea finito.
+		</p>
+	</div>
+	<div>
+		<h4>Producto de números negativos</h4>
+		<p>
+			El producto de números negativos también requiere reflexionar un poco. Primero, considérese el número -1. Para cualquier entero positivo m: (-1)m = (-1) + (-1) +...+ (-1) = -m
+		</p>
+		<p>
+			Éste es un resultado interesante que muestra que cualquier número negativo no es más que un número positivo multiplicado por -1. Así que la multiplicación de enteros cualesquiera se puede representar por la multiplicación de enteros positivos y factores -1. Lo único que queda por definir es el producto de (-1)(-1):(-1)(-1) = -(-1) = 1
+		</p>
+		<p>
+			De esta forma, se define la multiplicación de dos enteros. Las definiciones pueden extenderse a conjuntos cada vez mayores de números: primero el conjunto de las fracciones o números racionales, después a todos los números reales y finalmente a los números complejos y otras extensiones de los números reales. El producto vacío, es decir, multiplicar cero factores, vale 1.
+		</p>
+	</div>
+</div>','OPERACIONES BÁSICAS');""",
+    """INSERT INTO SUBTOPIC VALUES ('División','<div>
+	<h3>División</h3>
+	<p>
+		Se utiliza para determinar “n” partes iguales de una cantidad determinada, dividir una magnitud en partes iguales. En matemáticas, específicamente en aritmética elemental, la división es una operación aritmética que es la inversa de la multiplicación y a veces puede interpretarse como una resta repetida.
+	</p>
+	<p>
+		En otras palabras, consiste en averiguar cuántas veces un número (el divisor) está contenido en otro número (el dividendo). En la división de números enteros además del dividendo y el divisor intervienen otros números. Así al resultado entero de la división se le denomina cociente y si la división no es exacta, es decir, el divisor no está contenido un número exacto de veces en el dividendo, la operación tendrá un resto, donde: resto = dividendo - cociente × divisor
+	</p>
+</div>','OPERACIONES BÁSICAS');""",
+    """INSERT INTO SUBTOPIC VALUES ('Orden de operaciones','<div>
+	<h3>Orden de Operaciones</h3>
+	<p>
+		<ul>
+			<li>
+				Primero resolver todo lo que esté dentro de símbolos de agrupación.
+			</li>
+			<li>
+				Evaluar las expresiones exponenciales.
+			</li>
+			<li>
+				Hacer todas las multiplicaciones y divisiones en orden de izquierda a derecha.
+			</li>
+			</ul>
+	Ejemplo:</br><img src="https://drive.google.com/uc?id=1PapGvPB-SBKazJaAo-9tDkWI7sx1OJzF" alt="jerarquia">
+	</p>
+</div>','JERARQUÍA DE OPERACIONES');""",
+    """INSERT INTO SUBTOPIC VALUES ('Propiedades de los números reales','<div>
+	<h3>Propiedades de los números reales</h3>
+	<p>
+		Conmutativa de adición: La conmutatividad implica que no importa el orden de operación, el resultado siempre es el mismo.
+		</br>
+		<img src="https://drive.google.com/uc?id=1m2l2ejhCKy8xOa9_XdhQiIKZWLuw6sQ1" alt="Conmutativa">
+		</br>
+		Por ejemplo: 4 + 2 = 2 + 4.
+	</p>
+	<p>
+		Conmutativa de multiplicación:
+		</br>
+		<img src="https://drive.google.com/uc?id=1dpoMa-jdBYW7NXEk5qBkQLPfrbPsxS0A" alt="Conmutativa">
+		</br>
+		Por ejemplo: 4 . 2 = 2 . 4
+	</p>
+	<p>
+		Asociativa de adición: La asociatividad implica que no importa el orden en que se agrupe, el resultado es el mismo.
+		</br>
+		<img src="https://drive.google.com/uc?id=19mGNlaTLNrxg8Lcf734qXosw7SwVSu83" alt="Asociativa">
+		</br>
+		Por ejemplo: (4 + 2) + 9 = 4 + (2 + 9)
+	</p>
+	<p>
+		Asociativa de multiplicación:
+		</br>
+		<img src="https://drive.google.com/uc?id=16sAXbACGuZ3IZIxrPDx09bAiuQIBH1VJ" alt="Asociativa">
+		</br>
+		Por ejemplo: 4 . (2 . 9) = (4 . 2) . 9
+	</p>
+	<p>
+		Distributiva de multiplicación sobre adición:
+		</br>
+		<img src="https://drive.google.com/uc?id=1WAr_vtSPgQ9Res0uicMSA6b8wU0dLawv" alt="Distributiva">
+		</br>
+		Por ejemplo: 4 . (2 + 9) = 4 . 2 + 4 . 9
+	</p>
+</div>','PROPIEDADES DE LOS NÚMEROS REALES');""",
+    """INSERT INTO SUBTOPIC VALUES ('Reglas de los signos','<div>
+	<h3>Reglas de los signos</h3>
+	<p>
+		En suma, de números con signos iguales, se suman los números y el resultado lleva el mismo signo. Si los números tienen signos diferentes, se restan y el resultado lleva el signo del mayor. Ejemplo:</br>5 + 8 = 13</br>5 + -8 = -3
+	</p>
+	<p>
+		En resta de signos iguales el resultado lleva el signo del mayor. Si se restan signos diferentes, se suman los números y el resultado lleva el signo del mayor. Ejemplo:</br>5 - 8 = -3</br>5 - (-8) = 13
+	</p>
+	<p>
+		En multiplicación y división de números con signos iguales el resultado es positivo. Si los números son signos opuestos, el resultado es negativo. Ejemplo:</br>5 x 8 = 40</br>5 x -8 = -40
+	</p>
+</div>','REGLAS DE LOS SIGNOS');""",
+    """INSERT INTO SUBTOPIC VALUES ('Porcentaje','<div>
+	<h3>Porcentaje</h3>
+	<p>
+		Un porcentaje es una forma de expresar una proporción o fracción como una fracción de denominador 100, es decir, como una cantidad de centésimas. Es decir, una expresión como "45%" ("45 por ciento") es lo mismo que la fracción 45/100. "El 45% de la población humana..." es equivalente a: "45 de cada 100 personas..."
+	</p>
+	<p>
+		Un porcentaje puede ser un número mayor que 100. Por ejemplo, el 200% de un número es el doble de dicho número, o un incremento del 100%. Un incremento del 200% daría como resultado el triple de la cantidad inicial. De esta forma, se puede apreciar la relación que existe entre el aumento porcentual y el producto.
+	</p>
+	<div>
+		<h4>Confusión en el uso de los porcentajes</h4>
+		<p>
+			Surgen muchas confusiones en el uso de los porcentajes debido a un uso inconsistente o a un mal entendimiento de la aritmética elemental.
+		</p>
+	</div>
+	<div>
+		<h4>Cambios</h4>
+		<p>
+			Debido a un uso inconsistente, no siempre está claro por el contexto con qué se compara un porcentaje. Cuando se habla de una subida o caída del 10% de una cantidad, la interpretación usual es que este cambio es relativo al valor inicial de la cantidad: por ejemplo, una subida del 10% sobre un producto que cuesta 100\$ es una subida de 10\$, con lo que el nuevo precio pasa a ser 110\$. Para muchos, cualquier otra interpretación es incorrecta.
+		</p>
+		<p>
+			En el caso de los tipos de interés, sin embargo, es práctica común utilizar los porcentajes de otra manera: supongamos que el tipo de interés inicial es del 10%, y que en un momento dado sube al 20%. Esto se puede expresar como una subida del 100% si se calcula el aumento con respecto del valor inicial del tipo de interés. Sin embargo, mucha gente dice en la práctica que "los tipos de interés han subido un 10%", refiriéndose a que ha subido en un 10% sobre el 100% adicional al 10% inicial (20% en total), aunque en la expresión usual de los porcentajes debería querer decir una subida del 10% sobre el 10% inicial (es decir, un total del 11%).
+		</p>
+		<p>
+			Para evitar esta confusión, se suele emplear la expresión "punto porcentual". Así, en el ejemplo anterior, "los tipos de interés han subido en 10 puntos porcentuales" no daría lugar a confusión, sino que todos entenderían que los tipos están actualmente en el 20%. También se emplea la expresión "punto base", que significa la centésima parte de un punto porcentual (es decir, una parte entre diez mil). Así, los tipos de interés han subido en 1000 puntos base.
+		</p>
+	</div>
+	<div>
+		<h4>Cancelaciones</h4>
+		<p>
+			Un error común en el uso de porcentajes es imaginar que una subida de un determinado porcentaje se cancela con una caída del mismo porcentaje. Una subida del 50% sobre 100 es 100 + 50, o 150, pero una reducción del 50% sobre 150 es 150 - 75, o 75. En general, el efecto final de un aumento seguido de una reducción proporcionalmente igual es: (1 + x)(1 - x) = 1 - x² es decir, una reducción proporcional al cuadrado del cambio porcentual.
+		</p>
+		<p>
+			Los que tenían acciones punto como en el momento de la crisis acabaron comprendiendo que, aunque una acción haya caído un 99%, puede volver a caer otro 99%. Además, si sube por un porcentaje muy grande, seguirá perdiéndolo todo si un día la acción reduce su valor en un 100%, porque entonces no valdrá nada.
+		</p>
+	</div>
+</div>','CÁLCULO DE PORCENTAJES');""",
+    """INSERT INTO SUBTOPIC VALUES ('Regla de tres','<div>
+	<h3>Regla de tres</h3>
+	<p>
+		La regla de tres es una relación que se establece entre tres (o más) valores conocidos y una incógnita. Normalmente se usa cuando se puede establecer una relación de linealidad (proporcionalidad) entre todos los valores involucrados (análogo para proporcionalidad inversa).
+	</p>
+	<p>
+		Normalmente se representa de la siguiente forma:</br>A - B</br>X - C</br>Siendo A, B y C valores conocidos y X la incógnita cuyo valor queremos averiguar. Esto se lee de la siguiente manera: A es a B como X es a C. La posición de la incógnita puede variar, por supuesto.
+	</p>
+	<p>
+		Así por ejemplo para pasar 60 grados a radianes podríamos establecer la siguiente regla de tres:</br>360º - 2 ^ x π</br>60º   - X
+	</p>
+</div>','REGLA DE TRES');""",
+    """INSERT INTO SUBTOPIC VALUES ('Notación exponencial','<div>
+	<h3>Notación Exponencial</h3>
+	<p>
+		La notación exponencial se usa para repetir multiplicaciones de un mismo número. Es la elevación a la enésima potencia (n) de una base (X).</br><img src="https://drive.google.com/uc?id=1Ur4zdrJWsgPrG0G3kQXYiG2Htr8wFMME" alt="Notación"></br>Ejemplos:</br><img src="https://drive.google.com/uc?id=1rBEp9HkHyV2uFTpMgCV2MIFMbKiyp9sZ" alt="ejemplo">
+	</p>
+</div>','POTENCIA Y RAÍZ');""",
+    """INSERT INTO SUBTOPIC VALUES ('Raíz cuadrada','<div>
+	<h3>Raíz cuadrada</h3>
+	<p>
+		En matemáticas, la raíz cuadrada de un número real no negativo x es el número real no negativo que, multiplicado consigo mismo, da x. La raíz cuadrada de x se denota por √x. Por ejemplo, √16 = 4, ya que 4 × 4 = 16, y √2 = 1,41421
+	</p>
+	<p>
+		Las raíces cuadradas son importantes en la resolución de ecuaciones cuadráticas. La generalización de la función raíz cuadrada a los números negativos da lugar a los números imaginarios y al campo de los números complejos.
+	</p>
+	<p>
+		El símbolo de la raíz cuadrada se empleó por primera vez en el siglo XVI. Se ha especulado con que tuvo su origen en una forma alterada de la letra r minúscula, que representaría la palabra latina "radix", que significa "raíz".
+	</p>
+	<div>
+		<h4>Propiedades de la raíz cuadrada</h4>
+		<p>
+			Las siguientes propiedades de la raíz cuadrada son válidas para todos los números positivos x, y:
+			</br>
+			<img src="https://drive.google.com/uc?id=1UXwbS31sYp7sthSC0LZCLxSDLabbcPFe" alt="propiedad uno">
+			</br>
+			<img src="https://drive.google.com/uc?id=1IdlmXZ18iNfpjArkkrqVRK5cPBPk0ZL7" alt="propiedad dos">
+			</br>
+			<img src="https://drive.google.com/uc?id=1PM1eS22Nkj3X6vfJk4SQ_04t9Bkxmz-Y" alt="propiedad tres"> para todo número real x
+			</br>
+			<img src="https://drive.google.com/uc?id=1o8qnMa6k5x3Xjuq0j5WFEX9F42Z6bwBz" alt="propiedad tres">
+			</br>
+			La función raíz cuadrada, en general, transforma números racionales en números algebraicos; √x es racional si y sólo si x es un número racional que puede escribirse como fracción de dos cuadrados perfectos. Si el denominador es 1² = 1, entonces se trata de un número natural. Sin embargo, √2 es irracional. La función raíz cuadrada transforma la superficie de un cuadrado en la longitud de su lado.
+		</p>
+	</div>
+</div>','POTENCIA Y RAÍZ');""",
+    """INSERT INTO SUBTOPIC VALUES ('Propiedades de los números','<div>
+	<h3>Propiedades de los números</h3>
+	<p>
+		Un número es un símbolo que representa una cantidad. Los números son ampliamente utilizados en matemáticas, pero también en muchas otras disciplinas y actividades, así como de forma más elemental en la vida diaria.
+	</p>
+	<p>
+		El número es también una entidad abstracta con la que se describe una cantidad. Los números más conocidos son los números naturales 0, 1, 2, ..., que se usan para contar. Si añadimos los números negativos obtenemos los enteros. Cocientes de enteros generan los números racionales. Si incluimos todos los números que son expresables con decimales, pero no con fracciones de enteros, obtenemos los números reales; si a éstos les añadimos los números complejos, tendremos todos los números necesarios para resolver cualquier ecuación algebraica. Podemos ampliar aún más los números, si añadimos los infinitos y los transfinitos.
+	</p>
+	<p>
+		Entre los reales, existen números que no son soluciones de una ecuación polinomial o algebraica. Reciben el nombre de transcendentales. El ejemplo más famoso de estos números es π (Pi), otro ejemplo fundamental e igual de importante es e, base de los logaritmos naturales. Estos dos números están relacionados entre sí por la identidad de Euler, también llamada la fórmula más importante del mundo.
+	</p>
+	<p>
+		Existe toda una teoría de los números. Se distinguen distintos tipos de números:
+		<ul>
+			<li>
+				Números naturales: conjunto de números que utilizamos para contar cantidades enteras  positivas
+			</li>
+			<li>
+				Números racionales
+			</li>
+			<li>
+				Números reales
+			</li>
+			<li>
+				Números irracionales
+			</li>
+			<li>
+				Números trascendentes
+			</li>
+			<li>
+				Números complejos
+			</li>
+			<li>
+				Números infinitos
+			</li>
+			<li>
+				Números transfinitos
+			</li>
+			<li>
+				Números fundamentales: π y e
+			</li>
+		</ul>
+		Por mencionar algunos.
+	</p>
+	<p>
+		El estudio de ciertas propiedades que cumplen los números ha producido una enorme cantidad de tipos de números, la mayoría sin un interés matemático específico. A continuación, se indican algunos:
+		<ul>
+			<li>
+				Narcisista: Número de n dígitos que resulta ser igual a la suma de las potencias de orden n de sus dígitos. Ejemplo: 153 = 1³ + 5³ + 3³.
+			</li>
+			<li>
+				Omirp: Número primo que al invertir sus dígitos da otro número primo. Ejemplo : 1597 y 7951 son primos.
+			</li>
+			<li>
+				Vampiro: Número que se obtiene a partir del producto de dos números obtenidos a partir de sus dígitos. Ejemplo: 2187 = 27 x 81.
+			</li>
+		</ul>
+	</p>
+	<p>
+		Una vez entendido el problema de la naturaleza y la clasificación de los números, surge otro, más práctico, pero que condiciona todo lo que se va a hacer con ellos: la manera de escribirlos. El sistema que se ha impuesto universalmente es la numeración de posición gracias al invento del cero, con una base constante.
+	</p>
+</div>','PROPIEDADES DE LOS NÚMEROS');"""
+  ];
+
+/*
+
+
+
+
+
+
+
+
+
+
+*/
 
   Future loadAllData() async {
     await DBProvider.db.insertRecordsModule();
