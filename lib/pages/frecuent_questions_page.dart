@@ -3,6 +3,7 @@
 import 'dart:ui';
 
 import 'package:exaa_2/models/frecuent_question_model.dart';
+import 'package:exaa_2/pages/about_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -14,9 +15,31 @@ class FrecuentQuestion extends StatefulWidget {
 }
 
 class _FrecuentQuestionState extends State<FrecuentQuestion> {
+  List? contentList, generalList, howToUseTheAppList, conectionList;
+  List<FrecuentQuestionModel> renderList = [];
   List<FrecuentQuestionModel> questions = [
-    FrecuentQuestionModel(question: 'Hola', id: 1)
+    FrecuentQuestionModel(
+        question: '¿Cómo estudiar un tema?',
+        answer:
+            'Para estudiar un tema antes de presentar un exámen se debe de ir al módulo de "Material didáctico"',
+        category: 'Contenido'),
+    FrecuentQuestionModel(
+        question:
+            '¿Para presentar un examen es necesario estudiar un tema del módulo de "Material didáctico"?',
+        answer:
+            'No es necesario, prepararse previo al exámen con el material didáctico proporcionado, esto es opcional.',
+        category: 'Contenido'),
+    FrecuentQuestionModel(
+        question: '¿Qué es EXAA II?',
+        answer:
+            'Es una aplicación que permite a los usuarios preparse para sus exámenes de ingreso a la universidad a partir de un material didáctico y exámenes de simulación.',
+        category: 'Preguntas generales'),
+    FrecuentQuestionModel(
+        question: '¿Test1?', answer: 'Test1"', category: 'Contenido'),
+    FrecuentQuestionModel(
+        question: '¿Test2?', answer: 'Test2', category: 'Preguntas generales')
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,18 +48,33 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             padding: EdgeInsets.zero,
             children: <Widget>[
               _buildDrawerHeader(),
-              _buildDrawerItem(icon: Icons.home, text: 'Home', onTap: () => {}),
               _buildDrawerItem(
-                  icon: Icons.account_circle, text: 'Profile', onTap: () => {}),
+                  icon: Icons.question_answer_sharp,
+                  text: 'Preguntas generales',
+                  onTap: () {
+                    renderList = questions
+                        .where((element) =>
+                            element.category == 'Preguntas generales')
+                        .toList();
+                    setState(() {});
+                  }),
               _buildDrawerItem(
-                  icon: Icons.movie, text: 'Movies', onTap: () => {}),
+                  icon: Icons.menu_book_rounded,
+                  text: 'Contenido',
+                  onTap: () => {}),
+              _buildDrawerItem(
+                  icon: Icons.clear_all_sharp,
+                  text: '¿Cómo usar la app?',
+                  onTap: () => {}),
+              _buildDrawerItem(
+                  icon: Icons.network_cell, text: 'Conexión', onTap: () => {}),
               Divider(),
               _buildDrawerItem(
                   icon: Icons.contact_phone,
-                  text: 'Contact Info',
-                  onTap: () => {}),
+                  text: 'Acerca de',
+                  onTap: () => {Navigator.pushNamed(context, AboutPage.id)}),
               ListTile(
-                title: Text('App versión 1.0.0'),
+                title: Text('Versión 1.0'),
                 onTap: () {},
               ),
             ],
@@ -53,7 +91,7 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
               ),
               CarouselSlider(
                 options: CarouselOptions(height: 400.0),
-                items: [1, 2, 3, 4, 5].map((i) {
+                items: renderList.map((i) {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
@@ -68,12 +106,34 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
                                     Colors.deepPurple.shade300,
                                   ]),
                               borderRadius: BorderRadius.circular(20)),
-                          child: Center(
-                            child: Text(
-                              'hola $i',
-                              style: TextStyle(
-                                  fontSize: 26.0, color: Colors.white),
-                            ),
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Center(
+                                child: Text(
+                                  i.question,
+                                  style: TextStyle(
+                                      fontSize: 26.0,
+                                      color: Colors.white,
+                                      backgroundColor:
+                                          Colors.deepPurple.shade100),
+                                ),
+                              ),
+                              Container(
+                                padding: EdgeInsets.only(
+                                    right: 18, left: 18, top: 20),
+                                child: Center(
+                                  child: Text(
+                                    i.answer,
+                                    style: TextStyle(
+                                        fontSize: 20.0, color: Colors.white),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ));
                     },
                   );
@@ -97,7 +157,7 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
           Positioned(
               bottom: 20.0,
               left: 20.0,
-              child: Text("Categorías mas preguntadas",
+              child: Text("Categorías más preguntadas",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 18.0,
