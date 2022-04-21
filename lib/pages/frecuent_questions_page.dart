@@ -37,9 +37,21 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
     FrecuentQuestionModel(
         question: '¿Test1?', answer: 'Test1"', category: 'Contenido'),
     FrecuentQuestionModel(
-        question: '¿Test2?', answer: 'Test2', category: 'Preguntas generales')
+        question: '¿Test2?', answer: 'Test2', category: 'Preguntas generales'),
+    FrecuentQuestionModel(
+        question: '¿Test3?', answer: 'Test3"', category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: '¿Test4?', answer: 'Test4', category: 'Conexión'),
+    FrecuentQuestionModel(
+        question:
+            '¿Es necesario contar con una conexión a internet para usar la app?',
+        answer:
+            'Sí, es necesario contar con una conexión a internet para poder ingresar a esta.',
+        category: 'Conexión'),
+    FrecuentQuestionModel(
+        question: '¿Test6?', answer: 'Test6"', category: '¿Cómo usar la app?'),
   ];
-
+  String title = 'Preguntas Frecuentes';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,18 +68,40 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
                         .where((element) =>
                             element.category == 'Preguntas generales')
                         .toList();
+                    title = 'Preguntas generales';
                     setState(() {});
                   }),
               _buildDrawerItem(
                   icon: Icons.menu_book_rounded,
                   text: 'Contenido',
-                  onTap: () => {}),
+                  onTap: () {
+                    renderList = questions
+                        .where((element) => element.category == 'Contenido')
+                        .toList();
+                    title = 'Contenido';
+                    setState(() {});
+                  }),
               _buildDrawerItem(
                   icon: Icons.clear_all_sharp,
                   text: '¿Cómo usar la app?',
-                  onTap: () => {}),
+                  onTap: () {
+                    renderList = questions
+                        .where((element) =>
+                            element.category == '¿Cómo usar la app?')
+                        .toList();
+                    title = '¿Cómo usar la app?';
+                    setState(() {});
+                  }),
               _buildDrawerItem(
-                  icon: Icons.network_cell, text: 'Conexión', onTap: () => {}),
+                  icon: Icons.network_cell,
+                  text: 'Conexión',
+                  onTap: () {
+                    renderList = questions
+                        .where((element) => element.category == 'Conexión')
+                        .toList();
+                    title = 'Conexión';
+                    setState(() {});
+                  }),
               Divider(),
               _buildDrawerItem(
                   icon: Icons.contact_phone,
@@ -85,59 +119,109 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Center(
-                child: Text("Preguntas frecuentes",
+                child: Text(title,
                     style: TextStyle(
                         fontSize: 26.0, color: Colors.deepPurple.shade500)),
               ),
               CarouselSlider(
                 options: CarouselOptions(height: 400.0),
-                items: renderList.map((i) {
-                  return Builder(
-                    builder: (BuildContext context) {
-                      return Container(
-                          width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 10.0),
-                          decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                  begin: Alignment.topRight,
-                                  end: Alignment.bottomLeft,
-                                  colors: [
-                                    Colors.deepPurple.shade800,
-                                    Colors.deepPurple.shade300,
-                                  ]),
-                              borderRadius: BorderRadius.circular(20)),
-                          child: Column(
-                            children: <Widget>[
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Center(
-                                child: Text(
-                                  i.question,
-                                  style: TextStyle(
-                                      fontSize: 26.0,
-                                      color: Colors.white,
-                                      backgroundColor:
-                                          Colors.deepPurple.shade100),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.only(
-                                    right: 18, left: 18, top: 20),
-                                child: Center(
-                                  child: Text(
-                                    i.answer,
-                                    style: TextStyle(
-                                        fontSize: 20.0, color: Colors.white),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ));
-                    },
-                  );
-                }).toList(),
+                items: (renderList.isEmpty)
+                    ? questions.map((i) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                                decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Colors.deepPurple.shade800,
+                                          Colors.deepPurple.shade300,
+                                        ]),
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Container(
+                                        color: Colors.deepPurple.shade900,
+                                        child: Center(
+                                          child: Text(i.question,
+                                              style: TextStyle(
+                                                fontSize: 26.0,
+                                                color: Colors.white,
+                                              ),
+                                              textAlign: TextAlign.center),
+                                        )),
+                                    Container(
+                                      padding: EdgeInsets.only(
+                                          right: 18, left: 18, top: 20),
+                                      child: Center(
+                                        child: Text(
+                                          i.answer,
+                                          style: TextStyle(
+                                              fontSize: 20.0,
+                                              color: Colors.white),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ));
+                          },
+                        );
+                      }).toList()
+                    : renderList.map((i) {
+                        return Builder(
+                          builder: (BuildContext context) {
+                            return Container(
+                                width: MediaQuery.of(context).size.width,
+                                margin: EdgeInsets.symmetric(horizontal: 10.0),
+                                decoration: BoxDecoration(
+                                    gradient: LinearGradient(
+                                        begin: Alignment.topRight,
+                                        end: Alignment.bottomLeft,
+                                        colors: [
+                                          Colors.deepPurple.shade800,
+                                          Colors.deepPurple.shade300,
+                                        ]),
+                                    borderRadius: BorderRadius.circular(20)),
+                                child: Column(
+                                  children: <Widget>[
+                                    SizedBox(
+                                      height: 20,
+                                    ),
+                                    Container(
+                                        color: Colors.deepPurple.shade900,
+                                        child: Center(
+                                          child: Text(i.question,
+                                              style: TextStyle(
+                                                fontSize: 26.0,
+                                                color: Colors.white,
+                                              ),
+                                              textAlign: TextAlign.center),
+                                        )),
+                                    Container(
+                                      padding: EdgeInsets.only(
+                                          right: 18, left: 18, top: 20),
+                                      child: Center(
+                                        child: Text(
+                                          i.answer,
+                                          style: TextStyle(
+                                              fontSize: 20.0,
+                                              color: Colors.white),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ));
+                          },
+                        );
+                      }).toList(),
               )
             ],
           ),
