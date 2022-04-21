@@ -44,6 +44,7 @@ dependencies:
   firebase_auth: ^3.3.5
   email_validator: ^2.0.1
   carousel_slider: ^4.0.0
+  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_test:
