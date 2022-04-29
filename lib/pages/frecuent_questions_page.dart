@@ -24,10 +24,25 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             'Para estudiar un tema antes de presentar un exámen se debe de ir al módulo de "Material didáctico"',
         category: 'Contenido'),
     FrecuentQuestionModel(
+        question: '¿Cuántos módulos de estudio tenemos actualmente?',
+        answer:
+            'Actualmente sólo tenemos Pensamiento matemático, estructura de la lengua y física, en futuras actualizaciones se agregará el material para estudiar cálculo y comprensión lectora.',
+        category: 'Contenido'),
+    FrecuentQuestionModel(
         question:
             '¿Para presentar un examen es necesario estudiar un tema del módulo de "Material didáctico"?',
         answer:
             'No es necesario, prepararse previo al exámen con el material didáctico proporcionado, esto es opcional.',
+        category: 'Contenido'),
+    FrecuentQuestionModel(
+        question: '¿Puedo revisar el material cuantas veces quiera?',
+        answer:
+            'Sí, el material se puede revisar las veces que sean necesarias',
+        category: 'Contenido'),
+    FrecuentQuestionModel(
+        question: '¿Mis resultados son guardados?',
+        answer:
+            'Sí, los resultados son guardados para poder mostrar en el apartado de “Estadísticas” un análisis en forma de gráficos los resultados obtenidos en las pruebas.',
         category: 'Contenido'),
     FrecuentQuestionModel(
         question: '¿Qué es EXAA II?',
@@ -35,13 +50,25 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             'Es una aplicación que permite a los usuarios preparse para sus exámenes de ingreso a la universidad a partir de un material didáctico y exámenes de simulación.',
         category: 'Preguntas generales'),
     FrecuentQuestionModel(
-        question: '¿Test1?', answer: 'Test1"', category: 'Contenido'),
+        question:
+            '¿Con esto se me asegura que puedo entrar al Tecnológico de Toluca?',
+        answer:
+            'Con esta aplicación sólo podrás prepararte para tener un mejor desempeño en la prueba EXANI II, no se te asegura que entres al Tecnológico de Toluca.',
+        category: 'Preguntas generales'),
     FrecuentQuestionModel(
-        question: '¿Test2?', answer: 'Test2', category: 'Preguntas generales'),
+        question: '¿Esta es la versión final de la app?',
+        answer:
+            'Esta aplicación recibirá actualizaciones constantes, trayendo mejoras como material de estudio adicional, exámenes por realizar, y más cosas estarán por llegar.',
+        category: 'Preguntas generales'),
     FrecuentQuestionModel(
-        question: '¿Test3?', answer: 'Test3"', category: '¿Cómo usar la app?'),
+        question: '¿Es una aplicación gratuita?',
+        answer: 'Esta aplicación es completamente gratuita.',
+        category: 'Preguntas generales'),
     FrecuentQuestionModel(
-        question: '¿Test4?', answer: 'Test4', category: 'Conexión'),
+        question: '¿Para qué usamos tus datos?',
+        answer:
+            'Los datos serán usados para mejorar la experiencia de usuario en futuras actualizaciones.',
+        category: 'Preguntas generales'),
     FrecuentQuestionModel(
         question:
             '¿Es necesario contar con una conexión a internet para usar la app?',
@@ -49,7 +76,47 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             'Sí, es necesario contar con una conexión a internet para poder ingresar a esta.',
         category: 'Conexión'),
     FrecuentQuestionModel(
-        question: '¿Test6?', answer: 'Test6"', category: '¿Cómo usar la app?'),
+        question: '¿Alguna especificación de conexión a internet?',
+        answer: 'No, ninguna.',
+        category: 'Conexión'),
+    FrecuentQuestionModel(
+        question: 'Si le red está inestable, ¿Afecta el uso de aplicación?',
+        answer: 'Si, su funcionamiento no será el correcto.',
+        category: 'Conexión'),
+    FrecuentQuestionModel(
+        question: '¿Por qué es necesario contar con una conexión a internet?',
+        answer:
+            'Esta es vital para el inicio de sesión y el registro de una nueva cuenta.',
+        category: 'Conexión'),
+    FrecuentQuestionModel(
+        question:
+            '¿Debo aceptar los términos y condiciones para poder registrarme?',
+        answer:
+            'Efectivamente, para hacer uso de la app es necesario aceptar los términos y condiciones dados durante el registro de una nueva cuenta.',
+        category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: '¿Cómo puedo visualizar mi progreso?',
+        answer:
+            'La aplicación cuenta con una pequeña parte de estadísticas, la cual nos permite visualizar el avance resultante de cada examen resuelto.',
+        category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: '¿Cómo inicio un examen?',
+        answer:
+            'Diríjase al apartado "Aplicación de un examen", ahí observará una página introductiva, está le diré las temáticas que cubrirá tal examen, de clic en "Siguiente" e inicie su prueba.',
+        category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: '¿Qué hago si no puedo iniciar sesión o registrarme?',
+        answer:
+            'Cheque su conexión a internet, si todo es correcto entonces verifique que los datos sean correctos. Si de las 2 anteriores soluciones no le fueron útiles comunicarse al siguiente correo: app.exaall@gmail.com',
+        category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: 'Si tengo una duda ¿A dónde puedo recurrir?',
+        answer: 'Lea el apartado de "Preguntas frecuentes"',
+        category: '¿Cómo usar la app?'),
+    FrecuentQuestionModel(
+        question: 'Si no estoy preparado para iniciar un exámen ¿Qué hago?',
+        answer: 'Lea el apartado de "Material didáctico"',
+        category: '¿Cómo usar la app?')
   ];
   String title = 'Preguntas Frecuentes';
   @override

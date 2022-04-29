@@ -168,8 +168,8 @@ class _RegisterPageState extends State<RegisterPage> {
                                   child: const Text("términos y condiciones"),
                                   onPressed: () async {
                                     if (!await launch(
-                                        "https://moodle.toluca.tecnm.mx/"))
-                                      throw 'Could not launch https://moodle.toluca.tecnm.mx/';
+                                        "https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing"))
+                                      throw 'Could not launch https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing';
                                   },
                                 ),
                               ],
