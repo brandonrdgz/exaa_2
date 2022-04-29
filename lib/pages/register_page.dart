@@ -186,6 +186,12 @@ class _RegisterPageState extends State<RegisterPage> {
                               ),
                             ],
                           ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Image.asset("assets/img/Logo_ITT.png")
+                            ],
+                          ),
                         ],
                       ),
                     ),

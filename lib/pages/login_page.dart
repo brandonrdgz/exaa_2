@@ -69,19 +69,22 @@ class _LoginPageState extends State<LoginPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: <Widget>[
                           TextFormField(
-                            decoration: const InputDecoration(labelText: "Correo:"),
+                            decoration:
+                                const InputDecoration(labelText: "Correo:"),
                             onChanged: (String email) {
                               _email = email;
                             },
                             validator: (String? email) {
-                              if (email == null || ! EmailValidator.validate(email)) {
+                              if (email == null ||
+                                  !EmailValidator.validate(email)) {
                                 return 'El correo no es válido';
                               }
                             },
                           ),
                           const SizedBox(height: 13),
                           TextFormField(
-                            decoration: const InputDecoration(labelText: "Contraseña:"),
+                            decoration:
+                                const InputDecoration(labelText: "Contraseña:"),
                             obscureText: true,
                             onChanged: (String password) {
                               _password = password;
@@ -127,6 +130,12 @@ class _LoginPageState extends State<LoginPage> {
                               ),
                             ],
                           ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Image.asset("assets/img/Logo_ITT.png")
+                            ],
+                          ),
                         ],
                       ),
                     ),
@@ -146,20 +155,16 @@ class _LoginPageState extends State<LoginPage> {
         _loading = true;
       });
 
-      CommonDialog.progressDialog(
-        context,
-        content: const Text('Iniciando sesión...'),
-        future: Auth.login(_email, _password),
-        onSuccess: (value) {
-          Navigator.pushReplacementNamed(context, InitialPage.id);
-        },
-        onError: (error) {
-          setState(() {
-            _loading = false;
-          });
+      CommonDialog.progressDialog(context,
+          content: const Text('Iniciando sesión...'),
+          future: Auth.login(_email, _password), onSuccess: (value) {
+        Navigator.pushReplacementNamed(context, InitialPage.id);
+      }, onError: (error) {
+        setState(() {
+          _loading = false;
+        });
 
-          CommonDialog.dialog(
-            context,
+        CommonDialog.dialog(context,
             title: const Text('Error'),
             content: Text(Error.message(error)),
             actions: [
@@ -169,10 +174,8 @@ class _LoginPageState extends State<LoginPage> {
                   Navigator.pop(context);
                 },
               ),
-            ] 
-          );
-        }
-      );
+            ]);
+      });
     }
   }
 
