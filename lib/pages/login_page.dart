@@ -1,6 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
-import 'package:exaa_2/utils/error.dart';
+import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';
 
@@ -155,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
         _loading = true;
       });
 
-      CommonDialog.progressDialog(context,
+      CommonDialog.waitDialog(context,
           content: const Text('Iniciando sesión...'),
           future: Auth.login(_email, _password), onSuccess: (value) {
         Navigator.pushReplacementNamed(context, InitialPage.id);
@@ -166,7 +166,7 @@ class _LoginPageState extends State<LoginPage> {
 
         CommonDialog.dialog(context,
             title: const Text('Error'),
-            content: Text(Error.message(error)),
+            content: Text(ErrorUtil.message(error)),
             actions: [
               TextButton(
                 child: const Text('Aceptar'),

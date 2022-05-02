@@ -1,13 +1,10 @@
-import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
+import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/utils/sql_data.dart';
-import 'package:exaa_2/widgets/alerts.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
-import 'package:exaa_2/utils/error.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,7 +18,7 @@ class InitialPage extends StatefulWidget {
 }
 
 class _InitialPageState extends State<InitialPage> {
-  SqlData sql = new SqlData();
+  SqlData sql = SqlData();
 
   @override
   Widget build(BuildContext context) {
@@ -77,27 +74,6 @@ class _InitialPageState extends State<InitialPage> {
               Navigator.pushNamed(context, AboutPage.id);
             },
           ),
-          /*FutureBuilder(
-            future: DBProvider.db.getModules(),
-            builder: (BuildContext context,
-                AsyncSnapshot<List<ModuleModel>> snapshot) {
-              if (!snapshot.hasData) {
-                return SizedBox();
-              } else {
-                return RoundedIconTextButton(
-                  icon: FontAwesomeIcons.download,
-                  iconSize: 40,
-                  text: 'Cargar contenido de estudio',
-                  textSize: 30,
-                  onPressed: () async {
-                    await sql.loadAllData();
-                    Alerts.showAlertDialog(context);
-                    setState(() {});
-                  },
-                );
-              }
-            },
-          ),*/
           RoundedIconTextButton(
               icon: FontAwesomeIcons.signOutAlt,
               iconSize: 40,
@@ -112,14 +88,14 @@ class _InitialPageState extends State<InitialPage> {
   }
 
   void _logout(BuildContext context) {
-    CommonDialog.progressDialog(context,
+    CommonDialog.waitDialog(context,
         content: const Text('Cerrando sesión...'),
         future: Auth.logout(), onSuccess: (value) {
       Navigator.pushReplacementNamed(context, 'login');
     }, onError: (error) {
       CommonDialog.dialog(context,
           title: const Text('Error'),
-          content: Text(Error.message(error)),
+          content: Text(ErrorUtil.message(error)),
           actions: [
             TextButton(
               child: const Text('Aceptar'),

@@ -2,7 +2,7 @@ import 'package:email_validator/email_validator.dart';
 import 'package:exaa_2/models/users_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
-import 'package:exaa_2/utils/error.dart';
+import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -25,11 +25,6 @@ class _RegisterPageState extends State<RegisterPage> {
   String _password = '';
 
   bool agree = false;
-
-  // This function is triggered when the button is clicked
-  void _doSomething() {
-    // Do something
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -211,7 +206,7 @@ class _RegisterPageState extends State<RegisterPage> {
         _loading = true;
       });
 
-      CommonDialog.progressDialog(context,
+      CommonDialog.waitDialog(context,
           content: const Text('Registrando...'),
           future: Auth.register(_email, _password), onSuccess: (value) {
         setState(() {
@@ -229,7 +224,6 @@ class _RegisterPageState extends State<RegisterPage> {
                   UsersModel users =
                       UsersModel(email: _email, username: _username);
                   await DBProvider.db.insertUser(users);
-                  //await DBProvider.db.getUsers();
                 },
               ),
             ]);
@@ -240,7 +234,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
         CommonDialog.dialog(context,
             title: const Text('Error'),
-            content: Text(Error.message(error)),
+            content: Text(ErrorUtil.message(error)),
             actions: [
               TextButton(
                 child: const Text('Aceptar'),
