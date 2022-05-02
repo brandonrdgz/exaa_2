@@ -6,6 +6,7 @@ import 'package:exaa_2/utils/error.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'initial_page.dart';
 
@@ -22,6 +23,13 @@ class _RegisterPageState extends State<RegisterPage> {
   String _username = '';
   String _email = '';
   String _password = '';
+
+  bool agree = false;
+
+  // This function is triggered when the button is clicked
+  void _doSomething() {
+    // Do something
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -116,9 +124,11 @@ class _RegisterPageState extends State<RegisterPage> {
                             color: Theme.of(context).primaryColor,
                             padding: const EdgeInsets.symmetric(vertical: 17),
                             textColor: Colors.white,
-                            onPressed: () {
-                              _register(context);
-                            },
+                            onPressed: (!agree)
+                                ? null
+                                : () {
+                                    _register(context);
+                                  },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
@@ -135,6 +145,36 @@ class _RegisterPageState extends State<RegisterPage> {
                               ],
                             ),
                           ),
+                          Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Material(
+                                  child: Checkbox(
+                                    value: agree,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        agree = value ?? false;
+                                      });
+                                    },
+                                  ),
+                                ),
+                                const Text(
+                                  'He leído los',
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                FlatButton(
+                                  textColor: Theme.of(context).primaryColor,
+                                  child: const Text("términos y condiciones"),
+                                  onPressed: () async {
+                                    if (!await launch(
+                                        "https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing"))
+                                      throw 'Could not launch https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing';
+                                  },
+                                ),
+                              ],
+                            ),
+                          ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -144,6 +184,12 @@ class _RegisterPageState extends State<RegisterPage> {
                                 child: const Text("Iniciar sesión"),
                                 onPressed: () => _showLogin(context),
                               ),
+                            ],
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: <Widget>[
+                              Image.asset("assets/img/Logo_ITT.png")
                             ],
                           ),
                         ],

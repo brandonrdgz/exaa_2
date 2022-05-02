@@ -9,102 +9,101 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [
-                Colors.deepPurple.shade800,
-                Colors.deepPurple.shade300,
-              ]
-            )
-          ),
-          child: ListView(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset(
-                    "assets/img/Logo1.png",
-                    color: Colors.white,
-                  ),
-                  Image.asset(
-                    "assets/img/Logo2.png",
-                  ),
-                ],
-              ),
-              //Text('EXA II'),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: ListTile(
-                    leading: Icon(FontAwesomeIcons.school),
-                    title: Text('Institución'),
-                    subtitle: Text('Instituto Tecnológico de Toluca'),
-                  ),
+        child: Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+            gradient: LinearGradient(colors: [
+          Colors.deepPurple.shade800,
+          Colors.deepPurple.shade300,
+        ])),
+        child: ListView(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset(
+                  "assets/img/Logo1.png",
+                  color: Colors.white,
+                ),
+                Image.asset(
+                  "assets/img/Logo2.png",
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: ListTile(
+                  leading: Icon(FontAwesomeIcons.school),
+                  title: Text('Institución'),
+                  subtitle: Text('Instituto Tecnológico de Toluca'),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: ListTile(
-                    leading: Icon(FontAwesomeIcons.userAlt),
-                    title: Text('Lider de proyecto'),
-                    subtitle: Text('Dra. Maribel Miranda Estevez'),
-                  ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: ListTile(
+                  leading: Icon(FontAwesomeIcons.userAlt),
+                  title: Text('Lider de proyecto'),
+                  subtitle: Text('Dra. Maribel Miranda Estevez'),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      ListTile(
-                        leading: Icon(FontAwesomeIcons.users),
-                        title: Text('Colaboradores'),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: const [
-                            Text('Eduardo Dominguez Cordero'),
-                            Text('Brandon Ivan Rodriguez Duarte'),
-                            Text('Jaquelin Milagros Jardon García'),
-                            Text('Oswaldo Estrada Cardenas'),
-                            Text('Susana Ivett Arzate Hernández'),
-                            Text('Gabriel Villafaña Goméz'),
-                          ],
-                        ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ListTile(
+                      leading: Icon(FontAwesomeIcons.users),
+                      title: Text('Colaboradores'),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('Eduardo Dominguez Cordero'),
+                          Text('Brandon Ivan Rodriguez Duarte'),
+                          Text('Jaquelin Milagros Jardon García'),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Card(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: ListTile(
-                    leading: Icon(FontAwesomeIcons.hashtag),
-                    title: Text('Versión'),
-                    subtitle: Text('1.0'),
-                  ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: ListTile(
+                  leading: Icon(FontAwesomeIcons.hashtag),
+                  title: Text('Versión'),
+                  subtitle: Text('1.0'),
                 ),
               ),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[Image.asset("assets/img/Logo_ITT.png")],
+            ),
+          ],
         ),
-      )
-    );
+      ),
+    ));
   }
 }
