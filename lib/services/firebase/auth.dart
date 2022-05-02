@@ -19,6 +19,10 @@ class Auth {
       );
   }
 
+  static String getEmail() {
+    return FirebaseAuth.instance.currentUser!.email!;
+  }
+
   static Future<void> logout() {
     return FirebaseAuth.instance.signOut();
   }

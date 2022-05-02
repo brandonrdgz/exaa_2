@@ -1,3 +1,4 @@
+import 'package:exaa_2/utils/error_util.dart';
 import 'package:flutter/material.dart';
 
 class CommonDialog{
@@ -25,7 +26,7 @@ class CommonDialog{
     );
   }
 
-  static void progressDialog(
+  static void waitDialog(
     BuildContext context,
     {
       Widget? title,
@@ -68,6 +69,76 @@ class CommonDialog{
         Navigator.pop(context);
         onError.call(error);
       }
+    );
+  }
+
+  static void info(BuildContext context, Widget title, Widget content, {required void Function() onAccept}) {
+    dialog(
+      context,
+      title: title,
+      content: content,
+      actions: [
+        TextButton(
+          child: const Text('Aceptar'),
+          onPressed: onAccept,
+        ),
+      ]
+    );
+  }
+
+  static void confirm(
+    BuildContext context,
+    Widget content,
+    {
+      required void Function() onConfirm,
+      required void Function() onCancel,
+    }
+  ) {
+    dialog(
+      context,
+      content: content,
+      actions: [
+        TextButton(
+          child: const Text('No'),
+          onPressed: onCancel,
+        ),
+        TextButton(
+          child: const Text('Si'),
+          onPressed: onConfirm,
+        ),
+      ],
+    );
+  }
+
+  static void error(BuildContext context, dynamic error) {
+    dialog(
+      context, 
+      title: const Text('Error'),
+      content: Text(ErrorUtil.message(error)),
+      actions: [
+        TextButton(
+          child: const Text('Aceptar'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        )
+      ]
+    );
+  }
+
+  static void customError(BuildContext context, String errorMessage) {
+    dialog(
+      context, 
+      title: const Text('Error'),
+      content: Text(errorMessage),
+      actions: [
+        TextButton(
+          child: const Text('Aceptar'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        )
+      ]
     );
   }
 
