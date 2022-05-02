@@ -7,6 +7,7 @@ import 'package:exaa_2/pages/frecuent_questions_page.dart';
 import 'package:exaa_2/pages/initial_page.dart';
 import 'package:exaa_2/pages/learning_page.dart';
 import 'package:exaa_2/pages/login_page.dart';
+import 'package:exaa_2/pages/statistics_page.dart';
 import 'package:exaa_2/pages/subtopic_learning_page.dart';
 import 'package:exaa_2/pages/content_page.dart';
 import 'package:exaa_2/pages/topic_learning_page.dart';
@@ -28,6 +29,7 @@ class Routes {
     ApplyExamPage.id: (BuildContext context) => ApplyExamPage(),
     ExamPage.id: (BuildContext context) => ExamPage(),
     'questions': (BuildContext context) => FrecuentQuestion(),
-    'agreement': (BuildContext context) => AgreementPage()
+    'agreement': (BuildContext context) => AgreementPage(),
+    'statistics': (BuildContext context) => PieChartSample2()
   };
 }

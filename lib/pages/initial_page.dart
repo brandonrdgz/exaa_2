@@ -56,7 +56,7 @@ class _InitialPageState extends State<InitialPage> {
             text: 'Estadísticas',
             textSize: 40,
             onPressed: () {
-              //TODO: Show page 'Estadisticas'
+              Navigator.pushNamed(context, 'statistics');
             },
           ),
           RoundedIconTextButton(
