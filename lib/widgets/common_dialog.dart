@@ -19,7 +19,7 @@ class CommonDialog{
             borderRadius: BorderRadius.circular(16.0)
           ),
           title: title,
-          content: content,
+          content: SingleChildScrollView(child: content),
           actions: actions,
         );
       }
