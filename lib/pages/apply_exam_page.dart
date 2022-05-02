@@ -103,13 +103,13 @@ class _ApplyExamPageState extends State<ApplyExamPage> {
     return DataTable(
       columns: const [
         DataColumn(label: Text('Módulo')),
-        DataColumn(label: Center(child: Text('Preguntas'))),
+        DataColumn(label: Text('Preguntas')),
       ],
       rows: const [
         DataRow(
           cells: [
             DataCell(Text('Comprensión lectora')),
-            DataCell(Text('30')),
+            DataCell(Center(child: Text('30'))),
           ],
         ),
         DataRow(
