@@ -1,7 +1,7 @@
 import 'package:exaa_2/utils/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class Error {
+class ErrorUtil {
   static String message(dynamic error) {
     String? errorMsg;
 
