@@ -51,16 +51,16 @@ class _ExamResultPageState extends State<ExamResultPage> {
   }
 
   void _updateQuestionContent() {
-    _questionContent = _exam![_moduleIndex].questions[_questionIndex].question.content_question;
+    _questionContent = _exam![_moduleIndex].questions[_questionIndex].question.contentQuestion;
   }
 
   void _updateAnswers() {
     for (int i = 0; i < _questionAnswers.length; i++) {
-      _questionAnswers[i] = _exam![_moduleIndex].questions[_questionIndex].answers[i].answer.content_answer;
+      _questionAnswers[i] = _exam![_moduleIndex].questions[_questionIndex].answers[i].answer.contentAnswer;
     }
 
     _selectedAnswerIndex = _exam![_moduleIndex].questions[_questionIndex].answers.indexWhere((ExamAnswer examAnswer) => examAnswer.isSelected);
-    _correctAnswerIndex = _exam![_moduleIndex].questions[_questionIndex].answers.indexWhere((ExamAnswer examAnswer) => examAnswer.answer.is_correct == Constants.trueSQLiteIntValue);
+    _correctAnswerIndex = _exam![_moduleIndex].questions[_questionIndex].answers.indexWhere((ExamAnswer examAnswer) => examAnswer.answer.isCorrect == Constants.trueSQLiteIntValue);
   }
 
   Widget _buildExam() {

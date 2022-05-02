@@ -247,7 +247,7 @@ class DBProvider with ChangeNotifier {
       QuestionModel questionModel = QuestionModel.fromJson(question);
       List<AnswerModel> answersList = [];
 
-      answersMapList = await db?.rawQuery("SELECT * FROM ANSWER WHERE id_question = ?", [questionModel.id_question]);
+      answersMapList = await db?.rawQuery("SELECT * FROM ANSWER WHERE id_question = ?", [questionModel.idQuestion]);
 
       for(Map<String, Object?> answer in answersMapList!) {
         answersList.add(AnswerModel.fromJson(answer));

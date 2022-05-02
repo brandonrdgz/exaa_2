@@ -47,7 +47,7 @@ class ExamUtils {
       List<ExamAnswer> examAnswerList;
 
       for(QuestionModel questionModel in questions) {
-        answerModelList = await DBProvider.db.getAnswers(questionModel.id_question);
+        answerModelList = await DBProvider.db.getAnswers(questionModel.idQuestion);
         examAnswerList = answerModelList.map<ExamAnswer>((AnswerModel answerModel) {
           return ExamAnswer(answerModel, false);
         }).toList();
@@ -137,7 +137,7 @@ class ExamUtils {
 
     for(ExamQuestion examQuestion in questions) {
       selectedAnswerIndex = examQuestion.answers.indexWhere((answer) => answer.isSelected);
-      correctAnswerIndex = examQuestion.answers.indexWhere((answer) => answer.answer.is_correct == Constants.trueSQLiteIntValue);
+      correctAnswerIndex = examQuestion.answers.indexWhere((answer) => answer.answer.isCorrect == Constants.trueSQLiteIntValue);
 
       if(selectedAnswerIndex == correctAnswerIndex) {
         moduleScore += 1;
