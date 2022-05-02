@@ -2,6 +2,7 @@ import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
 import 'package:exaa_2/pages/dummy_pages.dart';
 import 'package:exaa_2/pages/exam_page.dart';
+import 'package:exaa_2/pages/exam_result_page.dart';
 import 'package:exaa_2/pages/initial_page.dart';
 import 'package:exaa_2/pages/learning_page.dart';
 import 'package:exaa_2/pages/login_page.dart';
@@ -25,5 +26,6 @@ class Routes {
     AboutPage.id: (BuildContext context) => AboutPage(),
     ApplyExamPage.id: (BuildContext context) => ApplyExamPage(),
     ExamPage.id: (BuildContext context) => ExamPage(),
+    ExamResultPage.id: (BuildContext context) => ExamResultPage(),
   };
 }
