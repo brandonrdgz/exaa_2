@@ -199,7 +199,7 @@ class _ExamResultPageState extends State<ExamResultPage> {
       child: DataTable(
         columns: const [
           DataColumn(label: Text('Módulo')),
-          DataColumn(label: Text('Preguntas contestadas')),
+          DataColumn(label: Text('Preguntas correctas')),
           DataColumn(label: Text('Preguntas totales')),
           DataColumn(label: Text('Puntaje')),
         ],
