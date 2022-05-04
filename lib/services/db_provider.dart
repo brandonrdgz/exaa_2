@@ -1,5 +1,7 @@
 import 'package:exaa_2/models/answer_model.dart';
 import 'package:exaa_2/models/dummy_model.dart';
+import 'package:exaa_2/models/exam_history_model.dart';
+import 'package:exaa_2/models/exam_detail_model.dart';
 import 'package:exaa_2/models/exam_result.dart';
 import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/models/module_result.dart';
@@ -185,10 +187,11 @@ class DBProvider with ChangeNotifier {
   Future<List<String>> getExamModules() async {
     final Database? db = await database;
 
-    List<Map<String, Object?>>? modulesMapList = await db?.rawQuery('SELECT DISTINCT module_name FROM QUESTION');
+    List<Map<String, Object?>>? modulesMapList =
+        await db?.rawQuery('SELECT DISTINCT module_name FROM QUESTION');
     List<String> modulesList = [];
 
-    for(Map<String, Object?> moduleMap in modulesMapList!) {
+    for (Map<String, Object?> moduleMap in modulesMapList!) {
       modulesList.add(moduleMap['module_name']! as String);
     }
 
@@ -198,23 +201,28 @@ class DBProvider with ChangeNotifier {
   Future<List<String>> getTopicsOfExamModule(String examModule) async {
     final Database? db = await database;
 
-    List<Map<String, Object?>>? topicsMapList = await db?.rawQuery('SELECT DISTINCT topic_name FROM QUESTION WHERE module_name = ?', [examModule]);
+    List<Map<String, Object?>>? topicsMapList = await db?.rawQuery(
+        'SELECT DISTINCT topic_name FROM QUESTION WHERE module_name = ?',
+        [examModule]);
     List<String> topicsList = [];
 
-    for(Map<String, Object?> topicMap in topicsMapList!) {
+    for (Map<String, Object?> topicMap in topicsMapList!) {
       topicsList.add(topicMap['topic_name'] as String);
     }
 
     return topicsList;
   }
 
-  Future<List<QuestionModel>> getQuestions(String examModule, String moduleTopic) async {
+  Future<List<QuestionModel>> getQuestions(
+      String examModule, String moduleTopic) async {
     final Database? db = await database;
 
-    List<Map<String, Object?>>? questionsMapList = await db?.rawQuery('SELECT * FROM QUESTION WHERE module_name = ? AND topic_name = ?', [examModule, moduleTopic]);
+    List<Map<String, Object?>>? questionsMapList = await db?.rawQuery(
+        'SELECT * FROM QUESTION WHERE module_name = ? AND topic_name = ?',
+        [examModule, moduleTopic]);
     List<QuestionModel> questionsList = [];
 
-    for(Map<String, Object?> questionMap in questionsMapList!) {
+    for (Map<String, Object?> questionMap in questionsMapList!) {
       questionsList.add(QuestionModel.fromJson(questionMap));
     }
 
@@ -224,10 +232,11 @@ class DBProvider with ChangeNotifier {
   Future<List<AnswerModel>> getAnswers(int questionId) async {
     final Database? db = await database;
 
-    List<Map<String, Object?>>? answersMapList = await db?.rawQuery('SELECT * FROM ANSWER WHERE id_question = ?', [questionId]);
+    List<Map<String, Object?>>? answersMapList = await db
+        ?.rawQuery('SELECT * FROM ANSWER WHERE id_question = ?', [questionId]);
     List<AnswerModel> answersList = [];
 
-    for(Map<String, Object?> answerMap in answersMapList!) {
+    for (Map<String, Object?> answerMap in answersMapList!) {
       answersList.add(AnswerModel.fromJson(answerMap));
     }
 
@@ -237,17 +246,20 @@ class DBProvider with ChangeNotifier {
   Future<List<Map<String, Object>>> getQuestionsAndAnswers() async {
     final Database? db = await database;
 
-    List<Map<String, Object?>>? questionsMapList = await db?.rawQuery('SELECT * FROM QUESTION');
+    List<Map<String, Object?>>? questionsMapList =
+        await db?.rawQuery('SELECT * FROM QUESTION');
     List<Map<String, Object?>>? answersMapList;
     List<Map<String, Object>> questionsAndAnswersMapList = [];
 
-    for(Map<String, Object?> question in questionsMapList!) {
+    for (Map<String, Object?> question in questionsMapList!) {
       QuestionModel questionModel = QuestionModel.fromJson(question);
       List<AnswerModel> answersList = [];
 
-      answersMapList = await db?.rawQuery("SELECT * FROM ANSWER WHERE id_question = ?", [questionModel.idQuestion]);
+      answersMapList = await db?.rawQuery(
+          "SELECT * FROM ANSWER WHERE id_question = ?",
+          [questionModel.idQuestion]);
 
-      for(Map<String, Object?> answer in answersMapList!) {
+      for (Map<String, Object?> answer in answersMapList!) {
         answersList.add(AnswerModel.fromJson(answer));
       }
 
@@ -262,19 +274,28 @@ class DBProvider with ChangeNotifier {
   }
 
   insertExamResults(ExamResult examResult) async {
-    final Database? db = await database; 
+    final Database? db = await database;
 
-    int examId = await db!.rawInsert('INSERT INTO Exam_History (id_exam, email, date_answered, total_score) '
-      'VALUES (null, ?, ?, ?)', [Auth.getEmail(), DateTime.now().toIso8601String(), examResult.totalScore]);
+    int examId = await db!.rawInsert(
+        'INSERT INTO Exam_History (id_exam, email, date_answered, total_score) '
+        'VALUES (null, ?, ?, ?)',
+        [
+          Auth.getEmail(),
+          DateTime.now().toIso8601String(),
+          examResult.totalScore
+        ]);
 
-    for(ModuleResult moduleResult in examResult.modulesResult) {
+    for (ModuleResult moduleResult in examResult.modulesResult) {
       await _insertModuleResult(db, examId, moduleResult);
     }
   }
 
-  _insertModuleResult(Database? db, int examId, ModuleResult moduleResult) async {
-    await db!.rawInsert('INSERT INTO Exam_Detail (id_exam, module_name, score) ' 
-      'VALUES (?, ?, ?)', [examId, moduleResult.moduleName, moduleResult.score]);
+  _insertModuleResult(
+      Database? db, int examId, ModuleResult moduleResult) async {
+    await db!.rawInsert(
+        'INSERT INTO Exam_Detail (id_exam, module_name, score) '
+        'VALUES (?, ?, ?)',
+        [examId, moduleResult.moduleName, moduleResult.score]);
   }
 
   insertUser(UsersModel user) async {
@@ -299,6 +320,84 @@ class DBProvider with ChangeNotifier {
     print('Lista');
     print(list[0].username);
     print(list[0].email);
+    return list;
+  }
+
+  //Modelo = ExamHistoryModel
+  Future<List<ExamHistoryModel>> getExams() async {
+    final db = await database;
+    var res;
+    res = await db?.query('EXAM_HISTORY');
+    print(res);
+    List<ExamHistoryModel> list = res.isNotEmpty
+        ? res
+            .map<ExamHistoryModel>((c) => ExamHistoryModel.fromJson(c))
+            .toList()
+        : <ExamHistoryModel>[];
+    print('Lista de todos los exámenes: ');
+    print(list[0].id_exam);
+    print(list[0].email);
+    print(list[0].date_answered);
+    print(list[0].total_score);
+    return list;
+  }
+
+  Future<List<ExamHistoryModel>> getExamsByUser(String email) async {
+    final db = await database;
+    var res;
+    res =
+        await db?.rawQuery('SELECT * FROM EXAM_HISTORY WHERE email=?', [email]);
+    //print(res);
+    List<ExamHistoryModel> list = res.isNotEmpty
+        ? res
+            .map<ExamHistoryModel>((c) => ExamHistoryModel.fromJson(c))
+            .toList()
+        : <ExamHistoryModel>[];
+    //print('Lista de todos los exámenes por usuario: ');
+    list.forEach((element) {
+      /*print(element.id_exam);
+      print(element.email);
+      print(element.date_answered);
+      print(element.total_score);*/
+    });
+    return list;
+  }
+
+  Future<List<ExamDetailModel>> getDetailByExam(int id_exam) async {
+    final db = await database;
+    var res;
+    res = await db
+        ?.rawQuery('SELECT * FROM EXAM_DETAIL WHERE id_exam=?', [id_exam]);
+    //print(res);
+    List<ExamDetailModel> list = res.isNotEmpty
+        ? res.map<ExamDetailModel>((c) => ExamDetailModel.fromJson(c)).toList()
+        : <ExamDetailModel>[];
+    //print('Lista de los detalles por examen: ');
+    list.forEach((element) {
+      //print(element.id_exam);
+      //print(element.module_name);
+      //print(element.score);
+    });
+    return list;
+  }
+
+  Future<List<ExamDetailModel>> getDetailByModuleANDId(
+      String module_name, int id_exam) async {
+    final db = await database;
+    var res;
+    res = await db?.rawQuery(
+        'SELECT score FROM EXAM_DETAIL WHERE module_name=? AND id_exam=?',
+        [module_name, id_exam]);
+    print(res);
+    List<ExamDetailModel> list = res.isNotEmpty
+        ? res.map<ExamDetailModel>((c) => ExamDetailModel.fromJson(c)).toList()
+        : <ExamDetailModel>[];
+    print('Lista de los detalles por modulo: ');
+    list.forEach((element) {
+      print(element.id_exam);
+      print(element.module_name);
+      print(element.score);
+    });
     return list;
   }
 }

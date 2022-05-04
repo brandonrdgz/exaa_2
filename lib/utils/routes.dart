@@ -11,6 +11,7 @@ import 'package:exaa_2/pages/login_page.dart';
 import 'package:exaa_2/pages/statistics_page.dart';
 import 'package:exaa_2/pages/subtopic_learning_page.dart';
 import 'package:exaa_2/pages/content_page.dart';
+import 'package:exaa_2/pages/testExamQuery.dart';
 import 'package:exaa_2/pages/topic_learning_page.dart';
 import 'package:exaa_2/pages/register_page.dart';
 
@@ -31,7 +32,8 @@ class Routes {
     ExamPage.id: (BuildContext context) => ExamPage(),
     'questions': (BuildContext context) => FrecuentQuestion(),
     'agreement': (BuildContext context) => AgreementPage(),
-    'statistics': (BuildContext context) => PieChartSample2(),
+    'statistics': (BuildContext context) => BarChartSample7(),
     ExamResultPage.id: (BuildContext context) => ExamResultPage(),
+    'testExam': (BuildContext context) => TestExamQuery()
   };
 }
