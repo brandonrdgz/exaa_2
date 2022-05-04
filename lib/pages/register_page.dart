@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
               "Nueva Cuenta",
               style: GoogleFonts.monoton(
                 textStyle: const TextStyle(
-                  fontSize: 42,
+                  fontSize: 30,
                   color: Colors.white,
                   letterSpacing: .5,
                 ),
@@ -154,18 +154,27 @@ class _RegisterPageState extends State<RegisterPage> {
                                     },
                                   ),
                                 ),
-                                const Text(
-                                  'He leído los',
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                FlatButton(
-                                  textColor: Theme.of(context).primaryColor,
-                                  child: const Text("términos y condiciones"),
-                                  onPressed: () async {
-                                    if (!await launch(
-                                        "https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing"))
-                                      throw 'Could not launch https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing';
-                                  },
+                                Column(
+                                  children: [
+                                    SizedBox(
+                                      height: 30,
+                                    ),
+                                    const Text(
+                                      'He leído los',
+                                      overflow: TextOverflow.ellipsis,
+                                      //style: TextStyle(fontSize: 5),
+                                    ),
+                                    FlatButton(
+                                      textColor: Theme.of(context).primaryColor,
+                                      child: const Text(
+                                          "términos y \ncondiciones"),
+                                      onPressed: () async {
+                                        if (!await launch(
+                                            "https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing"))
+                                          throw 'Could not launch https://drive.google.com/file/d/18Ci0WIc1IJhJG7ji7c6KfBvRuJn8l2Lq/view?usp=sharing';
+                                      },
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),

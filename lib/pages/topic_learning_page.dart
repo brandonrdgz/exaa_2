@@ -73,7 +73,7 @@ class TopicLearningPage extends StatelessWidget {
                     itemBuilder: (BuildContext context, int i) {
                       (snapshot.data![i].name_topic ==
                               'EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS')
-                          ? _size = 15
+                          ? _size = 11
                           : _size = 18;
                       return TopicCard(
                           snapshot.data![i].name_module,
