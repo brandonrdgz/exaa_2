@@ -18,12 +18,12 @@ class BarChartSample7 extends StatefulWidget {
 
 class _BarChartSample7State extends State<BarChartSample7> {
   List dataList = [
-    _BarData(Color(0xFFecb206), 4, 0), //0
-    _BarData(Color(0xFFa8bd1a), 4, 0), //1
-    _BarData(Color(0xFF17987b), 4, 0), //2
-    _BarData(Color(0xFFb87d46), 4, 0), //3
-    _BarData(Color(0xFF295ab5), 2, 0), //4
-    _BarData(Colors.purple, 2, 0), //4
+    _BarData(Color(0xFFecb206), 0, 0), //0
+    _BarData(Color(0xFFa8bd1a), 0, 0), //1
+    _BarData(Color(0xFF17987b), 0, 0), //2
+    _BarData(Color(0xFFb87d46), 0, 0), //3
+    _BarData(Color(0xFF295ab5), 0, 0), //4
+    _BarData(Colors.purple, 0, 0), //4
   ];
   @override
   void dispose() {
@@ -59,10 +59,10 @@ class _BarChartSample7State extends State<BarChartSample7> {
 
   @override
   Widget build(BuildContext context) {
-    /*Exams.examsDetail.forEach((element) {
+    Exams.examsDetail.forEach((element) {
       print(element.id_exam);
       print(element.module_name);
-    });*/
+    });
     /*dataList.forEach((element) {
       element.value = 8.toDouble();
       setState(() {});
@@ -117,7 +117,7 @@ class _BarChartSample7State extends State<BarChartSample7> {
                 children: const <Widget>[
                   Indicator(
                     color: Color(0xFFecb206),
-                    text: 'Pensamiento matemático',
+                    text: 'Física',
                     isSquare: true,
                   ),
                   SizedBox(
@@ -141,7 +141,7 @@ class _BarChartSample7State extends State<BarChartSample7> {
                   ),
                   Indicator(
                     color: Color(0xFFb87d46),
-                    text: 'Cálculo',
+                    text: 'Pensamiento matemático',
                     isSquare: true,
                   ),
                   SizedBox(
@@ -149,7 +149,7 @@ class _BarChartSample7State extends State<BarChartSample7> {
                   ),
                   Indicator(
                     color: Color(0xFF295ab5),
-                    text: 'Física',
+                    text: 'Pensamiento analítico verbal',
                     isSquare: true,
                   ),
                   SizedBox(
@@ -157,7 +157,7 @@ class _BarChartSample7State extends State<BarChartSample7> {
                   ),
                   Indicator(
                     color: Colors.purple,
-                    text: 'Pensamiento analítico verbal',
+                    text: 'Cálculo',
                     isSquare: true,
                   ),
                   SizedBox(
@@ -180,7 +180,30 @@ class _BarChartSample7State extends State<BarChartSample7> {
                         .toList();
                     int j = 0;
                     dummy.forEach((element) {
-                      dataList[j].value = element.score.toDouble();
+                      if (element.module_name.toString() == "Física") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 24;
+                      } else if (element.module_name.toString() ==
+                          "Estructura de la lengua") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 30;
+                      } else if (element.module_name.toString() ==
+                          "Comprensión Lectora") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 30;
+                      } else if (element.module_name.toString() ==
+                          "Pensamiento matemático") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 30;
+                      } else if (element.module_name.toString() ==
+                          "Pensamiento analítico verbal") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 30;
+                      } else if (element.module_name.toString() == "Cálculo") {
+                        dataList[j].value =
+                            (element.score.toDouble() * 100) / 24;
+                      }
+                      //dataList[j].value = element.score.toDouble();
                       j++;
                     });
                     //setState(() {});
@@ -280,7 +303,7 @@ class _BarChartSample7State extends State<BarChartSample7> {
                                             data.value,
                                             data.shadowValue);
                                       }).toList(),
-                                      maxY: 10,
+                                      maxY: 100,
                                       barTouchData: BarTouchData(
                                         enabled: true,
                                         handleBuiltInTouches: false,
@@ -336,11 +359,6 @@ class _BarChartSample7State extends State<BarChartSample7> {
                 )),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, 'testExam');
-        },
       ),
     );
   }
