@@ -7,14 +7,15 @@ class CommonDialog{
     {
       Widget? title,
       required Widget content,
+      bool barrierDismissible = false,
       required List<Widget> actions
     }
   ) {
     showDialog(
-      barrierDismissible: false,
+      barrierDismissible: barrierDismissible,
       context: context,
       builder: (context) {
-        return AlertDialog(
+        Widget alertDialog = AlertDialog(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16.0)
           ),
@@ -22,6 +23,16 @@ class CommonDialog{
           content: SingleChildScrollView(child: content),
           actions: actions,
         );
+
+        if(barrierDismissible) {
+          return alertDialog;
+        }
+        else {
+          return WillPopScope(
+            onWillPop: () async => false,
+            child: alertDialog,
+          );
+        }
       }
     );
   }
@@ -40,19 +51,22 @@ class CommonDialog{
       barrierDismissible: false,
       context: context,
       builder: (context) {
-        return AlertDialog(
-          title: title,
-          content: Row(
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(16.0),
-                child: const CircularProgressIndicator(),
-              ),
-              Expanded(child: content)
-            ],
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.0)
+        return WillPopScope(
+          onWillPop: () async => false,
+          child: AlertDialog(
+            title: title,
+            content: Row(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.all(16.0),
+                  child: const CircularProgressIndicator(),
+                ),
+                Expanded(child: content)
+              ],
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16.0)
+            ),
           ),
         );
       }

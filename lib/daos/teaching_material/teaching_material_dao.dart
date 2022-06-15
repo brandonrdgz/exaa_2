@@ -4,6 +4,7 @@ import 'package:exaa_2/models/teaching_material/topic_model.dart';
 import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:exaa_2/widgets/alerts.dart';
+import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';
 
 class TeachingMaterialDao {
@@ -43,7 +44,15 @@ class TeachingMaterialDao {
       await insertRecordsModule();
       await insertRecordsTopic();
       await insertRecordsSubtopic();
-      Alerts.showAlertDialog(context);
+      CommonDialog.info(
+        context,
+        const Text('Info'),
+        const Text('¡La carga de datos ha sido exitosa!\nSe requiere volver a la pantalla inicial para reflejar los cambios.'),
+        onAccept: () {
+          Navigator.pop(context);
+          Navigator.pop(context);
+        }
+      );
     }
     List<ModuleModel> list = res.isNotEmpty
         ? res.map<ModuleModel>((c) => ModuleModel.fromJson(c)).toList()
