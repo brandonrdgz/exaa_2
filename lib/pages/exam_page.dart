@@ -1,10 +1,8 @@
 import 'dart:async';
 
-import 'package:exaa_2/daos/exam/exam_dao.dart';
 import 'package:exaa_2/daos/statistics/statistics_dao.dart';
 import 'package:exaa_2/models/exam_result.dart';
 import 'package:exaa_2/pages/exam_result_page.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 

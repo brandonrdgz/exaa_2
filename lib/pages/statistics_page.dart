@@ -63,38 +63,9 @@ class _BarChartSample7State extends State<BarChartSample7> {
       print(element.id_exam);
       print(element.module_name);
     });
-    /*dataList.forEach((element) {
-      element.value = 8.toDouble();
-      setState(() {});
-    });*/
-    /*BarChartSample7.dataList[0].value = 5;
-    BarChartSample7.dataList[1].value = 6;
-    BarChartSample7.dataList[2].value = 8;
-    BarChartSample7.dataList[3].value = 2;
-    BarChartSample7.dataList[4].value = 1;*/
+    
     List<ExamHistoryModel> examsList = Exams.exams;
     List<ExamDetailModel> dummy;
-
-    /*
-    static List dataList = []:
-
-    Exams.examsDetail.forEach((element) {
-      ant=element.id_exam;
-      print(element.id_exam);
-      print(element.module_name);
-
-        var color;
-        if(element.module_name=='Pensamiento matemático'){
-          color=Color(0xFFecb206);
-        }else{
-          Color(0xFFa8bd1a)
-          Color(0xFF17987b)
-          Color(0xFFb87d46)
-          Color(0xFF295ab5)
-        }
-        dataList= dataList +' , '+ _BarData(color, element.score, 0);
-    });
-  ]; */
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -169,7 +140,6 @@ class _BarChartSample7State extends State<BarChartSample7> {
             Container(
                 padding: EdgeInsets.only(right: 30, left: 30),
                 child: ListView.builder(
-                  //scrollDirection: Axis.vertical,
                   physics: ScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: Exams.exams.length,
@@ -203,10 +173,8 @@ class _BarChartSample7State extends State<BarChartSample7> {
                         dataList[j].value =
                             (element.score.toDouble() * 100) / 24;
                       }
-                      //dataList[j].value = element.score.toDouble();
                       j++;
                     });
-                    //setState(() {});
                     List<String> dateExam =
                         examsList[i].date_answered.toString().split('T');
                     return Column(
@@ -287,12 +255,6 @@ class _BarChartSample7State extends State<BarChartSample7> {
                                           strokeWidth: 1,
                                         ),
                                       ),
-                                      /*barGroups: dummy.asMap().entries.map((e) {
-                                        final index = e.key;
-                                        final data = e.value;
-                                        return generateBarGroup(
-                                            index, Colors.red, data.value, 0);
-                                      }).toList(),*/
                                       barGroups:
                                           dataList.asMap().entries.map((e) {
                                         final index = e.key;

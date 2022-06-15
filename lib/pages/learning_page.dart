@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
 import 'package:exaa_2/models/module_model.dart';
 import 'package:exaa_2/widgets/module_card.dart';

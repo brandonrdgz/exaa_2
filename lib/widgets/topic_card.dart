@@ -27,9 +27,6 @@ class TopicCard extends StatelessWidget {
                     'EL ESTABLECIMIENTO DE RELACIONES ENTRE PALABRAS Y FRASES SINÓNIMAS Y ANTÓNIMAS')
             ? _fontSize = 20
             : _fontSize = 30;
-        //List<SubtopicModel> res =
-        //await DBProvider.db.getSubtopicByTopic(topicName);
-        //print(res);
         Navigator.pushNamed(context, 'subtopicLearning',
             arguments: <String, dynamic>{
               'name_topic': topicName,
@@ -43,12 +40,10 @@ class TopicCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               color: color,
-              // ignore: prefer_const_constructors
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(80),
               ),
               boxShadow: [
-                // ignore: unnecessary_new
                 new BoxShadow(
                     color: Color(0xFF363f93).withOpacity(0.3),
                     offset: new Offset(-10, 0),

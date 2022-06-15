@@ -25,12 +25,10 @@ class SubtopicCard extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
               color: color,
-              // ignore: prefer_const_constructors
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(80),
               ),
               boxShadow: [
-                // ignore: unnecessary_new
                 new BoxShadow(
                     color: Color(0xFF363f93).withOpacity(0.3),
                     offset: new Offset(-10, 0),

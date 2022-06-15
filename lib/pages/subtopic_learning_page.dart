@@ -1,6 +1,5 @@
 import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
 import 'package:exaa_2/models/subtopic_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/subtopic_card.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +12,6 @@ class SubtopicLearningPage extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
     final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
-    //List<TopicModel> topics = _arguments['topics'];
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -21,7 +19,6 @@ class SubtopicLearningPage extends StatelessWidget {
           Container(
             height: 230,
             decoration: BoxDecoration(
-              // ignore: prefer_const_constructors
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(50),
               ),
@@ -35,7 +32,6 @@ class SubtopicLearningPage extends StatelessWidget {
                   child: Container(
                     height: 100,
                     width: 300,
-                    // ignore: prefer_const_constructors
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(50),
@@ -84,22 +80,7 @@ class SubtopicLearningPage extends StatelessWidget {
               }
             },
           )),
-          /*Expanded(
-              child: MediaQuery.removePadding(
-            context: context,
-            removeTop: true,
-            child: ListView.builder(
-              itemCount: topics.length,
-              itemBuilder: (context, i) {
-                return TopicCard(topics[i].name_module, topics[i].name_topic);
-              },
-            ),
-            /*child: ListView(
-              children: <Widget>[
-                TopicCard(_arguments['name_module'], 'Álgebra')
-              ],
-            ),*/
-          ))*/
+          
         ],
       ),
     );

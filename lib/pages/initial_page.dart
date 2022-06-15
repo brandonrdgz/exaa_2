@@ -58,15 +58,11 @@ class _InitialPageState extends State<InitialPage> {
               StatisticsDao statisticsDao = StatisticsDao();
               Exams.exams = await statisticsDao
                   .getExamsByUser(Auth.getEmail().toString());
-              //id_exam = 1 -> (5)EXAM_DETAIL
-              //[1,2,3] ->ID_EXAM
               Exams.exams.forEach((element) async {
                 List<ExamDetailModel> temporalList = [];
                 temporalList =
                     await statisticsDao.getDetailByExam(element.id_exam);
-                /*List<ExamDetailModel> newList = new List.from(Exams.examsDetail)
-                  ..addAll(temporalList);
-                Exams.examsDetail = newList;*/
+                
                 Exams.examsDetail = [...temporalList, ...Exams.examsDetail];
               });
               print('Array spread');

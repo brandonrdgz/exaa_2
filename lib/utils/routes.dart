@@ -1,7 +1,6 @@
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/agreement_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
-import 'package:exaa_2/pages/dummy_pages.dart';
 import 'package:exaa_2/pages/exam_page.dart';
 import 'package:exaa_2/pages/frecuent_questions_page.dart';
 import 'package:exaa_2/pages/exam_result_page.dart';
@@ -11,7 +10,6 @@ import 'package:exaa_2/pages/login_page.dart';
 import 'package:exaa_2/pages/statistics_page.dart';
 import 'package:exaa_2/pages/subtopic_learning_page.dart';
 import 'package:exaa_2/pages/content_page.dart';
-import 'package:exaa_2/pages/testExamQuery.dart';
 import 'package:exaa_2/pages/topic_learning_page.dart';
 import 'package:exaa_2/pages/register_page.dart';
 
@@ -26,7 +24,6 @@ class Routes {
     'contentPage': (BuildContext context) => ContentPage(),
     InitialPage.id: (BuildContext context) => InitialPage(),
     'register': (BuildContext context) => RegisterPage(),
-    'dummy': (BuildContext context) => DummyPage(),
     AboutPage.id: (BuildContext context) => AboutPage(),
     ApplyExamPage.id: (BuildContext context) => ApplyExamPage(),
     ExamPage.id: (BuildContext context) => ExamPage(),
@@ -34,6 +31,5 @@ class Routes {
     'agreement': (BuildContext context) => AgreementPage(),
     'statistics': (BuildContext context) => BarChartSample7(),
     ExamResultPage.id: (BuildContext context) => ExamResultPage(),
-    'testExam': (BuildContext context) => TestExamQuery()
   };
 }

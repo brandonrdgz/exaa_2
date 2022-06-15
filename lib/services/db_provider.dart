@@ -1,4 +1,3 @@
-import 'package:exaa_2/models/dummy_model.dart';
 import 'package:exaa_2/models/users_model.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:flutter/material.dart';
@@ -33,30 +32,6 @@ class DBProvider with ChangeNotifier {
         await db.execute(SqlData.createTables[j]);
       }
     });
-  }
-
-  insertDummy(DummyModel dummy) async {
-    // se realiza únicamente una instancia de la base de datos, gracias al patrón singleton
-    final db = await database;
-    notifyListeners();
-
-    final res = await db?.rawInsert("INSERT INTO  Dummy (id, name) "
-        "VALUES ( '${dummy.id}', '${dummy.name}')");
-
-    return res;
-  }
-
-  Future<List<DummyModel>> getDummies() async {
-    final db = await database;
-    var res;
-    res = await db?.query('Dummy');
-    print(res);
-    List<DummyModel> list = res.isNotEmpty
-        ? res.map<DummyModel>((c) => DummyModel.fromJson(c)).toList()
-        : <DummyModel>[];
-    print('Lista');
-    print(list[1].name);
-    return list;
   }
 
   insertUser(UsersModel user) async {

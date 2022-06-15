@@ -1,6 +1,5 @@
 import 'package:exaa_2/daos/exam/exam_dao.dart';
 import 'package:exaa_2/pages/exam_page.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/utils/constants.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter/material.dart';

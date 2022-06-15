@@ -46,18 +46,13 @@ class StatisticsDao {
     var res;
     res =
         await db?.rawQuery('SELECT * FROM EXAM_HISTORY WHERE email=?', [email]);
-    //print(res);
     List<ExamHistoryModel> list = res.isNotEmpty
         ? res
             .map<ExamHistoryModel>((c) => ExamHistoryModel.fromJson(c))
             .toList()
         : <ExamHistoryModel>[];
-    //print('Lista de todos los exámenes por usuario: ');
     list.forEach((element) {
-      /*print(element.id_exam);
-      print(element.email);
-      print(element.date_answered);
-      print(element.total_score);*/
+      
     });
     return list;
   }
@@ -67,15 +62,10 @@ class StatisticsDao {
     var res;
     res = await db
         ?.rawQuery('SELECT * FROM EXAM_DETAIL WHERE id_exam=?', [id_exam]);
-    //print(res);
     List<ExamDetailModel> list = res.isNotEmpty
         ? res.map<ExamDetailModel>((c) => ExamDetailModel.fromJson(c)).toList()
         : <ExamDetailModel>[];
-    //print('Lista de los detalles por examen: ');
     list.forEach((element) {
-      //print(element.id_exam);
-      //print(element.module_name);
-      //print(element.score);
     });
     return list;
   }

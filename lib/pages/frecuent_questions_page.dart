@@ -1,7 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
-import 'dart:ui';
-
 import 'package:exaa_2/models/frecuent_question_model.dart';
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:flutter/material.dart';
@@ -303,7 +299,6 @@ class _FrecuentQuestionState extends State<FrecuentQuestion> {
             image: DecorationImage(
                 fit: BoxFit.fill,
                 image: AssetImage('assets/design/drawerBackground.jpg'))),
-        // ignore: prefer_const_literals_to_create_immutables
         child: Stack(children: <Widget>[
           Positioned(
               bottom: 20.0,

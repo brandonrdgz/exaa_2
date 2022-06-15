@@ -16,51 +16,14 @@ class ModuleCard extends StatelessWidget {
     Color color = Theme.of(context).primaryColor;
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
-    //String _moduleToStudy = '';
     double _fontSize;
-    //List<TopicModel> _topics = [];
     return GestureDetector(
       onTap: () async {
-        /*switch (moduleTitle) {
-          case 'Pensamiento Matemático':
-            {
-              _topics = ListOfTopics.topicsMath;
-              _moduleToStudy = 'Math';
-            }
-            break;
-          case 'Cálculo':
-            {
-              _topics = ListOfTopics.topicsCalculus;
-              _moduleToStudy = 'calculus';
-            }
-            break;
-          case 'Física':
-            {
-              _topics = ListOfTopics.topicsPhysics;
-              _moduleToStudy = 'physics';
-            }
-            break;
-          case 'Estructura de la lengua':
-            {
-              _topics = ListOfTopics.topicsGramaticalStructure;
-              _moduleToStudy = 'gramatic_structure';
-            }
-            break;
-          case 'Comprensión lectora':
-            {
-              _topics = ListOfTopics.topicsLecture;
-              _moduleToStudy = 'lecture';
-            }
-            break;
-        }*/
         (moduleTitle == 'PENSAMIENTO MATEMÁTICO' ||
                 moduleTitle == 'ESTRUCTURA DE LA LENGUA' ||
                 moduleTitle == 'COMPRENSIÓN LECTORA')
             ? _fontSize = 20
             : _fontSize = 30;
-        //List<TopicModel> res =
-        //  await DBProvider.db.getTopicByModule(moduleTitle);
-        //print(res);
         Navigator.pushNamed(context, 'topicLearning',
             arguments: <String, dynamic>{
               'name_module': moduleTitle,

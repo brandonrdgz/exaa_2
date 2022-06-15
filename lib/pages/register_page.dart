@@ -162,7 +162,6 @@ class _RegisterPageState extends State<RegisterPage> {
                                     const Text(
                                       'He leído los',
                                       overflow: TextOverflow.ellipsis,
-                                      //style: TextStyle(fontSize: 5),
                                     ),
                                     FlatButton(
                                       textColor: Theme.of(context).primaryColor,
