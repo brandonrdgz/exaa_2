@@ -1,5 +1,3 @@
-import 'package:exaa_2/models/subtopic_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:flutter/material.dart';
 
 class TopicCard extends StatelessWidget {

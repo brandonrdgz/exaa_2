@@ -1,5 +1,5 @@
-import 'package:exaa_2/models/frecuent_question_model.dart';
-import 'package:exaa_2/pages/about_page.dart';
+import 'package:exaa_2/models/faq/frecuent_question_model.dart';
+import 'package:exaa_2/pages/about/about_page.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 

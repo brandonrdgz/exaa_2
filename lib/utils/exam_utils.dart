@@ -1,13 +1,13 @@
 import 'dart:math';
 
 import 'package:exaa_2/daos/exam/exam_dao.dart';
-import 'package:exaa_2/models/answer_model.dart';
-import 'package:exaa_2/models/exam_answer.dart';
-import 'package:exaa_2/models/exam_question.dart';
-import 'package:exaa_2/models/exam_result.dart';
-import 'package:exaa_2/models/module_questions.dart';
-import 'package:exaa_2/models/module_result.dart';
-import 'package:exaa_2/models/question_model.dart';
+import 'package:exaa_2/models/exam/answer_model.dart';
+import 'package:exaa_2/models/exam/exam_answer.dart';
+import 'package:exaa_2/models/exam/exam_question.dart';
+import 'package:exaa_2/models/exam/exam_result.dart';
+import 'package:exaa_2/models/exam/module_questions.dart';
+import 'package:exaa_2/models/exam/module_result.dart';
+import 'package:exaa_2/models/exam/question_model.dart';
 import 'package:exaa_2/utils/constants.dart';
 
 class ExamUtils {

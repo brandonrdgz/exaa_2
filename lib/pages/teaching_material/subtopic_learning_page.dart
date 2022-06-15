@@ -1,5 +1,5 @@
 import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
-import 'package:exaa_2/models/subtopic_model.dart';
+import 'package:exaa_2/models/teaching_material/subtopic_model.dart';
 import 'package:exaa_2/widgets/subtopic_card.dart';
 import 'package:flutter/material.dart';
 

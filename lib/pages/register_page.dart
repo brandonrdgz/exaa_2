@@ -1,6 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:exaa_2/models/users_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
+import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';

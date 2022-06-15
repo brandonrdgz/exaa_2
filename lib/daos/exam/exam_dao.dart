@@ -1,6 +1,6 @@
-import 'package:exaa_2/models/answer_model.dart';
-import 'package:exaa_2/models/question_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
+import 'package:exaa_2/models/exam/answer_model.dart';
+import 'package:exaa_2/models/exam/question_model.dart';
+import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:sqflite/sqflite.dart';
 

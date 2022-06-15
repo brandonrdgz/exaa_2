@@ -1,4 +1,4 @@
-import 'package:exaa_2/models/answer_model.dart';
+import 'package:exaa_2/models/exam/answer_model.dart';
 
 class ExamAnswer {
   AnswerModel answer;

@@ -1,6 +1,3 @@
-import 'package:exaa_2/models/topic_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
-import 'package:exaa_2/utils/list_of_topics.dart';
 import 'package:flutter/material.dart';
 
 class ModuleCard extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:exaa_2/models/module_result.dart';
+import 'package:exaa_2/models/exam/module_result.dart';
 
 class ExamResult {
   List<ModuleResult> modulesResult;

@@ -1,7 +1,7 @@
 import 'package:exaa_2/daos/statistics/statistics_dao.dart';
-import 'package:exaa_2/models/exam_detail_model.dart';
-import 'package:exaa_2/pages/about_page.dart';
-import 'package:exaa_2/pages/apply_exam_page.dart';
+import 'package:exaa_2/models/statistics/exam_detail_model.dart';
+import 'package:exaa_2/pages/about/about_page.dart';
+import 'package:exaa_2/pages/exam/apply_exam_page.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/utils/exams.dart';

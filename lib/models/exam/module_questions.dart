@@ -1,4 +1,4 @@
-import 'package:exaa_2/models/exam_question.dart';
+import 'package:exaa_2/models/exam/exam_question.dart';
 
 class ModuleQuestions {
   String module;

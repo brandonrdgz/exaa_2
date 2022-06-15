@@ -1,16 +1,16 @@
-import 'package:exaa_2/pages/about_page.dart';
+import 'package:exaa_2/pages/about/about_page.dart';
 import 'package:exaa_2/pages/agreement_page.dart';
-import 'package:exaa_2/pages/apply_exam_page.dart';
-import 'package:exaa_2/pages/exam_page.dart';
-import 'package:exaa_2/pages/frecuent_questions_page.dart';
-import 'package:exaa_2/pages/exam_result_page.dart';
+import 'package:exaa_2/pages/exam/apply_exam_page.dart';
+import 'package:exaa_2/pages/exam/exam_page.dart';
+import 'package:exaa_2/pages/faq/frecuent_questions_page.dart';
+import 'package:exaa_2/pages/exam/exam_result_page.dart';
 import 'package:exaa_2/pages/initial_page.dart';
-import 'package:exaa_2/pages/learning_page.dart';
+import 'package:exaa_2/pages/teaching_material/learning_page.dart';
 import 'package:exaa_2/pages/login_page.dart';
-import 'package:exaa_2/pages/statistics_page.dart';
-import 'package:exaa_2/pages/subtopic_learning_page.dart';
-import 'package:exaa_2/pages/content_page.dart';
-import 'package:exaa_2/pages/topic_learning_page.dart';
+import 'package:exaa_2/pages/statistics/statistics_page.dart';
+import 'package:exaa_2/pages/teaching_material/subtopic_learning_page.dart';
+import 'package:exaa_2/pages/teaching_material/content_page.dart';
+import 'package:exaa_2/pages/teaching_material/topic_learning_page.dart';
 import 'package:exaa_2/pages/register_page.dart';
 
 import 'package:flutter/material.dart';

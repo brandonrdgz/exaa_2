@@ -1,21 +1,18 @@
 import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
-import 'package:exaa_2/models/module_model.dart';
-import 'package:exaa_2/widgets/module_card.dart';
+import 'package:exaa_2/models/teaching_material/topic_model.dart';
+import 'package:exaa_2/widgets/topic_card.dart';
 import 'package:flutter/material.dart';
 
-class LearningPage extends StatefulWidget {
-  const LearningPage({Key? key}) : super(key: key);
+class TopicLearningPage extends StatelessWidget {
+  const TopicLearningPage({Key? key}) : super(key: key);
 
-  @override
-  State<LearningPage> createState() => _LearningPageState();
-}
-
-class _LearningPageState extends State<LearningPage> {
   @override
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
     final double height = MediaQuery.of(context).size.height;
     final double width = MediaQuery.of(context).size.width;
+    final _arguments = ModalRoute.of(context)?.settings.arguments as Map;
+    int _size = 0;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -49,8 +46,9 @@ class _LearningPageState extends State<LearningPage> {
                   top: 110,
                   left: 20,
                   child: Text(
-                    'Material didáctico',
-                    style: TextStyle(fontSize: 30, color: color),
+                    _arguments['name_module'],
+                    style: TextStyle(
+                        fontSize: _arguments['font_size'], color: color),
                   ),
                 )
               ],
@@ -61,17 +59,22 @@ class _LearningPageState extends State<LearningPage> {
           ),
           Expanded(
               child: FutureBuilder(
-            future: TeachingMaterialDao().getModules(context),
+            future: TeachingMaterialDao().getTopicByModule(_arguments['name_module']),
             builder: (BuildContext context,
-                AsyncSnapshot<List<ModuleModel>> snapshot) {
+                AsyncSnapshot<List<TopicModel>> snapshot) {
               if (snapshot.hasData) {
                 return ListView.builder(
                     itemCount: snapshot.data?.length,
                     itemBuilder: (BuildContext context, int i) {
-                      return ModuleCard(
-                          snapshot.data![i].pathImage,
+                      (snapshot.data![i].name_topic ==
+                              'EL ESTABLECIMIENTO DE INTERPRETACIONES DE RAZONAMIENTOS LÓGICOS Y ANALÓGICOS')
+                          ? _size = 11
+                          : _size = 18;
+                      return TopicCard(
                           snapshot.data![i].name_module,
-                          snapshot.data![i].description_module);
+                          snapshot.data![i].name_topic,
+                          snapshot.data![i].description_topic,
+                          _size);
                     });
               } else {
                 return Container(
@@ -82,8 +85,8 @@ class _LearningPageState extends State<LearningPage> {
                 );
               }
             },
-          )
-              ),
+          )),
+         
         ],
       ),
     );

@@ -1,8 +1,8 @@
-import 'package:exaa_2/models/exam_detail_model.dart';
-import 'package:exaa_2/models/exam_history_model.dart';
-import 'package:exaa_2/models/exam_result.dart';
-import 'package:exaa_2/models/module_result.dart';
-import 'package:exaa_2/services/db_provider.dart';
+import 'package:exaa_2/models/statistics/exam_detail_model.dart';
+import 'package:exaa_2/models/statistics/exam_history_model.dart';
+import 'package:exaa_2/models/exam/exam_result.dart';
+import 'package:exaa_2/models/exam/module_result.dart';
+import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:sqflite/sqflite.dart';
 

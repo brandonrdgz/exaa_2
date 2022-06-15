@@ -1,11 +1,11 @@
-import 'package:exaa_2/models/exam_result.dart';
-import 'package:exaa_2/models/module_result.dart';
+import 'package:exaa_2/models/exam/exam_result.dart';
+import 'package:exaa_2/models/exam/module_result.dart';
 import 'package:exaa_2/utils/constants.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 
-import 'package:exaa_2/models/exam_answer.dart';
-import 'package:exaa_2/models/module_questions.dart';
+import 'package:exaa_2/models/exam/exam_answer.dart';
+import 'package:exaa_2/models/exam/module_questions.dart';
 import 'package:flutter/material.dart';
 import 'package:html_unescape/html_unescape.dart';
 

@@ -1,4 +1,4 @@
-import 'package:exaa_2/models/topic_model.dart';
+import 'package:exaa_2/models/teaching_material/topic_model.dart';
 
 class ListOfTopics {
   static List<TopicModel> topicsMath = [

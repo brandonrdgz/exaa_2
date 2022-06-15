@@ -1,7 +1,7 @@
-import 'package:exaa_2/models/module_model.dart';
-import 'package:exaa_2/models/subtopic_model.dart';
-import 'package:exaa_2/models/topic_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
+import 'package:exaa_2/models/teaching_material/module_model.dart';
+import 'package:exaa_2/models/teaching_material/subtopic_model.dart';
+import 'package:exaa_2/models/teaching_material/topic_model.dart';
+import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:exaa_2/widgets/alerts.dart';
 import 'package:flutter/material.dart';
