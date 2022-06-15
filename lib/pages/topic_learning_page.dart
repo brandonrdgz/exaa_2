@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_declarations
 
+import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
 import 'package:exaa_2/models/topic_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/topic_card.dart';
@@ -64,7 +65,7 @@ class TopicLearningPage extends StatelessWidget {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getTopicByModule(_arguments['name_module']),
+            future: TeachingMaterialDao().getTopicByModule(_arguments['name_module']),
             builder: (BuildContext context,
                 AsyncSnapshot<List<TopicModel>> snapshot) {
               if (snapshot.hasData) {

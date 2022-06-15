@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
 import 'package:exaa_2/models/module_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/module_card.dart';
 import 'package:flutter/material.dart';
 
@@ -63,7 +63,7 @@ class _LearningPageState extends State<LearningPage> {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getModules(context),
+            future: TeachingMaterialDao().getModules(context),
             builder: (BuildContext context,
                 AsyncSnapshot<List<ModuleModel>> snapshot) {
               if (snapshot.hasData) {
@@ -85,112 +85,7 @@ class _LearningPageState extends State<LearningPage> {
               }
             },
           )
-
-              /*  children: <Widget>[
-                ModuleCard('assets/design/math1.png', 'Pensamiento Matemático',
-                    'Descripción breve del módulo'),
-                ModuleCard('assets/design/calculus.jpg', 'Cálculo',
-                    'Descripción breve del módulo'),
-                ModuleCard('assets/design/physics.png', 'Física',
-                    'Descripción breve del módulo'),
-                ModuleCard('assets/design/gramatic_structure.jpg',
-                    'Estructura de la lengua', 'Descripción breve del módulo'),
-                ModuleCard('assets/design/lecture.jpg', 'Comprensión lectora',
-                    'Descripción breve del módulo')
-              ],*/
               ),
-
-          /*Expanded(
-              child: MediaQuery.removePadding(
-            context: context,
-            removeTop: true,
-            child: ListView(
-              children: <Widget>[
-                Container(
-                  margin: const EdgeInsets.only(bottom: 10, top: 25),
-                  height: 200,
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: color,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(80),
-                        ),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Color(0xFF363f93).withOpacity(0.3),
-                              offset: new Offset(-10, 0),
-                              blurRadius: 20,
-                              spreadRadius: 4)
-                        ]),
-                    padding:
-                        const EdgeInsets.only(left: 32, top: 50, bottom: 50),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          'FÍSICA',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                        SizedBox(
-                          height: 2,
-                        ),
-                        Text(
-                          'Estudia física',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.only(bottom: 10, top: 25),
-                  height: 200,
-                  padding:
-                      const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: color,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(80),
-                        ),
-                        boxShadow: [
-                          new BoxShadow(
-                              color: Color(0xFF363f93).withOpacity(0.3),
-                              offset: new Offset(-10, 0),
-                              blurRadius: 20,
-                              spreadRadius: 4)
-                        ]),
-                    padding:
-                        const EdgeInsets.only(left: 32, top: 50, bottom: 50),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          'CÁLCULO',
-                          style: TextStyle(color: Colors.white, fontSize: 12),
-                        ),
-                        SizedBox(
-                          height: 2,
-                        ),
-                        Text(
-                          'Estudia cálculo',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold),
-                        )
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ))*/
         ],
       ),
     );

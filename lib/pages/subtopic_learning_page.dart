@@ -1,3 +1,4 @@
+import 'package:exaa_2/daos/teaching_material/teaching_material_dao.dart';
 import 'package:exaa_2/models/subtopic_model.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/widgets/subtopic_card.dart';
@@ -61,7 +62,7 @@ class SubtopicLearningPage extends StatelessWidget {
           ),
           Expanded(
               child: FutureBuilder(
-            future: DBProvider.db.getSubtopicByTopic(_arguments['name_topic']),
+            future: TeachingMaterialDao().getSubtopicByTopic(_arguments['name_topic']),
             builder: (BuildContext context,
                 AsyncSnapshot<List<SubtopicModel>> snapshot) {
               if (snapshot.hasData) {

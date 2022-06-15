@@ -1,3 +1,4 @@
+import 'package:exaa_2/daos/exam/exam_dao.dart';
 import 'package:exaa_2/pages/exam_page.dart';
 import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/utils/constants.dart';
@@ -28,7 +29,7 @@ class _ApplyExamPageState extends State<ApplyExamPage> {
   }
 
   Future<bool> _dbHasNotQuestions() async {
-    List examModules = await DBProvider.db.getExamModules();
+    List examModules = await ExamDao().getExamModules();
 
     return examModules.isEmpty;
   }
@@ -44,7 +45,7 @@ class _ApplyExamPageState extends State<ApplyExamPage> {
           CommonDialog.waitDialog(
             context,
             content: const Text('Cargando información'),
-            future: DBProvider.db.insertQuestionsAndAnswers(),
+            future: ExamDao().insertQuestionsAndAnswers(),
             onSuccess: (result) {
               CommonDialog.info(
                 context,

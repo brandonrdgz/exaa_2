@@ -1,7 +1,7 @@
+import 'package:exaa_2/daos/statistics/statistics_dao.dart';
 import 'package:exaa_2/models/exam_detail_model.dart';
 import 'package:exaa_2/pages/about_page.dart';
 import 'package:exaa_2/pages/apply_exam_page.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/utils/error_util.dart';
 import 'package:exaa_2/utils/exams.dart';
@@ -47,7 +47,6 @@ class _InitialPageState extends State<InitialPage> {
             textSize: 40,
             onPressed: () {
               Navigator.pushNamed(context, 'learning');
-              //TODO: Show page 'Material didactico'
             },
           ),
           RoundedIconTextButton(
@@ -56,14 +55,15 @@ class _InitialPageState extends State<InitialPage> {
             text: 'Estadísticas',
             textSize: 40,
             onPressed: () async {
-              Exams.exams = await DBProvider.db
+              StatisticsDao statisticsDao = StatisticsDao();
+              Exams.exams = await statisticsDao
                   .getExamsByUser(Auth.getEmail().toString());
               //id_exam = 1 -> (5)EXAM_DETAIL
               //[1,2,3] ->ID_EXAM
               Exams.exams.forEach((element) async {
                 List<ExamDetailModel> temporalList = [];
                 temporalList =
-                    await DBProvider.db.getDetailByExam(element.id_exam);
+                    await statisticsDao.getDetailByExam(element.id_exam);
                 /*List<ExamDetailModel> newList = new List.from(Exams.examsDetail)
                   ..addAll(temporalList);
                 Exams.examsDetail = newList;*/

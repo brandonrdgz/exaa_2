@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:exaa_2/daos/exam/exam_dao.dart';
 import 'package:exaa_2/models/answer_model.dart';
 import 'package:exaa_2/models/exam_answer.dart';
 import 'package:exaa_2/models/exam_question.dart';
@@ -7,13 +8,13 @@ import 'package:exaa_2/models/exam_result.dart';
 import 'package:exaa_2/models/module_questions.dart';
 import 'package:exaa_2/models/module_result.dart';
 import 'package:exaa_2/models/question_model.dart';
-import 'package:exaa_2/services/db_provider.dart';
 import 'package:exaa_2/utils/constants.dart';
 
 class ExamUtils {
   static Future<List<ModuleQuestions>> getExamQuestions() async {
     List<ModuleQuestions> exam = [];
-    List<String> examModules = await DBProvider.db.getExamModules();
+    ExamDao examDao = ExamDao();
+    List<String> examModules = await examDao.getExamModules();
     List<String> moduleTopics;
     int questionsPerTopic = 0; 
     int questionsGenerated = 0;
@@ -23,7 +24,7 @@ class ExamUtils {
       List<QuestionModel> questions = [];
       totalOfQuestions = _getTotalOfQuestions(examModule);
 
-      moduleTopics = await DBProvider.db.getTopicsOfExamModule(examModule);
+      moduleTopics = await examDao.getTopicsOfExamModule(examModule);
       questionsPerTopic = _getQuestionsPerTopic(moduleTopics, totalOfQuestions); 
 
       questionsGenerated = 0;
@@ -47,7 +48,7 @@ class ExamUtils {
       List<ExamAnswer> examAnswerList;
 
       for(QuestionModel questionModel in questions) {
-        answerModelList = await DBProvider.db.getAnswers(questionModel.idQuestion);
+        answerModelList = await examDao.getAnswers(questionModel.idQuestion);
         examAnswerList = answerModelList.map<ExamAnswer>((AnswerModel answerModel) {
           return ExamAnswer(answerModel, false);
         }).toList();
@@ -102,7 +103,8 @@ class ExamUtils {
   }
 
   static Future<List<QuestionModel>> _getQuestionsFromTopic(String examModule, String moduleTopic, int questionsNum) async {
-    List<QuestionModel> questions = await DBProvider.db.getQuestions(examModule, moduleTopic);
+    ExamDao examDao = ExamDao();
+    List<QuestionModel> questions = await examDao.getQuestions(examModule, moduleTopic);
     List<QuestionModel> finalQuestions = [];
     Random random = Random();
     int questionIndex = 0;
