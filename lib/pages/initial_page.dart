@@ -1,10 +1,7 @@
-import 'package:exaa_2/daos/statistics/statistics_dao.dart';
-import 'package:exaa_2/models/statistics/exam_detail_model.dart';
 import 'package:exaa_2/pages/about/about_page.dart';
 import 'package:exaa_2/pages/exam/apply_exam_page.dart';
 import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/utils/error_util.dart';
-import 'package:exaa_2/utils/exams.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
 import 'package:exaa_2/widgets/rounded_icon_text_button.dart';
@@ -55,17 +52,6 @@ class _InitialPageState extends State<InitialPage> {
             text: 'Estadísticas',
             textSize: 40,
             onPressed: () async {
-              StatisticsDao statisticsDao = StatisticsDao();
-              Exams.exams = await statisticsDao
-                  .getExamsByUser(Auth.getEmail().toString());
-              Exams.exams.forEach((element) async {
-                List<ExamDetailModel> temporalList = [];
-                temporalList =
-                    await statisticsDao.getDetailByExam(element.id_exam);
-                
-                Exams.examsDetail = [...temporalList, ...Exams.examsDetail];
-              });
-              print('Array spread');
               Navigator.pushNamed(context, 'statistics');
             },
           ),

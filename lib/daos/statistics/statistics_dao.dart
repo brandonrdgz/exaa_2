@@ -41,7 +41,22 @@ class StatisticsDao {
     return list;
   }
 
-  Future<List<ExamHistoryModel>> getExamsByUser(String email) async {
+  Future<List<Map<Object, Object>>> getExamsHistory(String email) async {
+    List<Map<Object, Object>> examsHistory = [];
+    List<ExamHistoryModel> exams = await _getExamsByUser(email);
+
+    for(ExamHistoryModel examHistoryModel in exams) {
+      List<ExamDetailModel> examDetailsModel = await _getDetailByExam(examHistoryModel.id_exam);
+      examsHistory.add({
+        'exam': examHistoryModel,
+        'examDetails': examDetailsModel,
+      });
+    }
+
+    return examsHistory;
+  }
+
+  Future<List<ExamHistoryModel>> _getExamsByUser(String email) async {
     final db = await DBProvider.db.database;
     var res;
     res =
@@ -57,7 +72,7 @@ class StatisticsDao {
     return list;
   }
 
-  Future<List<ExamDetailModel>> getDetailByExam(int id_exam) async {
+  Future<List<ExamDetailModel>> _getDetailByExam(int id_exam) async {
     final db = await DBProvider.db.database;
     var res;
     res = await db
