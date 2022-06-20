@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:exaa_2/daos/statistics/statistics_dao.dart';
+import 'package:exaa_2/daos/exam/exam_dao.dart';
 import 'package:exaa_2/models/exam/exam_result.dart';
 import 'package:exaa_2/pages/exam/exam_result_page.dart';
 import 'package:exaa_2/widgets/common_dialog.dart';
@@ -175,7 +175,7 @@ class _ExamPageState extends State<ExamPage> {
                   CommonDialog.waitDialog(
                     context,
                     content: const Text('Guardando examen...'),
-                    future: StatisticsDao().insertExamResults(examResult),
+                    future: ExamDao().insertExamResults(examResult),
                     onSuccess: (result) {
                       Navigator.pop(context);
                       Navigator.pop(context);

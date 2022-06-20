@@ -1,5 +1,8 @@
 import 'package:exaa_2/models/exam/answer_model.dart';
+import 'package:exaa_2/models/exam/exam_result.dart';
+import 'package:exaa_2/models/exam/module_result.dart';
 import 'package:exaa_2/models/exam/question_model.dart';
+import 'package:exaa_2/services/firebase/auth.dart';
 import 'package:exaa_2/services/sqlite/db_provider.dart';
 import 'package:exaa_2/utils/sql_data.dart';
 import 'package:sqflite/sqflite.dart';
@@ -65,5 +68,21 @@ class ExamDao {
     }
 
     return answersList;
+  }
+
+  insertExamResults(ExamResult examResult) async {
+    final Database? db = await DBProvider.db.database; 
+
+    int examId = await db!.rawInsert('INSERT INTO Exam_History (id_exam, email, date_answered, total_score) '
+      'VALUES (null, ?, ?, ?)', [Auth.getEmail(), DateTime.now().toIso8601String(), examResult.totalScore]);
+
+    for(ModuleResult moduleResult in examResult.modulesResult) {
+      await _insertModuleResult(db, examId, moduleResult);
+    }
+  }
+
+  _insertModuleResult(Database? db, int examId, ModuleResult moduleResult) async {
+    await db!.rawInsert('INSERT INTO Exam_Detail (id_exam, module_name, score) ' 
+      'VALUES (?, ?, ?)', [examId, moduleResult.moduleName, moduleResult.score]);
   }
 }
