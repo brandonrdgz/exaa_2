@@ -273,7 +273,7 @@ class _ExamResultPageState extends State<ExamResultPage> {
       answerIcon = const Icon(Icons.cancel, color: Color.fromARGB(255, 255, 0, 0),);
     }
     else {
-      answerIcon = const Icon(Icons.circle, color: Colors.white);
+      answerIcon = const Icon(Icons.circle, color: Color.fromARGB(0, 255, 255, 255));
     }
 
     return answerIcon;
