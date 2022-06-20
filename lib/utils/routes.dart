@@ -29,7 +29,7 @@ class Routes {
     ExamPage.id: (BuildContext context) => ExamPage(),
     'questions': (BuildContext context) => FrecuentQuestion(),
     'agreement': (BuildContext context) => AgreementPage(),
-    'statistics': (BuildContext context) => BarChartSample7(),
+    'statistics': (BuildContext context) => StatisticsPage(),
     ExamResultPage.id: (BuildContext context) => ExamResultPage(),
   };
 }

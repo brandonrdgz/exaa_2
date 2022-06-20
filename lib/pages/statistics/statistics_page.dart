@@ -6,17 +6,17 @@ import 'package:exaa_2/utils/indicator.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class BarChartSample7 extends StatefulWidget {
-  const BarChartSample7({Key? key}) : super(key: key);
+class StatisticsPage extends StatefulWidget {
+  const StatisticsPage({Key? key}) : super(key: key);
 
   static const shadowColor = Color(0xFFCCCCCC);
   //estos son las calificaciones de los modulos por examen
 
   @override
-  State<BarChartSample7> createState() => _BarChartSample7State();
+  State<StatisticsPage> createState() => _StatisticsPageState();
 }
 
-class _BarChartSample7State extends State<BarChartSample7> {
+class _StatisticsPageState extends State<StatisticsPage> {
   BarChartGroupData _generateBarGroup(
     int x,
     Color color,

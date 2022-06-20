@@ -8,7 +8,7 @@ class StatisticsDao {
     List<ExamHistoryModel> exams = await _getExamsByUser(email);
 
     for(ExamHistoryModel examHistoryModel in exams) {
-      List<ExamDetailModel> examDetailsModel = await _getDetailByExam(examHistoryModel.id_exam);
+      List<ExamDetailModel> examDetailsModel = await _getExamDetails(examHistoryModel.id_exam);
       examsHistory.add({
         'exam': examHistoryModel,
         'examDetails': examDetailsModel,
@@ -34,7 +34,7 @@ class StatisticsDao {
     return list;
   }
 
-  Future<List<ExamDetailModel>> _getDetailByExam(int id_exam) async {
+  Future<List<ExamDetailModel>> _getExamDetails(int id_exam) async {
     final db = await DBProvider.db.database;
     var res;
     res = await db
